@@ -5,6 +5,29 @@
 	width: 100%;
 	height: 100%;
 
+	.ice-cream-desc {
+		position: absolute;
+		top: 28.4rem;
+		left: 19.9rem;
+		width: 34rem;
+
+		line-height: 1.1;
+		text-align: center;
+		z-index: 3;
+
+		.ice-cream-head {
+		    font-size: 44px;
+		    font-weight: 700;
+		    letter-spacing: 1px;
+		    text-transform: uppercase;
+		}
+
+		.ice-cream-body {
+		    font-size: 16px;
+		    line-height: 1.05;
+		}
+	}
+
 	&:before {
 		content: "";
 		position: absolute;
@@ -16,7 +39,45 @@
 		z-index: 2;
 	}
 
+	&:after {
+		content: "";
+		position: absolute;
+		top: 20.8375rem;
+		left: 48.7%;
+		z-index: 2;
+		width: 1012rem / @htmlFontSize;
+		height: 256rem / @htmlFontSize;
+		margin: 0 0 0 -1012rem / @htmlFontSize / 2;
+		background: url(../img/ice-cream/01c.png) no-repeat 0 0;
+	}
+
 	.slide {
+		.transition(all, 1s, ease);
+		opacity: 0;
+		-webkit-transform: translate(100%, 0);
+		transform: translate(100%, 0);
+
+		&.active {
+			opacity: 1;
+			-webkit-transform: translate(0, 0);
+			transform: translate(0, 0);
+
+			.left-splash {
+				-webkit-transform: scale(1) translate(0, 0);
+				transform: scale(1) translate(0, 0);
+			}
+			.right-splash {
+				-webkit-transform: scale(1) translate(0, 0);
+				transform: scale(1) translate(0, 0);
+			}
+		}
+
+		&.passed {
+			opacity: 0;
+			-webkit-transform: translate(-100%, 0);
+			transform: translate(-100%, 0);
+		}
+
 		.ice-cream {
 			position: absolute;
 			top: 20rem / @htmlFontSize;
@@ -29,7 +90,10 @@
 			background: url(../img/ice-cream/01.png) no-repeat 0 0;
 		}
 		.left-splash {
-			content: "";
+			.transition(all, 1.5s, ease);
+			-webkit-transform: scale(.05) translate(15%, 15%);
+			transform: scale(.05) translate(15%, 15%);	
+
 			position: absolute;
 			top: 58rem / @htmlFontSize;
 			left: 38%;
@@ -40,7 +104,10 @@
 			background: url(../img/ice-cream/01a.png) no-repeat 0 0;
 		}
 		.right-splash {
-			content: "";
+			.transition(all, 1.7s, ease);
+			-webkit-transform: scale(.05) translate(-25%, -25%);
+			transform: scale(.05) translate(-25%, -25%);
+
 			position: absolute;
 			top: -73rem / @htmlFontSize;
 			left: 52.7%;
@@ -51,14 +118,7 @@
 			background: url(../img/ice-cream/01b.png) no-repeat 0 0;			
 		}
 		.ice-cream-desc {
-			position: absolute;
-			top: 20.8375rem;
-			left: 48.7%;
-			z-index: 2;
-			width: 1012rem / @htmlFontSize;
-			height: 256rem / @htmlFontSize;
-			margin: 0 0 0 -1012rem / @htmlFontSize / 2;
-			background: url(../img/ice-cream/01c.png) no-repeat 0 0;
+			
 		}
 	}
 	.arrow {
@@ -81,7 +141,7 @@
 		}
 
 		&.disabled {
-			opacity: .65;
+			opacity: .45;
 			cursor: default;
 
 			&:hover {
