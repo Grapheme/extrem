@@ -1,15 +1,19 @@
 var Slider = (function(){
 	var $container = $('.ice-cream-slider');
 	var $slide = $('.slide');
+	var $desc = $('.desc-slide');
 	var $current;
-	var $size = $slide.length - 1;
+	var $currentDesc;
+	var $size = $slide.length;
 	var $next = $('.arrow-right');
 	var $prev = $('.arrow-left');
 
 	return {
 		init: function() {
 			$slide.first().addClass('active');
+			$desc.first().addClass('active');
 			$current = $('.slide.active').index();
+			$currentDesc = $('.desc-slide.active');
 
 			$(document).on('click', '.arrow-right', function(){
 				if ( $(this).hasClass('disabled') ) {
@@ -32,11 +36,14 @@ var Slider = (function(){
 
 			if ($current < $size) {
 				$current = $('.slide.active').removeClass('active').addClass('passed').next().addClass('active').index();
+				$currentDesc = $('.desc-slide.active').removeClass('active').addClass('passed').next().addClass('active').index();
 
 				if ($current == $size) {
 					$next.addClass('disabled');
 				}
 			}
+
+			console.log($current, $size);
 		},
 
 		prev: function() {
@@ -46,8 +53,9 @@ var Slider = (function(){
 
 			if ($current > 0) {
 				$current = $('.slide.active').removeClass('active').prev().addClass('active').removeClass('passed').index();
+				$currentDesc = $('.desc-slide.active').removeClass('active').prev().addClass('active').removeClass('passed').index();
 
-				if ($current === 0) {
+				if ($current === 1) {
 					$prev.addClass('disabled');
 				}
 			}

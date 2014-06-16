@@ -1,0 +1,25 @@
+.dropzone {
+	height: 73rem / @htmlFontSize;
+	margin: 0 0 1.1125rem;
+	line-height: 73rem / @htmlFontSize;
+	background: lighten(#CC044D, 10%);
+	text-align: center;
+	cursor: pointer;
+
+	.drop-text {
+		&:before {
+			.box-sizing;
+			content: "\e803";
+			font-family: 'fontello';
+			display: inline-block;
+			width: 48rem / @htmlFontSize;
+			height: 48rem / @htmlFontSize;
+			margin: 0 26rem / @htmlFontSize 0 0;
+			border: 3px solid #fff;
+			line-height: 44rem / @htmlFontSize;
+			vertical-align: middle;
+			border-radius: 50%;
+			font-size: 2em;
+		}
+	}
+}

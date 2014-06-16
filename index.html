@@ -44,6 +44,7 @@
                         </footer>
                     </section>
                     <div class="ice-cream-slider">
+                        <h2 class="ice-logo">Extreme</h2>
                         <div class="slide slide-1">
                             <div class="left-splash"></div>
                             <div class="ice-cream"></div>
@@ -59,18 +60,49 @@
                             <div class="ice-cream"></div>
                             <div class="right-splash"></div>
                         </div>
-                        <div class="arrow arrow-left">
+                        <div class="slide slide-4">
+                            <div class="left-splash"></div>
+                            <div class="ice-cream"></div>
+                            <div class="right-splash"></div>
+                        </div>
+                        <div class="arrow arrow-left disabled">
                             <span class="icon icon-left-dir"></span>
                         </div>
                         <div class="arrow arrow-right">
                             <span class="icon icon-right-dir"></span>
                         </div>
                         <div class="ice-cream-desc">
-                            <div class="ice-cream-head">Клубника</div>
-                            <div class="ice-cream-body">
-                                – самый страстный вкус, подготовил для тебя<br>
-                                только страстный и яркий<br>
-                                контент!
+                            <div class="desc-slide" data-slide="slide-1">
+                                <div class="ice-cream-head">Клубника</div>
+                                <div class="ice-cream-body">
+                                    – самый страстный вкус, подготовил для тебя<br>
+                                    только страстный и яркий<br>
+                                    контент!
+                                </div>
+                            </div>
+                            <div class="desc-slide" data-slide="slide-2">
+                                <div class="ice-cream-head">Фисташка</div>
+                                <div class="ice-cream-body">
+                                    – самый страстный вкус, подготовил для тебя<br>
+                                    только страстный и яркий<br>
+                                    контент!
+                                </div>
+                            </div>
+                            <div class="desc-slide" data-slide="slide-3">
+                                <div class="ice-cream-head">Тропик</div>
+                                <div class="ice-cream-body">
+                                    – самый страстный вкус, подготовил для тебя<br>
+                                    только страстный и яркий<br>
+                                    контент!
+                                </div>
+                            </div>
+                            <div class="desc-slide" data-slide="slide-4">
+                                <div class="ice-cream-head">Ямбери</div>
+                                <div class="ice-cream-body">
+                                    – самый страстный вкус, подготовил для тебя<br>
+                                    только страстный и яркий<br>
+                                    контент!
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -104,7 +136,14 @@
                             <a href="#"></a>
                             <footer>eXtreme блоггеры</footer>
                         </section>
-                </ul>            
+                </ul>
+                <form action="/file-upload"
+                      class="dropzone"
+                      id="dropzone">
+                    <div class="fallback">
+                        <input name="file" type="file" multiple />
+                    </div>
+                </form>
                 <footer class="main-footer">
                     <div class="hot-line">
                         <span>горячая линия</span>
@@ -123,5 +162,11 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/vendor/dropzone.js"></script>
+        <script>
+            Dropzone.options.dropzone = {
+                dictDefaultMessage: '<span class="drop-text">Загрузите вашу фотографию</span>'
+            }
+        </script>
     </body>
 </html>
