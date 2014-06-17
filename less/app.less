@@ -3,19 +3,64 @@ html {
 	color: #fff;
 }
 
+body > .main-wrapper {	
+	overflow: hidden;
+}
+
 main {
 	position: relative;
 	width: 100%;
 	height: 1080px;
 	margin: 0 auto;
-	overflow: hidden;
 
 	background: url(../img/main-bg.jpg) no-repeat center 0 #cc044d;
 
+	&[data-bg="2"] {
+		background: url(../img/background/02.jpg) no-repeat center 0 #eacb56;
+	}
+	&[data-bg="3"] {
+		background: url(../img/background/03.jpg) no-repeat center 0 #fcc94e;		
+	}
+	&[data-bg="4"] {
+		background: url(../img/background/04.jpg) no-repeat center 0 #70210e;		
+	}
+
 	.wrapper {
+		position: relative;
 		max-width: 1180rem / @htmlFontSize;
 		height: 100%;
 		margin: 0 auto;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: -25rem / @htmlFontSize;
+			left: 50%;
+			width: 180rem / @htmlFontSize;
+			height: 25rem / @htmlFontSize;
+			margin-left: -90rem / @htmlFontSize;
+		}
+
+		&[data-arrow="1"] {
+			&:before {
+				background: url(../img/arrows/01.png) no-repeat 0 0;
+			}			
+		}
+		&[data-arrow="2"] {
+			&:before {
+				background: url(../img/arrows/02.png) no-repeat 0 0;
+			}
+		}
+		&[data-arrow="3"] {
+			&:before {
+				background: url(../img/arrows/03.jpg) no-repeat 0 0;
+			}
+		}
+		&[data-arrow="4"] {
+			&:before {
+				background: url(../img/arrows/04.png) no-repeat 0 0;
+			}
+		}
 	}
 }
 .top {

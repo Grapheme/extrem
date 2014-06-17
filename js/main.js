@@ -7,6 +7,8 @@ var Slider = (function(){
 	var $size = $slide.length;
 	var $next = $('.arrow-right');
 	var $prev = $('.arrow-left');
+	var $arrow = $('[data-arrow]');
+	var $main = $('main');
 
 	return {
 		init: function() {
@@ -37,6 +39,8 @@ var Slider = (function(){
 			if ($current < $size) {
 				$current = $('.slide.active').removeClass('active').addClass('passed').next().addClass('active').index();
 				$currentDesc = $('.desc-slide.active').removeClass('active').addClass('passed').next().addClass('active').index();
+				$arrow.attr({'data-arrow': $current});
+				$main.attr({'data-bg': $current});
 
 				if ($current == $size) {
 					$next.addClass('disabled');
@@ -54,6 +58,8 @@ var Slider = (function(){
 			if ($current > 0) {
 				$current = $('.slide.active').removeClass('active').prev().addClass('active').removeClass('passed').index();
 				$currentDesc = $('.desc-slide.active').removeClass('active').prev().addClass('active').removeClass('passed').index();
+				$arrow.attr({'data-arrow': $current});
+				$main.attr({'data-bg': $current});
 
 				if ($current === 1) {
 					$prev.addClass('disabled');
