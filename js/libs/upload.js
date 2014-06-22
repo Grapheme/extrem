@@ -98,6 +98,15 @@ if(upload !== null){
 						$("#HolderPhoto").append(img);
 						$("#load-overlay").removeClass('hidden');
 						$("#load-photo").removeClass('hidden');
+						var img_width = img.width;
+						var img_height = img.height;
+
+						if(img_height < img_width) {
+							$('#HolderPhoto img').css('height', '800px');
+						} else {
+							$('#HolderPhoto img').css('width', '600px');
+						}
+
 					}
 				};
 				reader.readAsDataURL(file);

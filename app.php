@@ -31,6 +31,9 @@
                     <a class="select-image upload-btn" href="javascript:void(0);">Загрузить</a>
                 </div>
                 <div class="app-screen">
+                    <span class="logo-ext"></span>
+                    <span class="logo-hou"></span>
+                    <div class="app-overlay"></div>
                 	<div id="HolderPhoto"></div>
                 </div>
             </div>
@@ -58,7 +61,7 @@
                         <a href="#" class="ice-cream" data-ice="pistachio"></a>
                         <span class="ice-name"><span>Pistachio</span></span>
                     </div>
-                    <div class="ice-item active">
+                    <div class="ice-item">
                         <a href="#" class="ice-cream" data-ice="whitechokolate"></a>
                         <span class="ice-name"><span>White Chokolate</span></span>
                     </div>
@@ -83,6 +86,7 @@
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/app.js"></script>
     <script src="js/libs/jquery-form.min.js"></script>
 	<script src="js/libs/upload.js"></script>
 </body>

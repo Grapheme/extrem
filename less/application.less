@@ -45,6 +45,23 @@
 		height: 128rem / @htmlFontSize;
 	}
 
+	.logo-ext {
+		.transition;
+		position: absolute;
+		right: 20px;
+		top: 30px;
+		display: inline-block;
+		background: url(../img/extreme.png) no-repeat center center e('/') 100% 100%;
+		width: 277rem / @htmlFontSize;
+		height: 128rem / @htmlFontSize;
+		opacity: 0;
+		z-index: 3;
+
+		&.active {
+			opacity: 1;
+		}
+	}
+
 	.app-logo-hou {
 		position: absolute;
 		right: 0;
@@ -53,6 +70,23 @@
 		background: url(../img/application/hour.png) no-repeat center center e('/') 100% 100%;
 		width: 311rem / @htmlFontSize;
 		height: 143rem / @htmlFontSize;
+	}
+
+	.logo-hou {
+		.transition;
+		position: absolute;
+		left: 20px;
+		bottom: 30px;
+		display: inline-block;
+		background: url(../img/application/hour.png) no-repeat center center e('/') 100% 100%;
+		width: 311rem / @htmlFontSize;
+		height: 143rem / @htmlFontSize;
+		opacity: 0;
+		z-index: 3;
+
+		&.active {
+			opacity: 1;
+		}
 	}
 
 	.app-add-text {
@@ -165,6 +199,13 @@
 				min-height: 100%;
 				min-width: 100%;
 			}
+
+			.app-overlay {
+				position: absolute;
+				top: 0; left: 0; right: 0; bottom: 0;
+				background-size: 100% 100%;
+				z-index: 1;
+			}
 		}
 	}
 }
@@ -205,6 +246,8 @@
 		line-height: 232rem / @htmlFontSize;
 		text-decoration: none;
 		text-shadow: 0px -2px 1px rgba(150, 150, 150, 1);
+		border: 0 none;
+		outline: 0 none;
 
 		span {
 			position: relative;
@@ -240,6 +283,7 @@
 		width: 160rem / @htmlFontSize;
 		height: 91rem / @htmlFontSize;
 		margin: 0 25rem / @htmlFontSize 30rem / @htmlFontSize 0;
+		cursor: pointer;
 
 		&:after {
 			.transition(opacity);
