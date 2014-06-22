@@ -24,7 +24,7 @@ uploadImage.singlePhotoOption = {
 	success: function(response,statusText,xhr,jqForm){
 		//uploadImage.setProgress(100,false);
 		if(response.status == true){
-			window.open('/download.php?file='+response.downloadPhotoSrc);
+			window.open('download.php?file='+response.downloadPhotoSrc);
 		}
 	}
 }
