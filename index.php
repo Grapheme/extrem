@@ -172,8 +172,8 @@
                 </div>
             </main>
         </div>
-        <div class="overlay">
-            <div class="popup advice-popup">
+        <div class="overlay hidden">
+            <div class="popup advice-popup hidden">
                 <div class="popup-head">
                     <div class="mini-logo"></div>
                     <div class="mini-slider">
@@ -217,7 +217,7 @@
                 </div>
             </div>
 
-            <div class="popup advice-popup pad-popup">
+            <div class="popup advice-popup pad-popup hidden">
                 <div class="popup-head">
                     <div class="mini-logo"></div>
                     <div class="mini-slider">
@@ -345,7 +345,7 @@
                     <span class="icon icon-down-dir"></span>
                 </a>
             </div>
-            <div class="popup advice-popup pad-popup">
+            <div class="popup advice-popup pad-popup hidden">
                 <div class="popup-head">
                     <div class="mini-logo"></div>
                     <div class="popup-close"></div>
