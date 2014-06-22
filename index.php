@@ -23,18 +23,14 @@
     <div class="main-wrapper">
         <header class="main-header">
             <div class="main-header-cont">
-                <h1 class="logo">
-                    Час страсти
-                </h1>
+                <h1 class="logo">Час страсти</h1>
             </div>
         </header>
         <main data-bg="1">
             <div class="wrapper" data-arrow="1">
                 <div class="top clearfix">
                     <section class="app app-left">
-                        <div id="app" class="app-head fotorama" data-auto="false">
-
-                        </div>                    
+                        <div id="app" class="app-head fotorama" data-auto="false"></div>                    
                         <footer class="app-footer">
                             <a href="#">Приложение</a>
                         </footer>
@@ -147,7 +143,7 @@
                             <footer>eXtreme блоггеры</footer>
                         </section>
                 </ul>
-                 <a id="select-image" href="javascript:void(0);">Загрузите вашу фотографию</a>
+               	<a class="select-image" href="javascript:void(0);">Загрузите вашу фотографию</a>
                 <footer class="main-footer">
                     <div class="hot-line">
                         <span>горячая линия</span>
@@ -163,261 +159,198 @@
             </div>
         </main>
     </div>
-    <div class="overlay" style="display: none;">
-        <!--
-        <div class="popup advice-popup">
-            <div class="popup-head">
-                <div class="mini-logo"></div>
-                <div class="mini-slider">
-                    <div class="slide slide-1" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
-                        <div class="mini-desc">Клубника</div>
-                    </div>
-                    <div class="arr arr__left"><span class="icon icon-left-dir"></span></div>
-                    <div class="arr arr__right"><span class="icon icon-right-dir"></span></div>
-                </div>
-                <div class="popup-close"></div>
-            </div>
-            <div class="popup-body">
-                <header class="popup-header">
-                    <h2>Extreme советы</h2>
-                    <div class="popup-headdesc">
-                        Наши советы о том, как
-                        можно провести «Час страсти»
-                    </div>
-                </header>
-                <div class="popup-content">
-                    <div class="popup-fotorama">
-                        <div class="slide slide-1">
-                            Доведите градус своей
-                            страсти до максимума,
-                            охладите пыл
-                            мороженым eXtreme
-                            Клубника и покажите друг
-                            другу настоящий
-                            «Час страсти»!
+    <div id="load-overlay" class="overlay hidden">
+        <div class="popup advice-popup hidden">
+                <div class="popup-head">
+                    <div class="mini-logo"></div>
+                    <div class="mini-slider">
+                        <div class="slide slide-1" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
+                            <div class="mini-desc">Клубника</div>
                         </div>
-                    </div>                        
+                        <div class="arr arr__left"><span class="icon icon-left-dir"></span></div>
+                        <div class="arr arr__right"><span class="icon icon-right-dir"></span></div>
+                    </div>
+                    <div class="popup-close"></div>
                 </div>
-                <footer class="popup-footer">
-                    <script type="text/javascript" src="http://yandex.st/share/share.js"
-                    charset="utf-8"></script>
-                    <div class="yashare-auto-init" data-yashareL10n="ru"
-                     data-yashareQuickServices="vkontakte,facebook,odnoklassniki" data-yashareTheme="counter"
+                <div class="popup-body">
+                    <header class="popup-header">
+                        <h2>Extreme советы</h2>
+                        <div class="popup-headdesc">
+                            Наши советы о том, как
+                            можно провести «Час страсти»
+                        </div>
+                    </header>
+                    <div class="popup-content">
+                        <div class="popup-fotorama">
+                            <div class="slide slide-1">
+                                Доведите градус своей
+                                страсти до максимума,
+                                охладите пыл
+                                мороженым eXtreme
+                                Клубника и покажите друг
+                                другу настоящий
+                                «Час страсти»!
+                            </div>
+                        </div>                        
+                    </div>
+                    <footer class="popup-footer">
+                        <script type="text/javascript" src="http://yandex.st/share/share.js"
+                        charset="utf-8"></script>
+                        <div class="yashare-auto-init" data-yashareL10n="ru"
+                         data-yashareQuickServices="vkontakte,facebook,odnoklassniki" data-yashareTheme="counter"
 
-                    ></div> 
-                </footer>
-            </div>
-        </div>
-        -->
-        <!-- <div class="popup advice-popup">
-            <div class="popup-head">
-                <div class="mini-logo"></div>
-                <div class="mini-slider">
-                    <div class="slide slide-1" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
-                        <div class="mini-desc">Клубника</div>
-                    </div>
-                    <div class="arr arr__left"><span class="icon icon-left-dir"></span></div>
-                    <div class="arr arr__right"><span class="icon icon-right-dir"></span></div>
+                        ></div> 
+                    </footer>
                 </div>
-                <div class="popup-close"></div>
             </div>
-            <div class="popup-body clearfix">
-                <div class="column-content">
-                    <div class="content-image">
-                        <img src="http://photos-g.ak.instagram.com/hphotos-ak-xpf1/891407_871997296147198_24578230_n.jpg" alt="Час Страсти" />
-                        <div class="content-title">
-                            Аргентинское танго — танец страсти
+        <div class="popup advice-popup pad-popup hidden">
+                <div class="popup-head">
+                    <div class="mini-logo"></div>
+                    <div class="mini-slider">
+                        <div class="slide slide-1" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
+                            <div class="mini-desc">Клубника</div>
                         </div>
-                        <div class="content-info taste-strawberry">
-                            <span class="content-author">
-                                Вера Самохвальцева
-                            </span>
-                            <span class="content-date">
-                                15.06.2014
-                            </span>
-                        </div>
+                        <div class="arr arr__left"><span class="icon icon-left-dir"></span></div>
+                        <div class="arr arr__right"><span class="icon icon-right-dir"></span></div>
                     </div>
-                    <div class="content-text">
-                        <p>
-                            Танго получило распространение от африканских сообществ в Буэнос-Айресе на основе древних африканских 
-                            танцевальных форм[2]. Слово «танго» также имеет африканское происхождение, его возводят к языку 
-                            нигерийского народа ибибио, где оно значило «танец под звук барабана», и применяют к мелодиям, 
-                            полученным в результате синтеза различных форм музыки из Европы, Африки и Америки. Хорхе Луис 
-                            Борхес в El idioma de los argentinos пишет: «Танго принадлежит к Ла-Плата и является «сыном» 
-                            уругвайской милонги и «внуком» хабанеры». Слово «танго», похоже, впервые используется в 
-                            отношении к танцам в 1890-е. Первоначально этот танец был лишь одним из многих, но вскоре он стал 
-                            популярным во всем обществе.
-                        </p>
-                        <p>
-                            В первые годы ХХ века танцоры и оркестры из Буэнос-Айреса и Монтевидео отправились в Европу, и 
-                            первый европейский показ танго состоялся в Париже, а вскоре после этого в Лондоне, Берлине и 
-                            других столицах. К концу 1913 года танец попал в Нью-Йорк, США и Финляндию. В США в 1911 году 
-                            название «танго» часто применялось для танцев в ритме 2/4 или 4/4 «на один шаг». Иногда танго 
-                            исполняли в довольно быстром темпе. В тот период иногда относились к этому как «Североамериканского танго», 
-                            в сравнении с «Рио де ла Плата танго». К 1914 были более распространены аутентичные стили танго, а также 
-                            некоторые варианты, как «Менуэт-танго» Альберта Ньюмана.
-                        </p>
-                        <p>
-                            Несмотря на Великую депрессию, период 1930—1950 годов стал «золотым веком» танго. Было создано 
-                            множество ансамблей, в состав которых входили выдающиеся композиторы и исполнители танго, ставшие сегодня 
-                            классиками стиля: Аннибал Тройло, Освальдо Пульезе, Астор Пьяццолла и многие другие.
-                        </p>
-                    </div>
-                    <div class="content-social">
-                        <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
-                        <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,odnoklassniki" data-yashareTheme="counter"> </div>
-                    </div>
+                    <div class="popup-close"></div>
                 </div>
-                <div class="column-list">
-                    <div class="list-title">Другие статьи</div>
-                    <ul>
-                        <li>
-                            <h3>Топ–10 романтических фильмов</h3>
-                            <div class="list-item-info clearfix taste-strawberry">
-                                <span class="list-author">
+                <div class="popup-body clearfix">
+                    <div class="column-content">
+                        <div class="content-image">
+                            <img src="http://photos-g.ak.instagram.com/hphotos-ak-xpf1/891407_871997296147198_24578230_n.jpg" alt="Час Страсти" />
+                            <div class="content-title">
+                                Аргентинское танго — танец страсти
+                            </div>
+                            <div class="content-info taste-strawberry">
+                                <span class="content-author">
                                     Вера Самохвальцева
                                 </span>
-                                <span class="list-date">
+                                <span class="content-date">
                                     15.06.2014
                                 </span>
                             </div>
-                        </li>
-                        <li>
-                            <h3>Топ–10 романтических фильмов</h3>
-                            <div class="list-item-info clearfix taste-tropic">
-                                <span class="list-author">
-                                    Ксения Кузьмина
-                                </span>
-                                <span class="list-date">
-                                    07.06.2014
-                                </span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div> -->
-        <div class="popup photo-popup" style="display: none;">
-            <div class="popup-head">
-                <div class="mini-logo"></div>
-                <div class="mini-slider">
-                    <div class="slide slide-1" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
-                        <div class="mini-desc">Клубника</div>
+                        </div>
+                        <div class="content-text">
+                            <p>
+                                Танго получило распространение от африканских сообществ в Буэнос-Айресе на основе древних африканских 
+                                танцевальных форм[2]. Слово «танго» также имеет африканское происхождение, его возводят к языку 
+                                нигерийского народа ибибио, где оно значило «танец под звук барабана», и применяют к мелодиям, 
+                                полученным в результате синтеза различных форм музыки из Европы, Африки и Америки. Хорхе Луис 
+                                Борхес в El idioma de los argentinos пишет: «Танго принадлежит к Ла-Плата и является «сыном» 
+                                уругвайской милонги и «внуком» хабанеры». Слово «танго», похоже, впервые используется в 
+                                отношении к танцам в 1890-е. Первоначально этот танец был лишь одним из многих, но вскоре он стал 
+                                популярным во всем обществе.
+                            </p>
+                            <p>
+                                В первые годы ХХ века танцоры и оркестры из Буэнос-Айреса и Монтевидео отправились в Европу, и 
+                                первый европейский показ танго состоялся в Париже, а вскоре после этого в Лондоне, Берлине и 
+                                других столицах. К концу 1913 года танец попал в Нью-Йорк, США и Финляндию. В США в 1911 году 
+                                название «танго» часто применялось для танцев в ритме 2/4 или 4/4 «на один шаг». Иногда танго 
+                                исполняли в довольно быстром темпе. В тот период иногда относились к этому как «Североамериканского танго», 
+                                в сравнении с «Рио де ла Плата танго». К 1914 были более распространены аутентичные стили танго, а также 
+                                некоторые варианты, как «Менуэт-танго» Альберта Ньюмана.
+                            </p>
+                            <p>
+                                Несмотря на Великую депрессию, период 1930—1950 годов стал «золотым веком» танго. Было создано 
+                                множество ансамблей, в состав которых входили выдающиеся композиторы и исполнители танго, ставшие сегодня 
+                                классиками стиля: Аннибал Тройло, Освальдо Пульезе, Астор Пьяццолла и многие другие.
+                            </p>
+                        </div>
+                        <div class="content-social">
+                            <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+                            <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,odnoklassniki" data-yashareTheme="counter"> </div>
+                        </div>
                     </div>
-                    <div class="arr arr__left"><span class="icon icon-left-dir"></span></div>
-                    <div class="arr arr__right"><span class="icon icon-right-dir"></span></div>
-                </div>
-                <div class="popup-close"></div>
-            </div>
-            <div class="popup-body">
-                <header class="popup-header">
-                    <h2>#Часстрасти</h2>
-                    <div class="popup-headdesc">
-                        Ваши фотографии из инстаграм<br>
-                        с хэштегом #часстрасти
-                    </div>
-                </header>
-                <div class="popup-content">
-                    <div class="instaphoto-slider jcarousel">
+                    <div class="column-list">
+                        <div class="list-title">Другие статьи</div>
                         <ul>
-                            <li class="insta-slide slide-1" style="background: url(http://cs403326.vk.me/v403326787/3e9a/8Gc7BWxdupk.jpg) no-repeat center center / cover;">
-                                <div class="slide-desc">
-                                    <div class="slide-user">ValGal</div>
-                                    <div class="slide-description">Не могу без нее жить</div>
-                                    <div class="slide-tags">#часстрасти #клубника</div>
+                            <li>
+                                <h3>Топ–10 романтических фильмов</h3>
+                                <div class="list-item-info clearfix taste-strawberry">
+                                    <span class="list-author">
+                                        Вера Самохвальцева
+                                    </span>
+                                    <span class="list-date">
+                                        15.06.2014
+                                    </span>
                                 </div>
                             </li>
-                            <li class="insta-slide slide-2" style="background: url(http://cs403326.vk.me/v403326787/3e9a/8Gc7BWxdupk.jpg) no-repeat center center / cover;">
-                                <div class="slide-desc">
-                                    <div class="slide-user">ValGal</div>
-                                    <div class="slide-description">Не могу без нее жить</div>
-                                    <div class="slide-tags">#часстрасти #клубника</div>
-                                </div>
-                            </li>
-                            <li class="insta-slide slide-3" style="background: url(http://cs403326.vk.me/v403326787/3e9a/8Gc7BWxdupk.jpg) no-repeat center center / cover;">
-                                <div class="slide-desc">
-                                    <div class="slide-user">ValGal</div>
-                                    <div class="slide-description">Не могу без нее жить</div>
-                                    <div class="slide-tags">#часстрасти #клубника</div>
-                                </div>
-                            </li>
-                            <li class="insta-slide slide-4" style="background: url(http://cs403326.vk.me/v403326787/3e9a/8Gc7BWxdupk.jpg) no-repeat center center / cover;">
-                                <div class="slide-desc">
-                                    <div class="slide-user">ValGal</div>
-                                    <div class="slide-description">Не могу без нее жить</div>
-                                    <div class="slide-tags">#часстрасти #клубника</div>
-                                </div>
-                            </li>
-                            <li class="insta-slide slide-5" style="background: url(http://cs403326.vk.me/v403326787/3e9a/8Gc7BWxdupk.jpg) no-repeat center center / cover;">
-                                <div class="slide-desc">
-                                    <div class="slide-user">ValGal</div>
-                                    <div class="slide-description">Не могу без нее жить</div>
-                                    <div class="slide-tags">#часстрасти #клубника</div>
-                                </div>
-                            </li>
-                            <li class="insta-slide slide-6" style="background: url(http://cs403326.vk.me/v403326787/3e9a/8Gc7BWxdupk.jpg) no-repeat center center / cover;">
-                                <div class="slide-desc">
-                                    <div class="slide-user">ValGal</div>
-                                    <div class="slide-description">Не могу без нее жить</div>
-                                    <div class="slide-tags">#часстрасти #клубника</div>
-                                </div>
-                            </li>
-                            <li class="insta-slide slide-7" style="background: url(http://cs403326.vk.me/v403326787/3e9a/8Gc7BWxdupk.jpg) no-repeat center center / cover;">
-                                <div class="slide-desc">
-                                    <div class="slide-user">ValGal</div>
-                                    <div class="slide-description">Не могу без нее жить</div>
-                                    <div class="slide-tags">#часстрасти #клубника</div>
-                                </div>
-                            </li>
-                            <li class="insta-slide slide-8" style="background: url(http://cs403326.vk.me/v403326787/3e9a/8Gc7BWxdupk.jpg) no-repeat center center / cover;">
-                                <div class="slide-desc">
-                                    <div class="slide-user">ValGal</div>
-                                    <div class="slide-description">Не могу без нее жить</div>
-                                    <div class="slide-tags">#часстрасти #клубника</div>
+                            <li>
+                                <h3>Топ–10 романтических фильмов</h3>
+                                <div class="list-item-info clearfix taste-tropic">
+                                    <span class="list-author">
+                                        Ксения Кузьмина
+                                    </span>
+                                    <span class="list-date">
+                                        07.06.2014
+                                    </span>
                                 </div>
                             </li>
                         </ul>
                     </div>
-                    <a href="#" class="jcarousel-control jcarousel-control-prev"></a>
-                    <a href="#" class="jcarousel-control jcarousel-control-next"></a>                        
                 </div>
-            </div>                
-            <div class="instaphoto-slider-vertical jcarousel-vert">
-                <ul>
-                    <li class="insta-slide slide-1" style="background: url(http://cs403326.vk.me/v403326787/3e9a/8Gc7BWxdupk.jpg) no-repeat center center / cover;">
-                    </li>
-                    <li class="insta-slide slide-2" style="background: url(http://cs403326.vk.me/v403326787/3e9a/8Gc7BWxdupk.jpg) no-repeat center center / cover;">
-                    </li>
-                    <li class="insta-slide slide-3" style="background: url(http://cs403326.vk.me/v403326787/3e9a/8Gc7BWxdupk.jpg) no-repeat center center / cover;">
-                    </li>
-                    <li class="insta-slide slide-4" style="background: url(http://cs403326.vk.me/v403326787/3e9a/8Gc7BWxdupk.jpg) no-repeat center center / cover;">
-                    </li>
-                    <li class="insta-slide slide-5" style="background: url(http://cs403326.vk.me/v403326787/3e9a/8Gc7BWxdupk.jpg) no-repeat center center / cover;">
-                    </li>
-                    <li class="insta-slide slide-6" style="background: url(http://cs403326.vk.me/v403326787/3e9a/8Gc7BWxdupk.jpg) no-repeat center center / cover;">
-                    </li>
-                    <li class="insta-slide slide-7" style="background: url(http://cs403326.vk.me/v403326787/3e9a/8Gc7BWxdupk.jpg) no-repeat center center / cover;">
-                    </li>
-                    <li class="insta-slide slide-8" style="background: url(http://cs403326.vk.me/v403326787/3e9a/8Gc7BWxdupk.jpg) no-repeat center center / cover;">
-                    </li>
-                </ul> 
-            </div>                
-            <a href="#" class="jcarousel-vert-control jcarousel-vert-control-prev">
-                <span class="icon icon-up-dir"></span>
-            </a>
-            <a href="#" class="jcarousel-vert-control jcarousel-vert-control-next">
-                <span class="icon icon-down-dir"></span>
-            </a>
-        </div>
+            </div>
+        <div class="popup photo-popup hidden">
+                <div class="popup-head">
+                    <div class="mini-logo"></div>
+                    <div class="mini-slider">
+                        <div class="slide slide-1" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
+                            <div class="mini-desc">Клубника</div>
+                        </div>
+                        <div class="arr arr__left"><span class="icon icon-left-dir"></span></div>
+                        <div class="arr arr__right"><span class="icon icon-right-dir"></span></div>
+                    </div>
+                    <div class="popup-close"></div>
+                </div>
+                <div class="popup-body">
+                    <header class="popup-header">
+                        <h2>#Часстрасти</h2>
+                        <div class="popup-headdesc">
+                            Ваши фотографии из инстаграм<br>
+                            с хэштегом #часстрасти
+                        </div>
+                    </header>
+                    <div class="popup-content">
+                        <div class="instaphoto-slider jcarousel">
+                            <ul id="instaSlider">
+                            </ul>
+                        </div>
+                        <a href="#" class="jcarousel-control jcarousel-control-prev"></a>
+                        <a href="#" class="jcarousel-control jcarousel-control-next"></a>                        
+                    </div>
+                </div>                
+                <div class="instaphoto-slider-vertical jcarousel-vert">
+                    <ul id="instaNavSlider">
+                    </ul> 
+                </div>                
+                <a href="#" class="jcarousel-vert-control jcarousel-vert-control-prev">
+                    <span class="icon icon-up-dir"></span>
+                </a>
+                <a href="#" class="jcarousel-vert-control jcarousel-vert-control-next">
+                    <span class="icon icon-down-dir"></span>
+                </a>
+            </div>
+        <div id="load-photo" class="popup advice-popup pad-popup hidden">
+                <div class="popup-head">
+                    <div class="mini-logo"></div>
+                    <div class="popup-close"></div>
+                </div>
+                <div class="popup-body clearfix">
+                    <div class="photo-border">
+                    	<div id="HolderPhoto"></div>
+                        <div class="photo-frame"> </div>
+                        <div class="photo-logo"> </div>
+                    </div>
+                    <form id="form-photo-save" method="POST" action="upload.php">
+						<input type="file" style="width: 1em;" name="file" class="input-photo invisible" id="selectPhoto">
+						<button value="send" type="submit" class="photo-save">Сохранить</button>
+					</form>
+                    <a href="javascript:void(0);" class="photo-upload-link select-image">Загрузить другую фотографию</a>
+                </div>
+            </div>
     </div>
-	<div style="display: none">
-		<form id="save-photo" method="POST" action="/upload/photo">
-			<input type="file" style="width: 1em;" name="file" class="input-select-avatar invisible" id="selectAvatar">
-			<button value="send" type="submit" class="btn btn-submit loading">Загрузить</button>
-			<button class="btn info cancel-crop-avatar" type="button">Отмена</button>
-		</form>
-	</div>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
@@ -445,6 +378,38 @@
             }
         });
         feed.run();
+        var bigSlider = new Instafeed({
+            target: 'instaSlider',
+            get: 'tagged',
+            tagName: tag,
+            clientId: 'a541556dc1cc4a6ab63d72498e28801f',
+            resolution: 'low_resolution',
+            template:
+
+            '<li class="insta-slide slide-1" style="background:' +
+                'url({{image}}) no-repeat center center / cover;">'+
+                '<div class="slide-desc">'+
+                    '<div class="slide-user">{{model.user.full_name}}</div>'+
+                    '<div class="slide-description"></div>'+
+                    '<div class="slide-tags">#часстрасти #клубника</div>' +
+                '</div>' +
+            '</li>',
+
+            useHttp: true,
+            sortBy: 'none',
+            limit: 60,
+            after: function(){
+                navInit();
+            }
+        });
+        bigSlider.run();
+
+        function navInit() {
+            var elems = $('#instaSlider .insta-slide').clone().empty();
+            var parent = $('#instaNavSlider');
+            parent.append(elems);
+            jCarouselInit();
+        };       
     </script>
     <script src="js/vendor/fotorama.js"></script>
     <script>
@@ -460,7 +425,8 @@
     </script>
     <script src="js/vendor/jcarousel.js"></script>
     <script>
-        $(function(){
+        //Bounded slider for instagram photos
+        function jCarouselInit() {
             var connector = function(itemNavigation, carouselStage) {
                 return carouselStage.jcarousel('items').eq(itemNavigation.index());
             };
@@ -532,12 +498,9 @@
                 .jcarouselControl({
                     target: '+=1'
                 });
-        });
+        };
     </script>
-	
-	
 	<script src="js/libs/jquery-form.min.js"></script>
 	<script src="js/libs/upload.js"></script>
-
 </body>
 </html>

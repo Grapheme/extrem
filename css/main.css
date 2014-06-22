@@ -1060,6 +1060,9 @@ main .wrapper[data-arrow="6"]:before {
   width: 75rem;
   margin: 0 0 0 -37.5rem;
 }
+.popup.pad-popup .popup-body {
+  padding-top: 3.125rem;
+}
 .popup.photo-popup .popup-header {
   margin: 0.75rem 0 .75rem;
 }
