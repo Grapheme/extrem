@@ -87,37 +87,37 @@
                                         – клубничные страсти для ярких и темпераментных
                                     </div>
                                 </div>
-                            </div>
-                            <div class="desc-slide" data-slide="slide-2">
-                                <div class="ice-cream-head">Фисташка</div>
-                                <div class="ice-cream-body">
-                                    – дразнящая страсть для любителей запретных желаний
+                                <div class="desc-slide" data-slide="slide-2">
+                                    <div class="ice-cream-head">Фисташка</div>
+                                    <div class="ice-cream-body">
+                                        – дразнящая страсть для любителей запретных желаний
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="desc-slide" data-slide="slide-3">
-                                <div class="ice-cream-head">Тропик</div>
-                                <div class="ice-cream-body">
-                                    – тропические фантизии для тех, кто просыпается вместе
+                                <div class="desc-slide" data-slide="slide-3">
+                                    <div class="ice-cream-head">Тропик</div>
+                                    <div class="ice-cream-body">
+                                        – тропические фантизии для тех, кто просыпается вместе
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="desc-slide" data-slide="slide-4">
-                                <div class="ice-cream-head">Ямбери</div>
-                                <div class="ice-cream-body">
-                                    – страстная экзотика для искателей новых ощущений
+                                <div class="desc-slide" data-slide="slide-4">
+                                    <div class="ice-cream-head">Ямбери</div>
+                                    <div class="ice-cream-body">
+                                        – страстная экзотика для искателей новых ощущений
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="desc-slide" data-slide="slide-5">
-                                <div class="ice-cream-head">Два Шоколада</div>
-                                <div class="ice-cream-body">
-                                    – нежная страсть для ценителей традиций
+                                <div class="desc-slide" data-slide="slide-5">
+                                    <div class="ice-cream-head">Два Шоколада</div>
+                                    <div class="ice-cream-body">
+                                        – нежная страсть для ценителей традиций
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="desc-slide" data-slide="slide-6">
-                                <div class="ice-cream-head">Пломбирно-Ягодный</div>
-                                <div class="ice-cream-body">
-                                    – утончённые идеи для элегантных и страстных
+                                <div class="desc-slide" data-slide="slide-6">
+                                    <div class="ice-cream-head">Пломбирно-Ягодный</div>
+                                    <div class="ice-cream-body">
+                                        – утончённые идеи для элегантных и страстных
+                                    </div>
                                 </div>
-                            </div>
+                            </div>                            
                         </div>
                         <section class="app app-right">
                             <div id="app2" class="app-head">
@@ -179,7 +179,7 @@
                     </div>
                     <div class="popup-close"></div>
                 </div>
-                <div class="popup-body">
+                <div class="popup-body" id="popupCont">
                     <header class="popup-header">
                         <h2>Extreme советы</h2>
                         <div class="popup-headdesc">
@@ -189,7 +189,7 @@
                     </header>
                     <div class="popup-content">
                         <div class="popup-fotorama">
-                            <div class="slide slide-1">
+                            <div class="slide slide-1" data-taste="0">
                                 Доведите градус своей
                                 страсти до максимума,
                                 охладите пыл
@@ -197,24 +197,33 @@
                                 Клубника и покажите друг
                                 другу настоящий
                                 «Час страсти»!
+
                             </div>
-                            <div class="slide slide-2">
-                                Доведите градус своей
-                                страсти до максимума,
-                                охладите пыл
-                                мороженым eXtreme
-                                Клубника и покажите друг
-                                другу настоящий
-                                «Час страсти»!
+                            <div class="slide slide-2" data-taste="1">
+                                Съешьте любимый Extreme
+                                Фисташка на его глазах,
+                                дразните его. Не оставьте
+                                ни кусочка. Угостите любимого
+                                мороженным уже после
+                                «Часа Страсти».
                             </div>
-                            <div class="slide slide-3">
-                                Доведите градус своей
-                                страсти до максимума,
-                                охладите пыл
-                                мороженым eXtreme
-                                Клубника и покажите друг
-                                другу настоящий
-                                «Час страсти»!
+                            <div class="slide slide-3" data-taste="2">
+                                Возьмите кончик рожка в зубы и покормите любимого Ягодным Extreme без помощи рук.
+                            </div>
+                            <div class="slide slide-4" data-taste="3">
+                                Напишите ему страстное послание прямо на своём теле, используя лишь рожок Extreme Ямберия. Будьте кратки, но красноречивы. Позвольте ему справиться с прочитанным.
+                            </div>
+                            <div class="slide slide-5" data-taste="4">
+                                Попробуйте классический вкус Extreme Два Шоколада и сразу же порадуйте любимого особым холодным, но страстным поцелуем.
+                            </div>
+                            <div class="slide slide-6" data-taste="5">
+                                Спросите его про себя! С каждым правильным ответом двигайтесь туда, куда велит вам страсть, и угощайте его Тропическим Extreme.
+                            </div>
+                            <div class="slide slide-7" data-taste="6">
+                                Сделайте ей согревающий утренний массаж, после – аккуратно проведите мороженным Extreme Тропик по её спине, настроив на Час утренней Страсти.
+                            </div>
+                            <div class="slide slide-8" data-taste="7">
+                                Скажите, что он должен исполнить три любых ваших желания за рожок Extreme Ямбери. Пусть желания зажгут ваш «Час Страсти».
                             </div>
                         </div>                        
                     </div>
@@ -525,10 +534,21 @@
                     target: '+=1'
                 });
         };
-        $('.popup-fotorama').fotorama({
+        var $popupFotorama = $('.popup-fotorama').fotorama({
             nav: false,
-            width: '648',
+            width: '848',
+            height: '400',
+            arrows: 'always'
         });
+        var $popupFotoramaApi = $popupFotorama.data('fotorama');
+        
+        $popupFotorama.on(
+          'fotorama: show fotorama:showend',
+          function (e, fotorama, extra) {
+            var index = $('.fotorama__active .slide').data('taste');
+            $('#popupCont').attr('data-taste', index);
+          }
+        );
     </script>
 	<script src="js/libs/jquery-form.min.js"></script>
 	<script src="js/libs/upload.js"></script>
