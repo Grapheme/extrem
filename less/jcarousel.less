@@ -1,0 +1,121 @@
+/*
+This is the visible area of you carousel.
+Set a width here to define how much items are visible.
+The width can be either fixed in px or flexible in %.
+Position must be relative!
+*/
+.jcarousel,
+.jcarousel-vert {
+    position: relative;
+    overflow: hidden;
+}
+
+.jcarousel-vert {
+    position: absolute;
+    top: 10.45rem;
+    bottom: 52rem / @htmlFontSize;
+    right: 8rem / @htmlFontSize;
+    width: 125rem / @htmlFontSize;
+}
+
+.jcarousel-vert li {
+    position: relative;
+    width: 125rem / @htmlFontSize;
+    height: 125rem / @htmlFontSize;
+    border-bottom: 10rem / @htmlFontSize solid transparent;
+    cursor: pointer;
+
+    &:before {
+        .transition;
+        content: '';
+        .box-sizing;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 4rem / @htmlFontSize solid transparent;
+    }
+
+    &.active {
+        &:before {
+            border-color: #fff;
+        }
+    }
+}
+
+.jcarousel-vert-control {
+    .transition;
+    position: absolute;
+    display: inline-block;
+    width: 125rem / @htmlFontSize;
+    height: 28rem / @htmlFontSize;
+
+    line-height: 26rem / @htmlFontSize;
+    background: #cd094e;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+
+    &:hover {
+        background: lighten(#cd094e, 10%)
+    }
+}
+.jcarousel-vert-control-prev {
+    top: 123rem / @htmlFontSize;
+    right: 8rem / @htmlFontSize;
+}
+.jcarousel-vert-control-next {
+    bottom: 8rem / @htmlFontSize;
+    right: 8rem / @htmlFontSize;
+}
+
+/*
+This is the container of the carousel items.
+You must ensure that the position is relative or absolute and
+that the width is big enough to contain all items.
+*/
+.jcarousel ul,
+.jcarousel-vert ul {
+    width: 20000em;
+    position: relative;
+
+    /* Optional, required in this case since it's a <ul> element */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+These are the item elements. jCarousel works best, if the items
+have a fixed width and height (but it's not required).
+*/
+.jcarousel li {
+    /* Required only for block elements like <li>'s */
+    float: left;
+    border: 21rem / @htmlFontSize 21rem / @htmlFontSize 92rem / @htmlFontSize 21rem / @htmlFontSize;
+}
+
+.jcarousel-control {
+    .transition;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 31rem / @htmlFontSize;
+    height: 57rem / @htmlFontSize;
+    margin: 0 -57rem / 2 / @htmlFontSize;
+    outline: none !important;
+
+    &:hover {
+        opacity: .75;
+    }
+}
+.jcarousel-control-prev {
+    left: 25%;
+    background: url(../img/popups/arrows/left01.png) no-repeat 0 0 e('/') 100% 100%;   
+}
+
+.jcarousel-control-next {
+    right: 25%;
+    background: url(../img/popups/arrows/right01.png) no-repeat 0 0 e('/') 100% 100%;
+}
