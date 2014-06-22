@@ -122,12 +122,15 @@ main {
 
 	&.app-left {
 		float: left;
+		color: transparent;
 
 		.app-footer {
-			background: #f39200;
+			.transition;
+			background: url(../img/button01.jpg) no-repeat 0 0 e('/') 100% 100% #f39200;
+			box-shadow: 0 1px 2px 0 #222;
 
 			&:hover {
-				background: lighten(#f39200, 10%)
+				opacity: .85;
 			}
 		}
 
@@ -164,10 +167,13 @@ main {
 		}
 
 		.app-footer {
-			background: #004899;
+			.transition;
+			background: url(../img/button02.jpg) no-repeat 0 0 e('/') 100% 100% #004899;
+			box-shadow: 0 1px 2px 0 #222;
+			color: transparent;
 
 			&:hover {
-				background: lighten(#004899, 10%)
+				opacity: .85;
 			}
 		}
 	}

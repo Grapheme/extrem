@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Час Страсти</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -39,7 +39,7 @@
                                 
                             </div>                    
                             <footer class="app-footer">
-                                <a id="photo__popup" href="app.php">Приложение</a>
+                                <a id="photo__popup" target="_blank" href="http://mamba.ru/promo/extreme.phtml">Приложение</a>
                             </footer>
                         </section>
                         <div class="ice-cream-slider">
@@ -126,7 +126,7 @@
                                 <div class="app-tag">на нашем сайте</div>
                             </div>                    
                             <footer class="app-footer">
-                                <a href="http://mamba.ru/promo/extreme.phtml" target="_blank">Приложение</a>
+                                <a href="app.php" target="_blank">Приложение</a>
                             </footer>
                         </section>
                     </div>
@@ -160,7 +160,7 @@
                             <a href="http://vk.com/extremenestle" target="_blank"><span class="icon icon-vkontakte-rect"></span> vk.com/extremenestle</a>
                         </div>
                         <div class="feedback">
-                            <a href="#">обратная связь</a>
+                            <a href="mailto:hourofpassion@gmail.com">обратная связь</a>
                         </div>
                     </footer>
                 </div>
