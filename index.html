@@ -173,7 +173,6 @@
             </main>
         </div>
         <div class="overlay">
-            <!--
             <div class="popup advice-popup">
                 <div class="popup-head">
                     <div class="mini-logo"></div>
@@ -217,8 +216,7 @@
                     </footer>
                 </div>
             </div>
-            -->
-            <!--
+
             <div class="popup advice-popup">
                 <div class="popup-head">
                     <div class="mini-logo"></div>
@@ -307,7 +305,46 @@
                     </div>
                 </div>
             </div>
-            -->
+            <div class="popup photo-popup hidden">
+                <div class="popup-head">
+                    <div class="mini-logo"></div>
+                    <div class="mini-slider">
+                        <div class="slide slide-1" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
+                            <div class="mini-desc">Клубника</div>
+                        </div>
+                        <div class="arr arr__left"><span class="icon icon-left-dir"></span></div>
+                        <div class="arr arr__right"><span class="icon icon-right-dir"></span></div>
+                    </div>
+                    <div class="popup-close"></div>
+                </div>
+                <div class="popup-body">
+                    <header class="popup-header">
+                        <h2>#Часстрасти</h2>
+                        <div class="popup-headdesc">
+                            Ваши фотографии из инстаграм<br>
+                            с хэштегом #часстрасти
+                        </div>
+                    </header>
+                    <div class="popup-content">
+                        <div class="instaphoto-slider jcarousel">
+                            <ul id="instaSlider">
+                            </ul>
+                        </div>
+                        <a href="#" class="jcarousel-control jcarousel-control-prev"></a>
+                        <a href="#" class="jcarousel-control jcarousel-control-next"></a>                        
+                    </div>
+                </div>                
+                <div class="instaphoto-slider-vertical jcarousel-vert">
+                    <ul id="instaNavSlider">
+                    </ul> 
+                </div>                
+                <a href="#" class="jcarousel-vert-control jcarousel-vert-control-prev">
+                    <span class="icon icon-up-dir"></span>
+                </a>
+                <a href="#" class="jcarousel-vert-control jcarousel-vert-control-next">
+                    <span class="icon icon-down-dir"></span>
+                </a>
+            </div>
             <div class="popup advice-popup">
                 <div class="popup-head">
                     <div class="mini-logo"></div>
@@ -352,6 +389,38 @@
                 }
             });
             feed.run();
+            var bigSlider = new Instafeed({
+                target: 'instaSlider',
+                get: 'tagged',
+                tagName: tag,
+                clientId: 'a541556dc1cc4a6ab63d72498e28801f',
+                resolution: 'low_resolution',
+                template:
+
+                '<li class="insta-slide slide-1" style="background:' +
+                    'url({{image}}) no-repeat center center / cover;">'+
+                    '<div class="slide-desc">'+
+                        '<div class="slide-user">{{model.user.full_name}}</div>'+
+                        '<div class="slide-description"></div>'+
+                        '<div class="slide-tags">#часстрасти #клубника</div>' +
+                    '</div>' +
+                '</li>',
+
+                useHttp: true,
+                sortBy: 'none',
+                limit: 60,
+                after: function(){
+                    navInit();
+                }
+            });
+            bigSlider.run();
+
+            function navInit() {
+                var elems = $('#instaSlider .insta-slide').clone().empty();
+                var parent = $('#instaNavSlider');
+                parent.append(elems);
+                jCarouselInit();
+            };       
         </script>
         <script src="js/vendor/fotorama.js"></script>
         <script>
@@ -370,6 +439,83 @@
             Dropzone.options.dropzone = {
                 dictDefaultMessage: '<span class="drop-text">Загрузите вашу фотографию</span>'
             }
+        </script>
+        <script src="js/vendor/jcarousel.js"></script>
+        <script>
+            //Bounded slider for instagram photos
+            function jCarouselInit() {
+                var connector = function(itemNavigation, carouselStage) {
+                    return carouselStage.jcarousel('items').eq(itemNavigation.index());
+                };
+                var mainCarousel = $('.jcarousel').jcarousel({
+
+                });
+                var navCarousel = $('.jcarousel-vert').jcarousel({
+                    vertical: true
+                });
+                navCarousel.jcarousel('items').each(function() {
+                    var item = $(this);
+
+                    // This is where we actually connect to items.
+                    var target = connector(item, mainCarousel);
+
+                    item
+                        .on('jcarouselcontrol:active', function() {
+                            navCarousel.jcarousel('scrollIntoView', this);
+                            item.addClass('active');
+                        })
+                        .on('jcarouselcontrol:inactive', function() {
+                            item.removeClass('active');
+                        })
+                        .jcarouselControl({
+                            target: target,
+                            carousel: mainCarousel
+                        });
+                });
+                $('.jcarousel-control-prev')
+                    .on('jcarouselcontrol:active', function() {
+                        $(this).removeClass('inactive');
+                    })
+                    .on('jcarouselcontrol:inactive', function() {
+                        $(this).addClass('inactive');
+                    })
+                    .jcarouselControl({
+                        target: '-=1'
+                    });
+                /* Main Carousel Controls */
+                $('.jcarousel-control-next')
+                    .on('jcarouselcontrol:active', function() {
+                        $(this).removeClass('inactive');
+                    })
+                    .on('jcarouselcontrol:inactive', function() {
+                        $(this).addClass('inactive');
+                    })
+                    .jcarouselControl({
+                        target: '+=1'
+                    });
+
+                $('.jcarousel-vert-control-prev')
+                    .on('jcarouselcontrol:inactive', function() {
+                        $(this).addClass('inactive');
+                    })
+                    .on('jcarouselcontrol:active', function() {
+                        $(this).removeClass('inactive');
+                    })
+                    .jcarouselControl({
+                        target: '-=1'
+                    });
+                /* Nav Carousel Controls */
+                $('.jcarousel-vert-control-next')
+                    .on('jcarouselcontrol:inactive', function() {
+                        $(this).addClass('inactive');
+                    })
+                    .on('jcarouselcontrol:active', function() {
+                        $(this).removeClass('inactive');
+                    })
+                    .jcarouselControl({
+                        target: '+=1'
+                    });
+            };
         </script>
     </body>
 </html>
