@@ -69,4 +69,8 @@ var Slider = (function(){
 	};
 })();
 
+var Popup = (function(){
+	
+});
+
 Slider.init();
