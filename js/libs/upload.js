@@ -143,8 +143,7 @@ if(upload !== null){
 $(function(){
 	$("#select-image").click(function(){
 		uploadImage.changeStatus = false;
-		$("form.form-save-avatar").find("input:hidden").val('');
-		$("form.form-save-avatar").find('input.input-select-avatar').click();
+		$("#selectPhoto").click();
 	});
 	$("a.a-change-uploading-image").click(function(){
 		if($("div.msg-alert").exists() == true){
