@@ -27,8 +27,39 @@
 			background: url(../img/extreme.png) no-repeat 0 center e('/') 100% auto;
 		}
 		.mini-slider {
+			position: absolute;
+			top: 0;
+			bottom: -6rem / @htmlFontSize;
+			left: 50%;
+			width: 200rem / @htmlFontSize;
+			margin: 0 0 0 -100rem / @htmlFontSize;
 
-			
+			background: url(../img/popups/mini01.png) no-repeat center 0 e('/') auto 100%;
+
+			.arr {
+				position: absolute;
+				top: 62rem / @htmlFontSize;
+				color: #cd094e;
+				font-size: 1.185em;
+
+				&.arr__left {
+					left: 0;	
+				}
+				&.arr__right {
+					right: 0;
+				}
+			}
+
+			.mini-desc {
+				position: absolute;
+				top: 67rem / @htmlFontSize;
+				left: 0;
+				width: 100%;
+				text-align: center;
+				font-size: 18.59em / @htmlFontSize;
+				line-height: 15.85em / 18.59;
+				text-transform: uppercase;
+			}
 		}
 		.popup-close {
 			position: absolute;
@@ -43,5 +74,49 @@
 	.popup-body {
 		border: 3px solid #cd094e;
 	}
+	.popup-header {
+		text-align: center;
+		margin: 12rem / @htmlFontSize 0 77rem / @htmlFontSize;
+
+		h2 {
+			margin: 0;
+			font-size: 24em / @htmlFontSize;
+			line-height: 52em / 24;
+			text-transform: uppercase;
+			font-weight: normal;
+		}
+
+		.popup-headdesc {
+			width: 260rem / @htmlFontSize;
+			font-size: 14em / @htmlFontSize;
+			line-height: 1em;
+			display: inline-block;
+		}
+	}
+	.popup-content {
+		
+		.slide {
+			width: 648rem / @htmlFontSize;
+			margin: 0 auto 77rem / @htmlFontSize;
+			font-size: 48em / @htmlFontSize;
+			line-height: 47em / 48;
+			color: #cd094e;
+			text-align: center;
+			font-weight: 300;
+		}
+
+	}
+	.popup-footer {
+		text-align: center;
+
+		.yashare-auto-init {
+			display: inline-block;
+			margin: 40rem / @htmlFontSize 0;
+			padding: 5rem / @htmlFontSize 0;
+		}
+	}
 }
+
+
+
 
