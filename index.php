@@ -411,7 +411,7 @@
         </div>
     </div>
 	<div style="display: none">
-		<form class="form-save-avatar" method="POST" action="http://universiality.dev/user/profile/upload/photo">
+		<form id="save-photo" method="POST" action="/upload/photo">
 			<input type="file" style="width: 1em;" name="file" class="input-select-avatar invisible" id="selectAvatar">
 			<button value="send" type="submit" class="btn btn-submit loading">Загрузить</button>
 			<button class="btn info cancel-crop-avatar" type="button">Отмена</button>
