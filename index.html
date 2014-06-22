@@ -172,8 +172,8 @@
                 </div>
             </main>
         </div>
-        <div class="overlay hidden">
-            <div class="popup advice-popup hidden">
+        <div class="overlay">
+            <div class="popup advice-popup">
                 <div class="popup-head">
                     <div class="mini-logo"></div>
                     <div class="mini-slider">
@@ -216,7 +216,8 @@
                     </footer>
                 </div>
             </div>
-            <div class="popup advice-popup hidden">
+
+            <div class="popup advice-popup">
                 <div class="popup-head">
                     <div class="mini-logo"></div>
                     <div class="mini-slider">
@@ -344,6 +345,21 @@
                     <span class="icon icon-down-dir"></span>
                 </a>
             </div>
+            <div class="popup advice-popup">
+                <div class="popup-head">
+                    <div class="mini-logo"></div>
+                    <div class="popup-close"></div>
+                </div>
+                <div class="popup-body clearfix">
+                    <div class="photo-border">
+                        <img src="http://photos-g.ak.instagram.com/hphotos-ak-xpf1/891407_871997296147198_24578230_n.jpg" alt="Час Страсти" />
+                        <div class="photo-frame"> </div>
+                        <div class="photo-logo"> </div>
+                    </div>
+                    <a href="#" class="photo-save">Сохранить</a>
+                    <a href="#" class="photo-upload-link">Загрузить другую фотографию</a>
+                </div>
+            </div>
         </div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
@@ -373,7 +389,6 @@
                 }
             });
             feed.run();
-
             var bigSlider = new Instafeed({
                 target: 'instaSlider',
                 get: 'tagged',
@@ -405,7 +420,7 @@
                 var parent = $('#instaNavSlider');
                 parent.append(elems);
                 jCarouselInit();
-            };            
+            };       
         </script>
         <script src="js/vendor/fotorama.js"></script>
         <script>

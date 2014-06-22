@@ -187,12 +187,12 @@
 
 			.list-title {
 				color: #fff;
-				height: 23px;
+				height: 23rem / @htmlFontSize;
 				text-align: center;
-				font-size: 14px;
-				line-height: 21px;
+				font-size: 14em / @htmlFontSize;
+				line-height: 21rem / @htmlFontSize;
 				background: url('../img/popups/frame.png') center top no-repeat;
-				margin: 0 0 25px;
+				margin: 0 0 25rem / @htmlFontSize;
 			}
 			ul {
 				margin: 0;
@@ -203,7 +203,7 @@
 				margin: 0 0 50rem / @htmlFontSize;
 			}
 			ul li h3 {
-				font-size: 30px;
+				font-size: 30em / @htmlFontSize;
 				line-height: 1em;
 				font-weight: 400;
 				margin: 0;
@@ -218,14 +218,58 @@
 				.list-author {
 					display: inline-block;
 					float: left;
-					margin: 0 0 0 7px;
+					margin: 0 0 0 7rem / @htmlFontSize;
 				}
 				.list-date {
 					display: inline-block;
 					float: right;
-					margin: 0 7px 0 0;
+					margin: 0 7rem / @htmlFontSize 0 0;
 				}
 			}
+		}
+		.photo-border {
+			position: relative;
+			margin: 0 auto 240rem / @htmlFontSize;
+			width: 600rem / @htmlFontSize;
+			height: 610rem / @htmlFontSize;
+			top: 203rem / @htmlFontSize;
+			left: 0;
+			img { max-width: 100%; }
+			.photo-frame {
+				background: url('../img/popups/border.png') 0 0 no-repeat;
+				width: 789rem / @htmlFontSize;
+				height: 819rem / @htmlFontSize;
+				position: absolute;
+				top: -203rem / @htmlFontSize;
+				left: -123rem / @htmlFontSize;
+			}
+			.photo-logo {
+				position: absolute;
+				top: 20rem / @htmlFontSize;
+				left: 20rem / @htmlFontSize;
+				width: 150rem / @htmlFontSize;
+				height: 66rem / @htmlFontSize;
+				background: url('../img/popups/logo.png') 0 0 no-repeat;
+			}
+		}
+		.photo-save {
+			display: block;
+			height: 74rem / @htmlFontSize;
+			width: 640rem / @htmlFontSize;
+			margin: 0 auto 28rem / @htmlFontSize;
+			background: #cd094e;
+			color: #fff;
+			line-height: 74rem / @htmlFontSize;
+			font-size: 24em / @htmlFontSize;
+			text-decoration: none;
+			text-align: center;
+		}
+		.photo-upload-link {
+			color: #fff;
+			font-size: 14em / @htmlFontSize;
+			text-align: center;
+			display: block;
+			margin: 0 0 30rem / @htmlFontSize;
 		}
 	}
 	.popup-header {
