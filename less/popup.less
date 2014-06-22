@@ -1,5 +1,5 @@
 .overlay {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -42,6 +42,100 @@
 	}
 	.popup-body {
 		border: 3px solid #cd094e;
+		padding: 50rem / @htmlFontSize;
+
+		.column-content { 
+			width: 695rem / @htmlFontSize;
+			float: left;
+			margin: 0 55rem / @htmlFontSize 0 0;
+			.content-image {
+				width: 695rem / @htmlFontSize;
+				height: 478rem / @htmlFontSize;
+				overflow: hidden;
+				position: relative;
+				margin: 0 0 50rem / @htmlFontSize;
+				img {
+					width: 100%;
+				}
+				.content-title {
+					position: absolute;
+					top: 310rem / @htmlFontSize;
+					text-transform: uppercase;
+					font-size: 42em / @htmlFontSize;
+					text-align: center;
+					line-height: 1em;
+				}
+				.content-info {
+					position: absolute;
+					bottom: 20rem / @htmlFontSize;
+					background-color: #cd094e;
+					height: 40rem / @htmlFontSize;;
+					width: 400rem / @htmlFontSize;;
+					line-height: 40rem / @htmlFontSize;;
+					font-size: 21em / @htmlFontSize;;
+					color: #fff;
+					text-align: center;
+					left: 50%;
+					margin-left: -200rem / @htmlFontSize;;
+					.content-author {
+						display: inline-block;
+						margin: 0 15rem / @htmlFontSize 0 0;
+					}
+				}
+			}
+			.content-text p {
+				font-size: 18px;
+			}
+			.content-social {
+				margin: 55rem / @htmlFontSize 0 0;
+			}
+		}
+		.column-list {
+			width: 325rem / @htmlFontSize;
+			float: left;
+
+			.list-title {
+				color: #fff;
+				height: 23px;
+				text-align: center;
+				font-size: 14px;
+				line-height: 21px;
+				background: url('../img/popups/frame.png') center top no-repeat;
+				margin: 0 0 25px;
+			}
+			ul {
+				margin: 0;
+				padding: 0;
+			}
+			ul li {
+				list-style: none;
+				margin: 0 0 50rem / @htmlFontSize;
+			}
+			ul li h3 {
+				font-size: 30px;
+				line-height: 1em;
+				font-weight: 400;
+				margin: 0;
+			}
+			.list-item-info {
+				height: 27rem / @htmlFontSize;
+				line-height: 27rem / @htmlFontSize;
+				background-color: #cd094e;
+				color: #fff;
+				font-size: 14em / @htmlFontSize;
+				margin: 8rem / @htmlFontSize 0 0;
+				.list-author {
+					display: inline-block;
+					float: left;
+					margin: 0 0 0 7px;
+				}
+				.list-date {
+					display: inline-block;
+					float: right;
+					margin: 0 7px 0 0;
+				}
+			}
+		}
 	}
 }
 
