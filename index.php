@@ -133,7 +133,7 @@
                     <ul class="bot-links">
                         <li id="advices" class="bot-link bot-link_b advices">
                             <section>
-                                <header>Топ самых<br>страстных фильмов</header>
+                                <header>Доведите градус своей<br/>страсти до максимума...</header>
                                 <a href="#"></a>
                                 <footer>eXtreme советы</footer>
                             </section>
@@ -145,7 +145,7 @@
                             </section>
                         <li id="bloggers" class="bot-link bot-link_b bloggers">
                             <section>
-                                <header>Учим аргентинское<br>танго</header>
+                                <header>Сергей Судариков</header>
                                 <a href="#"></a>
                                 <footer>eXtreme блоггеры</footer>
                             </section>
