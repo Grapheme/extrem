@@ -84,7 +84,7 @@ uploadImage.setProgress = function(value,show){
 		$("#uploadprogressbar").addClass('hidden');
 	}
 }
-var upload = document.getElementById('selectAvatar');
+var upload = document.getElementById('selectPhoto');
 if(upload !== null){
 	upload.onchange = function(e){
 		e.preventDefault();
@@ -95,47 +95,14 @@ if(upload !== null){
 					var img = new Image();
 					img.src = event.target.result;
 					img.onload = function(){
-						var img_width = img.width;
-						var img_height = img.height;
-						uploadImage.half_resolution = 1;
-						if(img_width >= img_height){
-								uploadImage.half_resolution = Math.round(img_width/uploadImage.minSize);
-						}else{
-							uploadImage.half_resolution = Math.round(img_height/uploadImage.minSize);
-						}
-						img_width = Math.round(img_width/uploadImage.half_resolution);
-						img_height = Math.round(img_height/uploadImage.half_resolution);
-						$("#HolderAvatar").append(img).css({width:img_width,height:img_height});
-						uploadImage.center_x = Math.round(img_width/2);
-						uploadImage.center_y = Math.round(img_height/2);
-						$("#HolderAvatar img").Jcrop({
-							setSelect: [uploadImage.center_x-200,uploadImage.center_y-200,uploadImage.center_x+200,uploadImage.center_y+200],
-							onChange: updatePreview,
-							onSelect: updatePreview,
-							bgOpacity: 0.5,
-							aspectRatio:xsize/ysize,
-						},function(){
-							var bounds = this.getBounds();
-							boundx = bounds[0];
-							boundy = bounds[1];
-							uploadImage.jcrop_api = this;
-							$(preview).appendTo(uploadImage.jcrop_api.ui.holder);
-							$(preview).find("div.preview-container").empty().append(img);
-							$(preview).find("div.preview-container img").css({display:'block',visibility:'visible'});
-							$(".crop-change-avatar").removeClass('invisible');
-							uploadImage.jcrop_api.animateTo([uploadImage.center_x-200,uploadImage.center_y-200,uploadImage.center_x+200,uploadImage.center_y+200]);
-						})
+						$("#HolderPhoto").append(img);
+						$("#load-overlay").removeClass('hidden');
+						$("#load-photo").removeClass('hidden');
 					}
 				};
 				reader.readAsDataURL(file);
 				return false;
-			}else{
-				$("#uploadprogress").addClass('hidden').html(0);
-				$("div.div-select-uploading-image").removeClass('hidden').after('<div class="msg-alert error">Размер более 15Мб</div>');
 			}
-		}else{
-			$("#uploadprogress").addClass('hidden').html(0);
-			$("div.div-select-uploading-image").removeClass('hidden').after('<div class="msg-alert error">Формат файла не поддерживается</div>');
 		}
 	};
 }
@@ -143,10 +110,8 @@ $(function(){
 	$(".select-image").click(function(){
 		$("#selectPhoto").click();
 	});
-	$("form.form-save-avatar .btn-submit").click(function(event){
-		$(this).addClass('loading');
-		refreshCropBox();
-		$("form.form-save-avatar").ajaxSubmit(uploadImage.singlePhotoOption);
+	$("#form-photo-save button").click(function(event){
+		$("#form-photo-save").ajaxSubmit(uploadImage.singlePhotoOption);
 		return false;
 	});
 });

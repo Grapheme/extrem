@@ -159,7 +159,7 @@
             </div>
         </main>
     </div>
-    <div class="overlay hidden">
+    <div id="load-overlay" class="overlay hidden">
         <div class="popup advice-popup hidden">
                 <div class="popup-head">
                     <div class="mini-logo"></div>
@@ -331,14 +331,14 @@
                     <span class="icon icon-down-dir"></span>
                 </a>
             </div>
-        <div class="popup advice-popup pad-popup hidden">
+        <div id="load-photo" class="popup advice-popup pad-popup hidden">
                 <div class="popup-head">
                     <div class="mini-logo"></div>
                     <div class="popup-close"></div>
                 </div>
                 <div class="popup-body clearfix">
                     <div class="photo-border">
-                        <img src="http://photos-g.ak.instagram.com/hphotos-ak-xpf1/891407_871997296147198_24578230_n.jpg" alt="Час Страсти" />
+                    	<div id="HolderPhoto"></div>
                         <div class="photo-frame"> </div>
                         <div class="photo-logo"> </div>
                     </div>
