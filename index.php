@@ -571,7 +571,7 @@
                 </div>
                 <form id="form-photo-save" method="POST" action="upload.php">
 					<input type="file" style="width: 1em;" name="file" class="input-photo invisible" id="selectPhoto">
-					<button value="send" type="submit" class="photo-save">Сохранить</button>
+					<button value="send" type="submit" class="photo-save">Отправить</button>
 				</form>
                 <a href="javascript:void(0);" class="photo-upload-link select-image">Загрузить другую фотографию</a>
             </div>
