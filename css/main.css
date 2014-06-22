@@ -849,15 +849,29 @@ main .wrapper[data-arrow="6"]:before {
   color: #adacac;
   font-weight: 100;
 }
+.app-container .app-window .app-upload .upload-zone .upload-prog {
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: url(../img/application/upload-prog.jpg) repeat-x;
+  z-index: 5;
+}
 .app-container .app-window .app-screen {
   position: relative;
   z-index: 2;
   width: 37.5rem;
   height: 50rem;
   background: url(../img/application/app-screen.jpg);
+  overflow: hidden;
   -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+}
+.app-container .app-window .app-screen img {
+  min-height: 100%;
+  min-width: 100%;
 }
 .app-nav {
   text-align: center;
@@ -942,8 +956,8 @@ main .wrapper[data-arrow="6"]:before {
   opacity: 0;
 }
 .app-nav .ice-item .ice-name {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
   position: absolute;
   left: 4.0625rem;
   line-height: 4.6875rem;
@@ -955,9 +969,8 @@ main .wrapper[data-arrow="6"]:before {
   vertical-align: middle;
 }
 .app-nav .ice-item.active .ice-cream {
-  -webkit-transform: scale(1.1) rotate(20deg);
-  transform: scale(1.1) rotate(20deg);
-  margin-left: -0.625rem;
+  -webkit-transform: scale(1.1) rotate(20deg) translateX(-0.3125rem);
+  transform: scale(1.1) rotate(20deg) translateX(-0.3125rem);
 }
 .app-nav .ice-item.active:after {
   opacity: 1;
@@ -968,6 +981,8 @@ main .wrapper[data-arrow="6"]:before {
   left: 4.375rem;
 }
 .app-nav .ice-cream {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   position: relative;
   display: inline-block;
   width: 3.0625rem;

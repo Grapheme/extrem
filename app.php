@@ -31,12 +31,13 @@
                 <div class="app-window">
                     <div class="app-upload">
                         <a href="#" class="upload-zone">
-                            <span class="upload-prog">Загрузите сюда фотографию</span>
+                            <span class="upload-prog" style="width: 20%;"></span>
                             Загрузите сюда фотографию
                         </a>
                         <a href="#" class="upload-btn">Загрузить</a>
                     </div>
                     <div class="app-screen">
+                        <img src="img/application/test.jpg">
                     </div>
                 </div>
                 <div class="app-nav">
