@@ -70,7 +70,58 @@ var Slider = (function(){
 })();
 
 var Popup = (function(){
-	
-});
+	var $popup_1 = $('[data-popup="1"]'),
+		$popup_2 = $('[data-popup="2"]'),
+		$popup_3 = $('[data-popup="3"]'),
+		$popup_4 = $('[data-popup="4"]'),
+		$close = $('.popup-close'),
+		$overlay = $('.overlay'),
+		$popupArr = $('.popup'),
+		$mainWrapper = $('.main-wrapper'),
+
+		$photoTrggr = $('#app'),
+		$advicesTrggr = $('#advices'),
+		$eventsTrggr = $('#events'),
+		$bloggers = $('#bloggers');
+
+	function openPopup(elem) {
+		$overlay.removeClass('hidden');
+		elem.removeClass('hidden').addClass('active');
+		setTimeout( function(){
+			var $height1 = $('.popup.active .column-content').height() + 430;
+			var $height2 = $mainWrapper.height();
+			var finishHeight = ($height1 >= $height2)? $height1: $height2;
+			$overlay.height( finishHeight );
+			$mainWrapper.height( finishHeight );
+		}, 100);
+	}
+	function closePopup() {
+		$overlay.addClass('hidden').removeAttr('style');
+		$mainWrapper.removeAttr('style');
+		$popupArr.addClass('hidden');
+	}
+	function alignOverlay() {
+
+	}
+
+	$(document).on('click', '#app, #app2', function(){
+		openPopup($popup_3);
+	});
+	$(document).on('click', '#advices', function(){
+		openPopup($popup_1);
+	});
+	$(document).on('click', '#events', function(){
+		openPopup($popup_1);
+	});
+	$(document).on('click', '#bloggers', function(){
+		openPopup($popup_2);
+	});
+	$(document).on('click', '.popup', function(e){
+		e.stopPropagation();
+	});
+	$(document).on('click', '.popup-close, .overlay', function(){
+		closePopup();
+	});
+})();
 
 Slider.init();

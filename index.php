@@ -36,10 +36,10 @@
                     <div class="top clearfix">
                         <section class="app app-left">
                             <div id="app" class="app-head fotorama" data-auto="false">
-
+                                
                             </div>                    
                             <footer class="app-footer">
-                                <a href="#">Приложение</a>
+                                <a id="photo__popup" href="app.php">Приложение</a>
                             </footer>
                         </section>
                         <div class="ice-cream-slider">
@@ -120,30 +120,30 @@
                             </div>
                         </div>
                         <section class="app app-right">
-                            <div class="app-head">
+                            <div id="app2" class="app-head">
                                 <img class="app-bg" src="img/apps/02.jpg" alt="">
                                 <header>Анна<br>Межиковская</header>
                                 <div class="app-tag">на нашем сайте</div>
                             </div>                    
                             <footer class="app-footer">
-                                <a href="#">Приложение</a>
+                                <a href="http://mamba.ru/promo/extreme.phtml" target="_blank">Приложение</a>
                             </footer>
                         </section>
                     </div>
                     <ul class="bot-links">
-                        <li class="bot-link bot-link_b advices">
+                        <li id="advices" class="bot-link bot-link_b advices">
                             <section>
                                 <header>Топ самых<br>страстных фильмов</header>
                                 <a href="#"></a>
                                 <footer>eXtreme советы</footer>
                             </section>
-                        <li class="bot-link bot-link_m events">
+                        <li id="events" class="bot-link bot-link_m events">
                             <section>
                                 <header>Презентации<br>нового вкуса<br>eXtreme</header>
                                 <a href="#"></a>
                                 <footer>события</footer>
                             </section>
-                        <li class="bot-link bot-link_b bloggers">
+                        <li id="bloggers" class="bot-link bot-link_b bloggers">
                             <section>
                                 <header>Учим аргентинское<br>танго</header>
                                 <a href="#"></a>
@@ -173,7 +173,7 @@
             </main>
         </div>
         <div class="overlay hidden">
-            <div class="popup advice-popup hidden">
+            <div class="popup advice-popup hidden" data-popup="1">
                 <div class="popup-head">
                     <div class="mini-logo"></div>
                     <div class="mini-slider">
@@ -216,8 +216,7 @@
                     </footer>
                 </div>
             </div>
-
-            <div class="popup advice-popup pad-popup hidden">
+            <div class="popup advice-popup pad-popup hidden" data-popup="2">
                 <div class="popup-head">
                     <div class="mini-logo"></div>
                     <div class="mini-slider">
@@ -305,7 +304,7 @@
                     </div>
                 </div>
             </div>
-            <div class="popup photo-popup hidden">
+            <div class="popup photo-popup hidden" data-popup="3">
                 <div class="popup-head">
                     <div class="mini-logo"></div>
                     <div class="mini-slider">
@@ -345,7 +344,7 @@
                     <span class="icon icon-down-dir"></span>
                 </a>
             </div>
-            <div class="popup advice-popup pad-popup hidden">
+            <div class="popup advice-popup pad-popup hidden" data-popup="4">
                 <div class="popup-head">
                     <div class="mini-logo"></div>
                     <div class="popup-close"></div>
@@ -375,7 +374,7 @@
         <script src="js/main.js"></script>
         <script src="js/vendor/instafeed.min.js"></script>
         <script type="text/javascript">
-            var tag = 'girl';
+            var tag = 'часстрасти';
             var feed = new Instafeed({
                 target: 'app',
                 get: 'tagged',
@@ -397,6 +396,7 @@
                 }
             });
             feed.run();
+
             var bigSlider = new Instafeed({
                 target: 'instaSlider',
                 get: 'tagged',
@@ -410,7 +410,7 @@
                     '<div class="slide-desc">'+
                         '<div class="slide-user">{{model.user.full_name}}</div>'+
                         '<div class="slide-description"></div>'+
-                        '<div class="slide-tags">#часстрасти #клубника</div>' +
+                        '<div class="slide-tags">#часстрасти</div>' +
                     '</div>' +
                 '</li>',
 
