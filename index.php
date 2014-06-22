@@ -87,35 +87,35 @@
                                         – клубничные страсти для ярких и темпераментных
                                     </div>
                                 </div>
-                                <div class="desc-slide" data-slide="slide-2">
-                                    <div class="ice-cream-head">Фисташка</div>
-                                    <div class="ice-cream-body">
-                                        – дразнящая страсть для любителей запретных желаний
-                                    </div>
+                            </div>
+                            <div class="desc-slide" data-slide="slide-2">
+                                <div class="ice-cream-head">Фисташка</div>
+                                <div class="ice-cream-body">
+                                    – дразнящая страсть для любителей запретных желаний
                                 </div>
-                                <div class="desc-slide" data-slide="slide-3">
-                                    <div class="ice-cream-head">Тропик</div>
-                                    <div class="ice-cream-body">
-                                        – тропические фантизии для тех, кто просыпается вместе
-                                    </div>
+                            </div>
+                            <div class="desc-slide" data-slide="slide-3">
+                                <div class="ice-cream-head">Тропик</div>
+                                <div class="ice-cream-body">
+                                    – тропические фантизии для тех, кто просыпается вместе
                                 </div>
-                                <div class="desc-slide" data-slide="slide-4">
-                                    <div class="ice-cream-head">Ямбери</div>
-                                    <div class="ice-cream-body">
-                                        – страстная экзотика для искателей новых ощущений
-                                    </div>
+                            </div>
+                            <div class="desc-slide" data-slide="slide-4">
+                                <div class="ice-cream-head">Ямбери</div>
+                                <div class="ice-cream-body">
+                                    – страстная экзотика для искателей новых ощущений
                                 </div>
-                                <div class="desc-slide" data-slide="slide-5">
-                                    <div class="ice-cream-head">Два Шоколада</div>
-                                    <div class="ice-cream-body">
-                                        – нежная страсть для ценителей традиций
-                                    </div>
+                            </div>
+                            <div class="desc-slide" data-slide="slide-5">
+                                <div class="ice-cream-head">Два Шоколада</div>
+                                <div class="ice-cream-body">
+                                    – нежная страсть для ценителей традиций
                                 </div>
-                                <div class="desc-slide" data-slide="slide-6">
-                                    <div class="ice-cream-head">Пломбирно-Ягодный</div>
-                                    <div class="ice-cream-body">
-                                        – утончённые идеи для элегантных и страстных
-                                    </div>
+                            </div>
+                            <div class="desc-slide" data-slide="slide-6">
+                                <div class="ice-cream-head">Пломбирно-Ягодный</div>
+                                <div class="ice-cream-body">
+                                    – утончённые идеи для элегантных и страстных
                                 </div>
                             </div>
                         </div>
@@ -150,13 +150,7 @@
                                 <footer>eXtreme блоггеры</footer>
                             </section>
                     </ul>
-                    <form action="/file-upload"
-                          class="dropzone"
-                          id="dropzone">
-                        <div class="fallback">
-                            <input name="file" type="file" multiple />
-                        </div>
-                    </form>
+                    <a class="select-image" href="javascript:void(0);">Загрузите вашу фотографию</a>
                     <footer class="main-footer">
                         <div class="hot-line">
                             <span>горячая линия</span>
@@ -172,7 +166,7 @@
                 </div>
             </main>
         </div>
-        <div class="overlay hidden">
+        <div id="load-overlay" class="overlay hidden">
             <div class="popup advice-popup hidden" data-popup="1">
                 <div class="popup-head">
                     <div class="mini-logo"></div>
@@ -216,314 +210,305 @@
                     </footer>
                 </div>
             </div>
-            <div class="popup advice-popup pad-popup hidden" data-popup="2">
-                <div class="popup-head">
-                    <div class="mini-logo"></div>
-                    <div class="mini-slider">
-                        <div class="slide slide-1" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
-                            <div class="mini-desc">Клубника</div>
-                        </div>
-                        <div class="arr arr__left"><span class="icon icon-left-dir"></span></div>
-                        <div class="arr arr__right"><span class="icon icon-right-dir"></span></div>
+        <div class="popup advice-popup pad-popup hidden" data-popup="2">
+            <div class="popup-head">
+                <div class="mini-logo"></div>
+                <div class="mini-slider">
+                    <div class="slide slide-1" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
+                        <div class="mini-desc">Клубника</div>
                     </div>
-                    <div class="popup-close"></div>
+                    <div class="arr arr__left"><span class="icon icon-left-dir"></span></div>
+                    <div class="arr arr__right"><span class="icon icon-right-dir"></span></div>
                 </div>
-                <div class="popup-body clearfix">
-                    <div class="column-content">
-                        <div class="content-image">
-                            <img src="http://photos-g.ak.instagram.com/hphotos-ak-xpf1/891407_871997296147198_24578230_n.jpg" alt="Час Страсти" />
-                            <div class="content-title">
-                                Аргентинское танго — танец страсти
-                            </div>
-                            <div class="content-info taste-strawberry">
-                                <span class="content-author">
+                <div class="popup-close"></div>
+            </div>
+            <div class="popup-body clearfix">
+                <div class="column-content">
+                    <div class="content-image">
+                        <img src="http://photos-g.ak.instagram.com/hphotos-ak-xpf1/891407_871997296147198_24578230_n.jpg" alt="Час Страсти" />
+                        <div class="content-title">
+                            Аргентинское танго — танец страсти
+                        </div>
+                        <div class="content-info taste-strawberry">
+                            <span class="content-author">
+                                Вера Самохвальцева
+                            </span>
+                            <span class="content-date">
+                                15.06.2014
+                            </span>
+                        </div>
+                    </div>
+                    <div class="content-text">
+                        <p>
+                            Танго получило распространение от африканских сообществ в Буэнос-Айресе на основе древних африканских 
+                            танцевальных форм[2]. Слово «танго» также имеет африканское происхождение, его возводят к языку 
+                            нигерийского народа ибибио, где оно значило «танец под звук барабана», и применяют к мелодиям, 
+                            полученным в результате синтеза различных форм музыки из Европы, Африки и Америки. Хорхе Луис 
+                            Борхес в El idioma de los argentinos пишет: «Танго принадлежит к Ла-Плата и является «сыном» 
+                            уругвайской милонги и «внуком» хабанеры». Слово «танго», похоже, впервые используется в 
+                            отношении к танцам в 1890-е. Первоначально этот танец был лишь одним из многих, но вскоре он стал 
+                            популярным во всем обществе.
+                        </p>
+                        <p>
+                            В первые годы ХХ века танцоры и оркестры из Буэнос-Айреса и Монтевидео отправились в Европу, и 
+                            первый европейский показ танго состоялся в Париже, а вскоре после этого в Лондоне, Берлине и 
+                            других столицах. К концу 1913 года танец попал в Нью-Йорк, США и Финляндию. В США в 1911 году 
+                            название «танго» часто применялось для танцев в ритме 2/4 или 4/4 «на один шаг». Иногда танго 
+                            исполняли в довольно быстром темпе. В тот период иногда относились к этому как «Североамериканского танго», 
+                            в сравнении с «Рио де ла Плата танго». К 1914 были более распространены аутентичные стили танго, а также 
+                            некоторые варианты, как «Менуэт-танго» Альберта Ньюмана.
+                        </p>
+                        <p>
+                            Несмотря на Великую депрессию, период 1930—1950 годов стал «золотым веком» танго. Было создано 
+                            множество ансамблей, в состав которых входили выдающиеся композиторы и исполнители танго, ставшие сегодня 
+                            классиками стиля: Аннибал Тройло, Освальдо Пульезе, Астор Пьяццолла и многие другие.
+                        </p>
+                    </div>
+                    <div class="content-social">
+                        <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+                        <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,odnoklassniki" data-yashareTheme="counter"> </div>
+                    </div>
+                </div>
+                <div class="column-list">
+                    <div class="list-title">Другие статьи</div>
+                    <ul>
+                        <li>
+                            <h3>Топ–10 романтических фильмов</h3>
+                            <div class="list-item-info clearfix taste-strawberry">
+                                <span class="list-author">
                                     Вера Самохвальцева
                                 </span>
-                                <span class="content-date">
+                                <span class="list-date">
                                     15.06.2014
                                 </span>
                             </div>
-                        </div>
-                        <div class="content-text">
-                            <p>
-                                Танго получило распространение от африканских сообществ в Буэнос-Айресе на основе древних африканских 
-                                танцевальных форм[2]. Слово «танго» также имеет африканское происхождение, его возводят к языку 
-                                нигерийского народа ибибио, где оно значило «танец под звук барабана», и применяют к мелодиям, 
-                                полученным в результате синтеза различных форм музыки из Европы, Африки и Америки. Хорхе Луис 
-                                Борхес в El idioma de los argentinos пишет: «Танго принадлежит к Ла-Плата и является «сыном» 
-                                уругвайской милонги и «внуком» хабанеры». Слово «танго», похоже, впервые используется в 
-                                отношении к танцам в 1890-е. Первоначально этот танец был лишь одним из многих, но вскоре он стал 
-                                популярным во всем обществе.
-                            </p>
-                            <p>
-                                В первые годы ХХ века танцоры и оркестры из Буэнос-Айреса и Монтевидео отправились в Европу, и 
-                                первый европейский показ танго состоялся в Париже, а вскоре после этого в Лондоне, Берлине и 
-                                других столицах. К концу 1913 года танец попал в Нью-Йорк, США и Финляндию. В США в 1911 году 
-                                название «танго» часто применялось для танцев в ритме 2/4 или 4/4 «на один шаг». Иногда танго 
-                                исполняли в довольно быстром темпе. В тот период иногда относились к этому как «Североамериканского танго», 
-                                в сравнении с «Рио де ла Плата танго». К 1914 были более распространены аутентичные стили танго, а также 
-                                некоторые варианты, как «Менуэт-танго» Альберта Ньюмана.
-                            </p>
-                            <p>
-                                Несмотря на Великую депрессию, период 1930—1950 годов стал «золотым веком» танго. Было создано 
-                                множество ансамблей, в состав которых входили выдающиеся композиторы и исполнители танго, ставшие сегодня 
-                                классиками стиля: Аннибал Тройло, Освальдо Пульезе, Астор Пьяццолла и многие другие.
-                            </p>
-                        </div>
-                        <div class="content-social">
-                            <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
-                            <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,odnoklassniki" data-yashareTheme="counter"> </div>
-                        </div>
-                    </div>
-                    <div class="column-list">
-                        <div class="list-title">Другие статьи</div>
-                        <ul>
-                            <li>
-                                <h3>Топ–10 романтических фильмов</h3>
-                                <div class="list-item-info clearfix taste-strawberry">
-                                    <span class="list-author">
-                                        Вера Самохвальцева
-                                    </span>
-                                    <span class="list-date">
-                                        15.06.2014
-                                    </span>
-                                </div>
-                            </li>
-                            <li>
-                                <h3>Топ–10 романтических фильмов</h3>
-                                <div class="list-item-info clearfix taste-tropic">
-                                    <span class="list-author">
-                                        Ксения Кузьмина
-                                    </span>
-                                    <span class="list-date">
-                                        07.06.2014
-                                    </span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="popup photo-popup hidden" data-popup="3">
-                <div class="popup-head">
-                    <div class="mini-logo"></div>
-                    <div class="mini-slider">
-                        <div class="slide slide-1" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
-                            <div class="mini-desc">Клубника</div>
-                        </div>
-                        <div class="arr arr__left"><span class="icon icon-left-dir"></span></div>
-                        <div class="arr arr__right"><span class="icon icon-right-dir"></span></div>
-                    </div>
-                    <div class="popup-close"></div>
-                </div>
-                <div class="popup-body">
-                    <header class="popup-header">
-                        <h2>#Часстрасти</h2>
-                        <div class="popup-headdesc">
-                            Ваши фотографии из инстаграм<br>
-                            с хэштегом #часстрасти
-                        </div>
-                    </header>
-                    <div class="popup-content">
-                        <div class="instaphoto-slider jcarousel">
-                            <ul id="instaSlider">
-                            </ul>
-                        </div>
-                        <a href="#" class="jcarousel-control jcarousel-control-prev"></a>
-                        <a href="#" class="jcarousel-control jcarousel-control-next"></a>                        
-                    </div>
-                </div>                
-                <div class="instaphoto-slider-vertical jcarousel-vert">
-                    <ul id="instaNavSlider">
-                    </ul> 
-                </div>                
-                <a href="#" class="jcarousel-vert-control jcarousel-vert-control-prev">
-                    <span class="icon icon-up-dir"></span>
-                </a>
-                <a href="#" class="jcarousel-vert-control jcarousel-vert-control-next">
-                    <span class="icon icon-down-dir"></span>
-                </a>
-            </div>
-            <div class="popup advice-popup pad-popup hidden" data-popup="4">
-                <div class="popup-head">
-                    <div class="mini-logo"></div>
-                    <div class="popup-close"></div>
-                </div>
-                <div class="popup-body clearfix">
-                    <div class="photo-border">
-                        <img src="http://photos-g.ak.instagram.com/hphotos-ak-xpf1/891407_871997296147198_24578230_n.jpg" alt="Час Страсти" />
-                        <div class="photo-frame"> </div>
-                        <div class="photo-logo"> </div>
-                    </div>
-                    <a href="#" class="photo-save">Сохранить</a>
-                    <a href="#" class="photo-upload-link">Загрузить другую фотографию</a>
+                        </li>
+                        <li>
+                            <h3>Топ–10 романтических фильмов</h3>
+                            <div class="list-item-info clearfix taste-tropic">
+                                <span class="list-author">
+                                    Ксения Кузьмина
+                                </span>
+                                <span class="list-date">
+                                    07.06.2014
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>
-    <div style="display: none">
-        <form id="save-photo" method="POST" action="/upload/photo">
-            <input type="file" style="width: 1em;" name="file" class="input-select-avatar invisible" id="selectAvatar">
-            <button value="send" type="submit" class="btn btn-submit loading">Загрузить</button>
-            <button class="btn info cancel-crop-avatar" type="button">Отмена</button>
-        </form>
+        <div class="popup photo-popup hidden" data-popup="3">
+            <div class="popup-head">
+                <div class="mini-logo"></div>
+                <div class="mini-slider">
+                    <div class="slide slide-1" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
+                        <div class="mini-desc">Клубника</div>
+                    </div>
+                    <div class="arr arr__left"><span class="icon icon-left-dir"></span></div>
+                    <div class="arr arr__right"><span class="icon icon-right-dir"></span></div>
+                </div>
+                <div class="popup-close"></div>
+            </div>
+            <div class="popup-body">
+                <header class="popup-header">
+                    <h2>#Часстрасти</h2>
+                    <div class="popup-headdesc">
+                        Ваши фотографии из инстаграм<br>
+                        с хэштегом #часстрасти
+                    </div>
+                </header>
+                <div class="popup-content">
+                    <div class="instaphoto-slider jcarousel">
+                        <ul id="instaSlider">
+                        </ul>
+                    </div>
+                    <a href="#" class="jcarousel-control jcarousel-control-prev"></a>
+                    <a href="#" class="jcarousel-control jcarousel-control-next"></a>                        
+                </div>
+            </div>                
+            <div class="instaphoto-slider-vertical jcarousel-vert">
+                <ul id="instaNavSlider">
+                </ul> 
+            </div>                
+            <a href="#" class="jcarousel-vert-control jcarousel-vert-control-prev">
+                <span class="icon icon-up-dir"></span>
+            </a>
+            <a href="#" class="jcarousel-vert-control jcarousel-vert-control-next">
+                <span class="icon icon-down-dir"></span>
+            </a>
+        </div>
+        <div id="load-photo" class="popup advice-popup pad-popup hidden" data-popup="4">
+            <div class="popup-head">
+                <div class="mini-logo"></div>
+                <div class="popup-close"></div>
+            </div>
+            <div class="popup-body clearfix">
+                <div class="photo-border">
+                	<div id="HolderPhoto"></div>
+                    <div class="photo-frame"> </div>
+                    <div class="photo-logo"> </div>
+                </div>
+                <form id="form-photo-save" method="POST" action="upload.php">
+					<input type="file" style="width: 1em;" name="file" class="input-photo invisible" id="selectPhoto">
+					<button value="send" type="submit" class="photo-save">Сохранить</button>
+				</form>
+                <a href="javascript:void(0);" class="photo-upload-link select-image">Загрузить другую фотографию</a>
+            </div>
+        </div>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/vendor/instafeed.min.js"></script>
-        <script type="text/javascript">
-            var tag = 'часстрасти';
-            var feed = new Instafeed({
-                target: 'app',
-                get: 'tagged',
-                tagName: tag,
-                clientId: 'a541556dc1cc4a6ab63d72498e28801f',
-                resolution: 'low_resolution',
-                template:
-                   '<div>' +
-                   '<a href="{{link}}"><img src="{{image}}" /></a>' + 
-                   '<img class="app-bg" src="{{image}}" alt="">' +
-                   '<header><span>{{model.user.full_name}}</span></header>' +
-                   '<div class="app-tag"><span>#' + tag + '</span></div>' +
-                   '</div>',
-                useHttp: true,
-                sortBy: 'most-liked',
-                limit: 60,
-                after: function(){
-                    fotoramaInit();
-                }
-            });
-            feed.run();
-
-            var bigSlider = new Instafeed({
-                target: 'instaSlider',
-                get: 'tagged',
-                tagName: tag,
-                clientId: 'a541556dc1cc4a6ab63d72498e28801f',
-                resolution: 'low_resolution',
-                template:
-
-                '<li class="insta-slide slide-1" style="background:' +
-                    'url({{image}}) no-repeat center center / cover;">'+
-                    '<div class="slide-desc">'+
-                        '<div class="slide-user">{{model.user.full_name}}</div>'+
-                        '<div class="slide-description"></div>'+
-                        '<div class="slide-tags">#часстрасти</div>' +
-                    '</div>' +
-                '</li>',
-
-                useHttp: true,
-                sortBy: 'none',
-                limit: 60,
-                after: function(){
-                    navInit();
-                }
-            });
-            bigSlider.run();
-
-            function navInit() {
-                var elems = $('#instaSlider .insta-slide').clone().empty();
-                var parent = $('#instaNavSlider');
-                parent.append(elems);
-                jCarouselInit();
-            };       
-        </script>
-        <script src="js/vendor/fotorama.js"></script>
-        <script>
-            function fotoramaInit() {
-                var parent = $('.fotorama').fotorama({
-                    arrows: false,
-                    nav: false,
-                    height: '280',
-                    autoplay: '15000',
-                    transition: 'crossfade'
-                });
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/vendor/instafeed.min.js"></script>
+    <script type="text/javascript">
+        var tag = 'часстрасти';
+        var feed = new Instafeed({
+            target: 'app',
+            get: 'tagged',
+            tagName: tag,
+            clientId: 'a541556dc1cc4a6ab63d72498e28801f',
+            resolution: 'low_resolution',
+            template:
+               '<div>' +
+               '<a href="{{link}}"><img src="{{image}}" /></a>' + 
+               '<img class="app-bg" src="{{image}}" alt="">' +
+               '<header><span>{{model.user.full_name}}</span></header>' +
+               '<div class="app-tag"><span>#' + tag + '</span></div>' +
+               '</div>',
+            useHttp: true,
+            sortBy: 'most-liked',
+            limit: 60,
+            after: function(){
+                fotoramaInit();
             }
-        </script>
-        <script src="js/vendor/dropzone.js"></script>
-        <script>
-            Dropzone.options.dropzone = {
-                dictDefaultMessage: '<span class="drop-text">Загрузите вашу фотографию</span>'
+        });
+        feed.run();
+
+        var bigSlider = new Instafeed({
+            target: 'instaSlider',
+            get: 'tagged',
+            tagName: tag,
+            clientId: 'a541556dc1cc4a6ab63d72498e28801f',
+            resolution: 'low_resolution',
+            template:
+
+            '<li class="insta-slide slide-1" style="background:' +
+                'url({{image}}) no-repeat center center / cover;">'+
+                '<div class="slide-desc">'+
+                    '<div class="slide-user">{{model.user.full_name}}</div>'+
+                    '<div class="slide-description"></div>'+
+                    '<div class="slide-tags">#часстрасти</div>' +
+                '</div>' +
+            '</li>',
+
+            useHttp: true,
+            sortBy: 'none',
+            limit: 60,
+            after: function(){
+                navInit();
             }
-        </script>
-        <script src="js/vendor/jcarousel.js"></script>
-        <script>
-            //Bounded slider for instagram photos
-            function jCarouselInit() {
-                var connector = function(itemNavigation, carouselStage) {
-                    return carouselStage.jcarousel('items').eq(itemNavigation.index());
-                };
-                var mainCarousel = $('.jcarousel').jcarousel({
+        });
+        bigSlider.run();
 
-                });
-                var navCarousel = $('.jcarousel-vert').jcarousel({
-                    vertical: true
-                });
-                navCarousel.jcarousel('items').each(function() {
-                    var item = $(this);
-
-                    // This is where we actually connect to items.
-                    var target = connector(item, mainCarousel);
-
-                    item
-                        .on('jcarouselcontrol:active', function() {
-                            navCarousel.jcarousel('scrollIntoView', this);
-                            item.addClass('active');
-                        })
-                        .on('jcarouselcontrol:inactive', function() {
-                            item.removeClass('active');
-                        })
-                        .jcarouselControl({
-                            target: target,
-                            carousel: mainCarousel
-                        });
-                });
-                $('.jcarousel-control-prev')
-                    .on('jcarouselcontrol:active', function() {
-                        $(this).removeClass('inactive');
-                    })
-                    .on('jcarouselcontrol:inactive', function() {
-                        $(this).addClass('inactive');
-                    })
-                    .jcarouselControl({
-                        target: '-=1'
-                    });
-                /* Main Carousel Controls */
-                $('.jcarousel-control-next')
-                    .on('jcarouselcontrol:active', function() {
-                        $(this).removeClass('inactive');
-                    })
-                    .on('jcarouselcontrol:inactive', function() {
-                        $(this).addClass('inactive');
-                    })
-                    .jcarouselControl({
-                        target: '+=1'
-                    });
-
-                $('.jcarousel-vert-control-prev')
-                    .on('jcarouselcontrol:inactive', function() {
-                        $(this).addClass('inactive');
-                    })
-                    .on('jcarouselcontrol:active', function() {
-                        $(this).removeClass('inactive');
-                    })
-                    .jcarouselControl({
-                        target: '-=1'
-                    });
-                /* Nav Carousel Controls */
-                $('.jcarousel-vert-control-next')
-                    .on('jcarouselcontrol:inactive', function() {
-                        $(this).addClass('inactive');
-                    })
-                    .on('jcarouselcontrol:active', function() {
-                        $(this).removeClass('inactive');
-                    })
-                    .jcarouselControl({
-                        target: '+=1'
-                    });
+        function navInit() {
+            var elems = $('#instaSlider .insta-slide').clone().empty();
+            var parent = $('#instaNavSlider');
+            parent.append(elems);
+            jCarouselInit();
+        };       
+    </script>
+    <script src="js/vendor/fotorama.js"></script>
+    <script>
+        function fotoramaInit() {
+            var parent = $('.fotorama').fotorama({
+                arrows: false,
+                nav: false,
+                height: '280',
+                autoplay: '15000',
+                transition: 'crossfade'
+            });
+        }
+    </script>
+    <script src="js/vendor/jcarousel.js"></script>
+    <script>
+        //Bounded slider for instagram photos
+        function jCarouselInit() {
+            var connector = function(itemNavigation, carouselStage) {
+                return carouselStage.jcarousel('items').eq(itemNavigation.index());
             };
-        </script>
-    </body>
+            var mainCarousel = $('.jcarousel').jcarousel({
+
+            });
+            var navCarousel = $('.jcarousel-vert').jcarousel({
+                vertical: true
+            });
+            navCarousel.jcarousel('items').each(function() {
+                var item = $(this);
+
+                // This is where we actually connect to items.
+                var target = connector(item, mainCarousel);
+
+                item
+                    .on('jcarouselcontrol:active', function() {
+                        navCarousel.jcarousel('scrollIntoView', this);
+                        item.addClass('active');
+                    })
+                    .on('jcarouselcontrol:inactive', function() {
+                        item.removeClass('active');
+                    })
+                    .jcarouselControl({
+                        target: target,
+                        carousel: mainCarousel
+                    });
+            });
+            $('.jcarousel-control-prev')
+                .on('jcarouselcontrol:active', function() {
+                    $(this).removeClass('inactive');
+                })
+                .on('jcarouselcontrol:inactive', function() {
+                    $(this).addClass('inactive');
+                })
+                .jcarouselControl({
+                    target: '-=1'
+                });
+            /* Main Carousel Controls */
+            $('.jcarousel-control-next')
+                .on('jcarouselcontrol:active', function() {
+                    $(this).removeClass('inactive');
+                })
+                .on('jcarouselcontrol:inactive', function() {
+                    $(this).addClass('inactive');
+                })
+                .jcarouselControl({
+                    target: '+=1'
+                });
+
+            $('.jcarousel-vert-control-prev')
+                .on('jcarouselcontrol:inactive', function() {
+                    $(this).addClass('inactive');
+                })
+                .on('jcarouselcontrol:active', function() {
+                    $(this).removeClass('inactive');
+                })
+                .jcarouselControl({
+                    target: '-=1'
+                });
+            /* Nav Carousel Controls */
+            $('.jcarousel-vert-control-next')
+                .on('jcarouselcontrol:inactive', function() {
+                    $(this).addClass('inactive');
+                })
+                .on('jcarouselcontrol:active', function() {
+                    $(this).removeClass('inactive');
+                })
+                .jcarouselControl({
+                    target: '+=1'
+                });
+        };
+    </script>
+	<script src="js/libs/jquery-form.min.js"></script>
+	<script src="js/libs/upload.js"></script>
+</body>
 </html>
