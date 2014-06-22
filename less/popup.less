@@ -1,0 +1,47 @@
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	background: #042d43;
+	background: rgba(4, 45, 67, .9);
+	z-index: 5;
+}
+
+.popup {
+	position: absolute;
+	left: 95rem / @htmlFontSize;
+	right: 95rem / @htmlFontSize;
+	top: 67rem / @htmlFontSize;
+
+	.popup-head {
+		position: relative;
+		height: 112rem / @htmlFontSize;
+
+		.mini-logo {
+			width: 190rem / @htmlFontSize;
+			height: 112rem / @htmlFontSize;
+
+			background: url(../img/extreme.png) no-repeat 0 center e('/') 100% auto;
+		}
+		.mini-slider {
+
+			
+		}
+		.popup-close {
+			position: absolute;
+			bottom: 19rem / @htmlFontSize;
+			right: 0;
+			width: 44rem / @htmlFontSize;
+			height: 44rem / @htmlFontSize;
+
+			background: url(../img/popups/close.png) no-repeat 0 0 e('/') 100% 100%;
+		}
+	}
+	.popup-body {
+		border: 3px solid #cd094e;
+	}
+}
+

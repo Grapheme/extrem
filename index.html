@@ -14,6 +14,7 @@
         
         <link rel="stylesheet" href="css/fontello.css">
         <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/fotorama.css">
         <link rel="stylesheet" href="css/main.css">
         <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -34,10 +35,8 @@
                 <div class="wrapper" data-arrow="1">
                     <div class="top clearfix">
                         <section class="app app-left">
-                            <div class="app-head">
-                                <img class="app-bg" src="img/apps/01.jpg" alt="">
-                                <header>Валя<br>Городецкая</header>
-                                <div class="app-tag">#часстрасти</div>                        
+                            <div id="app" class="app-head fotorama" data-auto="false">
+
                             </div>                    
                             <footer class="app-footer">
                                 <a href="#">Приложение</a>
@@ -173,10 +172,81 @@
                 </div>
             </main>
         </div>
+        <div class="overlay">
+            <div class="popup advice-popup">
+                <div class="popup-head">
+                    <div class="mini-logo"></div>
+                    <div class="mini-slider">
+                        <div class="slide slide-1" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
+                            <div class="mini-desc">Клубника</div>
+                        </div>
+                    </div>
+                    <div class="popup-close"></div>
+                </div>
+                <div class="popup-body">
+                    <header class="popup-header">
+                        <h2>Extreme советы</h2>
+                        <div class="popup-headdesc">
+                            Наши советы о том, как
+                            можно провести «Час страсти»
+                        </div>
+                    </header>
+                    <div class="popup-content">
+                        Доведите градус своей
+                        страсти до максимума,
+                        охладите пыл
+                        мороженым eXtreme
+                        Клубника и покажите друг
+                        другу настоящий
+                        «Час страсти»!
+                    </div>
+                    <footer class="popup-footer">
+
+                    </footer>
+                </div>
+            </div>
+        </div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/vendor/instafeed.min.js"></script>
+        <script type="text/javascript">
+            var tag = 'girl';
+            var feed = new Instafeed({
+                target: 'app',
+                get: 'tagged',
+                tagName: tag,
+                clientId: 'a541556dc1cc4a6ab63d72498e28801f',
+                resolution: 'low_resolution',
+                template:
+                   '<div>' +
+                   '<a href="{{link}}"><img src="{{image}}" /></a>' + 
+                   '<img class="app-bg" src="{{image}}" alt="">' +
+                   '<header><span>{{model.user.full_name}}</span></header>' +
+                   '<div class="app-tag"><span>#' + tag + '</span></div>' +
+                   '</div>',
+                useHttp: true,
+                sortBy: 'most-liked',
+                limit: 60,
+                after: function(){
+                    fotoramaInit();
+                }
+            });
+            feed.run();
+        </script>
+        <script src="js/vendor/fotorama.js"></script>
+        <script>
+            function fotoramaInit() {
+                var parent = $('.fotorama').fotorama({
+                    arrows: false,
+                    nav: false,
+                    height: '280',
+                    autoplay: '15000',
+                    transition: 'crossfade'
+                });
+            }
+        </script>
         <script src="js/vendor/dropzone.js"></script>
         <script>
             Dropzone.options.dropzone = {
