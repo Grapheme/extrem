@@ -336,7 +336,7 @@
                         <div class="content-title">
                             Аня Лунева
                         </div>
-                        <div class="content-info taste-strawberry">
+                        <div class="content-info taste-tropic">
                             <span class="content-author">
                                 Аня Лунева
                             </span>
@@ -450,7 +450,7 @@
                         </li>
                         <li>
                             <h3>Татьяна Аверина</h3>
-                            <div class="list-item-info clearfix taste-tropic">
+                            <div class="list-item-info clearfix taste-strawberry">
                                 <span class="list-author">
                                     Татьяна Аверина
                                 </span>
@@ -461,7 +461,7 @@
                         </li>
                         <li>
                             <h3>Екатерина Брицова</h3>
-                            <div class="list-item-info clearfix taste-tropic">
+                            <div class="list-item-info clearfix taste-strawberry">
                                 <span class="list-author">
                                     Екатерина Брицова
                                 </span>
@@ -483,7 +483,7 @@
                         </li>
                         <li>
                             <h3>Сергеи Судариков</h3>
-                            <div class="list-item-info clearfix taste-tropic">
+                            <div class="list-item-info clearfix taste-strawberry">
                                 <span class="list-author">
                                     Сергеи Судариков
                                 </span>
@@ -494,7 +494,7 @@
                         </li>
                         <li>
                             <h3>Irina Shevchik</h3>
-                            <div class="list-item-info clearfix taste-tropic">
+                            <div class="list-item-info clearfix taste-strawberry">
                                 <span class="list-author">
                                     Irina Shevchik
                                 </span>
@@ -505,7 +505,7 @@
                         </li>
                         <li>
                             <h3>Stas Vitus</h3>
-                            <div class="list-item-info clearfix taste-tropic">
+                            <div class="list-item-info clearfix taste-strawberry">
                                 <span class="list-author">
                                     Stas Vitus
                                 </span>
