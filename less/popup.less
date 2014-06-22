@@ -246,7 +246,7 @@
 			top: 203rem / @htmlFontSize;
 			left: 0;
 			img { max-height: 100%; min-height: 100%; }
-			#HolderPhoto { overflow: hidden; }
+			#HolderPhoto { overflow: hidden; height: 100%;}
 			.photo-frame {
 				background: url('../img/popups/border.png') 0 0 no-repeat;
 				width: 789rem / @htmlFontSize;
@@ -265,16 +265,22 @@
 			}
 		}
 		.photo-save {
+			.transition;
 			display: block;
 			height: 74rem / @htmlFontSize;
 			width: 640rem / @htmlFontSize;
 			margin: 0 auto 28rem / @htmlFontSize;
+			border: none;
 			background: #cd094e;
 			color: #fff;
 			line-height: 74rem / @htmlFontSize;
 			font-size: 24em / @htmlFontSize;
 			text-decoration: none;
 			text-align: center;
+
+			&:hover {
+				background: lighten(#cd094e, 10%);
+			}
 		}
 		.photo-upload-link {
 			color: #fff;

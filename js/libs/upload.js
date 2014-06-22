@@ -49,7 +49,7 @@ if(upload !== null){
 					img.onload = function(){
 						uploadImage.changeStatus = true;
 						$("#HolderPhoto").html(img);
-						$("#load-overlay").removeClass('hidden');
+						$("#load-overlay").removeClass('hidden').height($('.main-wrapper').height() + 100);
 						$("#load-photo").removeClass('hidden');
 						var img_width = img.width;
 						var img_height = img.height;
