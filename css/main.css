@@ -112,6 +112,7 @@ textarea {
 html {
   font-family: 'Roboto Slab', serif;
   color: #fff;
+  background: #CC044D;
 }
 body > .main-wrapper {
   overflow: hidden;
@@ -218,6 +219,9 @@ main .wrapper[data-arrow="6"]:before {
 .app.app-right {
   float: right;
 }
+.app.app-right .app-head {
+  cursor: pointer;
+}
 .app.app-right .app-head header {
   width: 93%;
   line-height: 1;
@@ -286,7 +290,7 @@ main .wrapper[data-arrow="6"]:before {
 }
 .bot-links {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -296,6 +300,7 @@ main .wrapper[data-arrow="6"]:before {
 .bot-links .bot-link {
   position: relative;
   display: inline-block;
+  cursor: pointer;
 }
 .bot-links .bot-link header {
   -webkit-box-sizing: border-box;
@@ -673,15 +678,36 @@ main .wrapper[data-arrow="6"]:before {
 .ice-cream-slider .arrow.arrow-right span {
   margin: 0 0 0 0.2em;
 }
+.popup-fotorama {
+  width: 648px;
+  margin: 0 auto;
+}
+.popup-fotorama .fotorama__arr--next {
+  display: inline-block;
+  width: 1.9375rem;
+  height: 3.5625rem;
+  background: url(../img/popups/arrows/right01.png) no-repeat scroll 0 0 / 100% 100% rgba(0, 0, 0, 0);
+}
+.popup-fotorama .fotorama__arr--prev {
+  display: inline-block;
+  width: 1.9375rem;
+  height: 3.5625rem;
+  background: url(../img/popups/arrows/left01.png) no-repeat scroll 0 0 / 100% 100% rgba(0, 0, 0, 0);
+}
 .dropzone {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  display: inline-block;
+  width: 100%;
   height: 4.5625rem;
   margin: 0 0 1.1125rem;
   line-height: 4.33rem;
   background: #fa0961;
   text-align: center;
   cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  outline: none !important;
 }
 .dropzone .drop-text:before {
   -webkit-box-sizing: border-box;
@@ -1092,7 +1118,8 @@ main .wrapper[data-arrow="6"]:before {
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 180%;
+  min-height: 100%;
+  overflow: hidden;
   background: #042d43;
   background: rgba(4, 45, 67, 0.9);
   z-index: 5;
@@ -1205,6 +1232,7 @@ main .wrapper[data-arrow="6"]:before {
   right: 0;
   width: 2.75rem;
   height: 2.75rem;
+  cursor: pointer;
   background: url(../img/popups/close.png) no-repeat 0 0 / 100% 100%;
 }
 .popup .popup-body {
