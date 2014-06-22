@@ -150,7 +150,7 @@
                                 <footer>eXtreme блоггеры</footer>
                             </section>
                     </ul>
-                    <a class="select-image" href="javascript:void(0);">Загрузите вашу фотографию</a>
+                    <a class="dropzone select-image" href="javascript:void(0);"><span class="drop-text">Загрузите вашу фотографию</span></a>
                     <footer class="main-footer">
                         <div class="hot-line">
                             <span>горячая линия</span>
