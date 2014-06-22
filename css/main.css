@@ -1261,6 +1261,7 @@ main .wrapper[data-arrow="6"]:before {
   font-size: 2.625em;
   text-align: center;
   line-height: 1em;
+  width: 100%;
 }
 .popup .popup-body .column-content .content-image .content-info {
   position: absolute;
@@ -1305,6 +1306,7 @@ main .wrapper[data-arrow="6"]:before {
 .popup .popup-body .column-list ul li {
   list-style: none;
   margin: 0 0 3.125rem;
+  cursor: pointer;
 }
 .popup .popup-body .column-list ul li h3 {
   font-size: 1.875em;

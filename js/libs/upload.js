@@ -60,6 +60,9 @@ if(upload !== null){
 							$('#HolderPhoto img').css('width', '600px');
 						}
 
+						$('input[name=width]').val(parseInt($('#HolderPhoto img').css('width')));
+						$('input[name=height]').val(parseInt($('#HolderPhoto img').css('height')));
+
 					}
 				};
 				reader.readAsDataURL(file);

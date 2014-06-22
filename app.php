@@ -42,6 +42,11 @@
                 <form id="form-photo-save" method="POST" action="upload.php">
 					<input type="file" style="width: 1em;" name="file" class="input-photo invisible" id="selectPhoto">
 					<button value="send" type="submit" class="save-btn"><span>Сохранить</span></button>
+                    <input type="hidden" name="logo-extreme" value="no">
+                    <input type="hidden" name="logo-hours" value="no">
+                    <input type="hidden" name="filter" value="no">
+                    <input type="hidden" name="width">
+                    <input type="hidden" name="height">
 				</form>
                 <div class="app-ices">
                     <div class="ice-item">
