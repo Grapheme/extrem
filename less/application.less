@@ -1,0 +1,347 @@
+.app-body {
+	background: #cc044d;
+}
+
+.app-header {
+	position: relative;
+	top: 0; left: 0;
+	height: 80rem / @htmlFontSize;
+	width: 100%;
+	min-width: 1280rem / @htmlFontSize;
+	background-color: #0b6495;
+	background-image: url(../img/application/header_ice.png), url(../img/application/header.jpg);
+	background-repeat: no-repeat;
+	background-position: -125rem / @htmlFontSize -25rem / @htmlFontSize, center center;
+	background-size: auto, 100% 100%;
+}
+
+.app-main {
+	background-image: url(../img/application/blinds.png), url(../img/application/light.png);
+	background-position: center 100rem / @htmlFontSize, center -80rem / @htmlFontSize;
+	background-repeat: no-repeat;
+	min-width: 1280rem / @htmlFontSize;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.app-container {
+	position: relative;
+	margin: 0 auto;
+	top: -40rem / @htmlFontSize;
+	width: 100%;
+	max-width: 1366rem / @htmlFontSize;
+	min-width: 1280rem / @htmlFontSize;
+	background-image: url(../img/application/milk.png), url(../img/application/redsplash.png);
+	background-repeat: no-repeat;
+	background-position: 93rem / @htmlFontSize 45rem / @htmlFontSize, right 280rem / @htmlFontSize;
+
+	.app-logo-ext {
+		position: absolute;
+		left: 0;
+		top: 250rem / @htmlFontSize;
+		display: inline-block;
+		background: url(../img/extreme.png) no-repeat center center e('/') 100% 100%;
+		width: 277rem / @htmlFontSize;
+		height: 128rem / @htmlFontSize;
+	}
+
+	.app-logo-hou {
+		position: absolute;
+		right: 0;
+		top: 250rem / @htmlFontSize;
+		display: inline-block;
+		background: url(../img/application/hour.png) no-repeat center center e('/') 100% 100%;
+		width: 311rem / @htmlFontSize;
+		height: 143rem / @htmlFontSize;
+	}
+
+	.app-add-text {
+		position: absolute;
+		display: inline-block;
+		left: 0;
+		left: 30rem / @htmlFontSize;
+		top: 620rem / @htmlFontSize;
+		color: #ffc518;
+		font-size: 30rem / @htmlFontSize;
+		text-decoration: none;
+		text-transform: uppercase;
+		text-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+	}
+
+	.app-window {
+		position: relative;
+		width: 600rem / @htmlFontSize;
+		margin: 0 auto;
+
+		.app-upload {
+			position: relative;
+			height: 80rem / @htmlFontSize;
+			font-size: 18rem / @htmlFontSize;
+			line-height: 80rem / @htmlFontSize;
+			text-align: center;
+
+			.upload-btn {
+				position: absolute;
+				z-index: 2;
+				display: inline-block;
+				background: #f39200;
+				height: 100%;
+				width: 210rem / @htmlFontSize;
+				color: #fff;
+				text-decoration: none;
+				left: 100%;
+				top: 0;
+				-webkit-box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.25);
+				-moz-box-shadow:    0px 30px 30px 0px rgba(0, 0, 0, 0.25);
+				box-shadow:         0px 30px 30px 0px rgba(0, 0, 0, 0.25);
+
+				&:hover {
+					&:before {
+						opacity: 1;
+					}
+				}
+
+				&:active {
+					&:after {
+						opacity: 1;
+					}
+				}
+
+				&:after {
+					.transition(opacity, .1s);
+					content: "";
+					background: url(../img/application/upload_active.jpg);
+					position: absolute;
+					top: 0; left: 0; right: 0; bottom: 0;
+					z-index: -1;
+					opacity: 0;
+				}
+
+				&:before {
+					.transition(opacity);
+					content: "";
+					background: url(../img/application/upload_hover.jpg);
+					position: absolute;
+					top: 0; left: 0; right: 0; bottom: 0;
+					z-index: -1;
+					opacity: 0;
+				}
+			}
+
+			.upload-zone {
+				position: relative;
+				z-index: 3;
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+				background: #fff;
+				text-decoration: none;
+				color: #adacac;
+				font-weight: 100;
+			}
+		}
+
+		.app-screen {
+			position: relative;
+			z-index: 2;
+			width: 600rem / @htmlFontSize;
+			height: 800rem / @htmlFontSize;
+			background: url(../img/application/app-screen.jpg);
+
+			-webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+			-moz-box-shadow:    0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+			box-shadow:         0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+		}
+	}
+}
+
+.app-nav {
+	text-align: center;
+	margin-top: 50rem / @htmlFontSize;
+
+	.share-btn {
+		position: relative;
+		float: left;
+		display: inline-block;
+		background: #f39200;
+
+		&:after {
+			background: url(../img/application/big-share.jpg);
+		}
+	}
+
+	.save-btn {
+		position: relative;
+		float: right;
+		display: inline-block;
+		background: #0b6293;
+
+		&:after {
+			background: url(../img/application/big-save.jpg);
+		}
+	}
+
+	.share-btn, .save-btn {
+		width: 271rem / @htmlFontSize;
+		height: 232rem / @htmlFontSize;
+		font-size: 27rem / @htmlFontSize;
+		text-align: center;
+		color: #fff;
+		font-weight: 300;
+		line-height: 232rem / @htmlFontSize;
+		text-decoration: none;
+		text-shadow: 0px -2px 1px rgba(150, 150, 150, 1);
+
+		span {
+			position: relative;
+			z-index: 2;
+		}
+
+		&:after {
+			.transition(opacity);
+			content: "";
+			position: absolute;
+			top: 0; left: 0; right: 0; bottom: 0;
+			opacity: 1;
+			z-index: 1;
+		}
+
+		&:hover {
+			&:after {
+				opacity: 0;
+			}
+		}
+	}
+
+	.app-ices {
+		display: inline-block;
+		width: 50%;
+		margin-top: 20rem / @htmlFontSize;
+	}
+
+	.ice-item {
+		text-align: left;
+		position: relative;
+		display: inline-block;
+		width: 160rem / @htmlFontSize;
+		height: 91rem / @htmlFontSize;
+		margin: 0 25rem / @htmlFontSize 30rem / @htmlFontSize 0;
+
+		&:after {
+			.transition(opacity);
+			content: "";
+			position: absolute;
+			width: 80rem / @htmlFontSize;
+			height: 80rem / @htmlFontSize;
+			border-radius: 40rem / @htmlFontSize;
+			background: #ee8a41;
+			left: -20rem / @htmlFontSize;
+			z-index: 1;
+			opacity: 0;
+		}
+
+		.ice-name {
+			.transition;
+			position: absolute;
+			left: 65rem / @htmlFontSize;
+			line-height: 75rem / @htmlFontSize;
+			font-size: 18rem / @htmlFontSize;
+
+			span {
+				display: inline-block;
+				line-height: normal;
+				vertical-align: middle;
+			}
+		}
+
+		&.active {
+			.ice-cream {
+				.transform(scale(1.1) rotate(20deg));
+				margin-left: -10rem / @htmlFontSize;
+			}
+
+			&:after {
+				opacity: 1;
+			}
+
+			.ice-name {
+				font-size: 23rem / @htmlFontSize;
+				color: #f7ab3b;
+				left: 70rem / @htmlFontSize;
+			}
+		}
+	}
+
+	.ice-cream {
+		position: relative;
+		display: inline-block;
+		width: 49rem / @htmlFontSize;
+		height: 91rem / @htmlFontSize;
+		z-index: 2;
+
+		&:after {
+			position: absolute;
+		}
+	}
+
+	.ice-cream[data-ice=strawberry] {
+		background: url(../img/application/ices/strawberry.png) no-repeat left center e('/') 49rem / @htmlFontSize 91rem / @htmlFontSize;
+	}
+
+	.ice-cream[data-ice=yamberi] {
+		background: url(../img/application/ices/yamberi.png) no-repeat left center e('/') 49rem / @htmlFontSize 91rem / @htmlFontSize;
+	}
+
+	.ice-cream[data-ice=tropic] {
+		background: url(../img/application/ices/tropic.png) no-repeat left center e('/') 49rem / @htmlFontSize 91rem / @htmlFontSize;
+	}
+
+	.ice-cream[data-ice=pistachio] {
+		background: url(../img/application/ices/pistachio.png) no-repeat left center e('/') 49rem / @htmlFontSize 91rem / @htmlFontSize;
+	}
+
+	.ice-cream[data-ice=whitechokolate] {
+		background: url(../img/application/ices/whitechokolate.png) no-repeat left center e('/') 49rem / @htmlFontSize 91rem / @htmlFontSize;
+	}
+
+	.ice-cream[data-ice=blackcurrant] {
+		background: url(../img/application/ices/blackcurrant.png) no-repeat left center e('/') 49rem / @htmlFontSize 91rem / @htmlFontSize;
+	}
+}
+
+.app-footer {
+	height: 90rem / @htmlFontSize;
+	line-height: 90rem / @htmlFontSize;
+	text-align: center;
+
+	.app-share {
+		display: inline-block;
+		font-size: 28rem / @htmlFontSize;
+		border-bottom: 1px solid;
+		height: 34rem / @htmlFontSize;
+		line-height: normal;
+		margin-left: 10rem / @htmlFontSize;
+	}
+
+	.soc-vk, .soc-fb, .soc-ok {
+		position: relative;
+		top: -2rem / @htmlFontSize;
+		display: inline-block;
+		width: 37rem / @htmlFontSize;
+		height: 37rem / @htmlFontSize;
+		margin-right: 15rem / @htmlFontSize;
+		vertical-align: middle;
+	}
+
+	.soc-vk {
+		background: url(../img/application/soc-vk.png) no-repeat 0 0 e('/') 100% 100%;
+	}
+
+	.soc-fb {
+		background: url(../img/application/soc-fb.png) no-repeat 0 0 e('/') 100% 100%;
+	}
+
+	.soc-ok {
+		background: url(../img/application/soc-ok.png) no-repeat 0 0 e('/') 100% 100%;
+	}
+}
