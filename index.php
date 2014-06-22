@@ -361,7 +361,15 @@
                 </div>
             </div>
         </div>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    </div>
+    <div style="display: none">
+        <form id="save-photo" method="POST" action="/upload/photo">
+            <input type="file" style="width: 1em;" name="file" class="input-select-avatar invisible" id="selectAvatar">
+            <button value="send" type="submit" class="btn btn-submit loading">Загрузить</button>
+            <button class="btn info cancel-crop-avatar" type="button">Отмена</button>
+        </form>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
