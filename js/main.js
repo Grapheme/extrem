@@ -1,6 +1,6 @@
 var Slider = (function(){
 	var $container = $('.ice-cream-slider');
-	var $slide = $('.slide');
+	var $slide = $('.ice-cream-slider .slide');
 	var $desc = $('.desc-slide');
 	var $current;
 	var $currentDesc;
