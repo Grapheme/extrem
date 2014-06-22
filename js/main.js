@@ -122,6 +122,19 @@ var Popup = (function(){
 	$(document).on('click', '.popup-close, .overlay', function(){
 		closePopup();
 	});
+
+	var slide_allow = true;
+	$(document).on('click', '.column-list li', function(){
+		if(!slide_allow) return;
+		slide_allow = false;
+		$(this).slideUp();
+		$('.column-list li').not(':visible').slideDown();
+		$('.column-content').addClass('hidden');
+		$('.column-content').eq($(this).index()).removeClass('hidden');
+		setTimeout(function(){
+			slide_allow = true;
+		}, 500);
+	});
 })();
 
 Slider.init();

@@ -24,7 +24,7 @@
         <div class="app-container">
             <a href="#" class="app-logo-ext"></a>
             <a href="#" class="app-logo-hou"></a>
-            <a href="#" class="app-add-text">Добавить текст</a>
+            <!--<a href="#" class="app-add-text">Добавить текст</a>-->
             <div class="app-window">
                 <div class="app-upload">
                     <a href="#" class="upload-zone">Загрузите сюда фотографию</a>
@@ -42,6 +42,11 @@
                 <form id="form-photo-save" method="POST" action="upload.php">
 					<input type="file" style="width: 1em;" name="file" class="input-photo invisible" id="selectPhoto">
 					<button value="send" type="submit" class="save-btn"><span>Сохранить</span></button>
+                    <input type="hidden" name="logo-extreme" value="no">
+                    <input type="hidden" name="logo-hours" value="no">
+                    <input type="hidden" name="filter" value="no">
+                    <input type="hidden" name="width">
+                    <input type="hidden" name="height">
 				</form>
                 <div class="app-ices">
                     <div class="ice-item">
