@@ -198,6 +198,24 @@
                                 другу настоящий
                                 «Час страсти»!
                             </div>
+                            <div class="slide slide-2">
+                                Доведите градус своей
+                                страсти до максимума,
+                                охладите пыл
+                                мороженым eXtreme
+                                Клубника и покажите друг
+                                другу настоящий
+                                «Час страсти»!
+                            </div>
+                            <div class="slide slide-3">
+                                Доведите градус своей
+                                страсти до максимума,
+                                охладите пыл
+                                мороженым eXtreme
+                                Клубника и покажите друг
+                                другу настоящий
+                                «Час страсти»!
+                            </div>
                         </div>                        
                     </div>
                     <footer class="popup-footer">
@@ -507,6 +525,10 @@
                     target: '+=1'
                 });
         };
+        $('.popup-fotorama').fotorama({
+            nav: false,
+            width: '648',
+        });
     </script>
 	<script src="js/libs/jquery-form.min.js"></script>
 	<script src="js/libs/upload.js"></script>
