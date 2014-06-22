@@ -143,7 +143,7 @@
                             <footer>eXtreme блоггеры</footer>
                         </section>
                 </ul>
-               	<a id="select-image" href="javascript:void(0);">Загрузите вашу фотографию</a>
+               	<a class="select-image" href="javascript:void(0);">Загрузите вашу фотографию</a>
                 <footer class="main-footer">
                     <div class="hot-line">
                         <span>горячая линия</span>
@@ -346,7 +346,7 @@
 						<input type="file" style="width: 1em;" name="file" class="input-photo invisible" id="selectPhoto">
 						<button value="send" type="submit" class="photo-save">Сохранить</button>
 					</form>
-                    <a href="#" class="photo-upload-link">Загрузить другую фотографию</a>
+                    <a href="javascript:void(0);" class="photo-upload-link select-image">Загрузить другую фотографию</a>
                 </div>
             </div>
     </div>

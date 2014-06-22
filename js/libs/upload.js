@@ -6,7 +6,6 @@ var uploadImage = uploadImage || {};
 
 uploadImage.minSize = 640;
 uploadImage.half_resolution = 1;
-uploadImage.changeStatus = false;
 
 var acceptedTypes = {'image/png': true,'image/jpeg': true,'image/gif': true};
 var maxFileSize = 15728640;
@@ -141,58 +140,13 @@ if(upload !== null){
 	};
 }
 $(function(){
-	$("#select-image").click(function(){
-		uploadImage.changeStatus = false;
+	$(".select-image").click(function(){
 		$("#selectPhoto").click();
 	});
-	$("a.a-change-uploading-image").click(function(){
-		if($("div.msg-alert").exists() == true){
-			$("div.msg-alert").remove();
-		}
-		refreshCropBox();
-		uploadImage.changeStatus = true;
-		var file = $(".destination-photo").attr('src');
-		uploadImage.changeMiniature(file.replace(/thumbnail/,'photo'));
-	})
-	$(".cancel-crop-avatar").click(function(){$("form.form-save-avatar").find("input:hidden").val('');refreshCropBox();})
-	function refreshCropBox(){
-		$("div.msg-alert").remove();
-		$("#HolderAvatar").empty();
-		if(uploadImage.changeStatus == true){
-			$("input.input-select-avatar").val('');
-		}
-		$(".crop-change-avatar").addClass('invisible');
-	}
 	$("form.form-save-avatar .btn-submit").click(function(event){
 		$(this).addClass('loading');
 		refreshCropBox();
 		$("form.form-save-avatar").ajaxSubmit(uploadImage.singlePhotoOption);
 		return false;
-	});
-	$(".a-remove-user-avatar").click(function(){
-		if(confirm('Вы уверены, что хотите удалить фотографию?') == false){return false;}
-		var _this = this;
-		$.ajax({
-			url: $(_this).attr('data-action'),
-			type: 'POST',dataType: 'json',
-			beforeSend: function(){
-				$(".div-select-uploading-image").addClass('hidden');
-				$(".div-select-uploading-image a").addClass('hidden');
-				$(".div-select-uploading-image").before('<span class="btn-loading" style="margin: 29px; display:block" type="button"><i class="fa fa-refresh fa-spin"></i> Удаление</span>');
-			},
-			success: function(data,textStatus,xhr){
-				setTimeout(function(){
-					if(data.status == true){
-						$("img.destination-photo").attr('src',data.responsePhotoSrc);
-						$(".a-select-uploading-image").html('Загрузить фотографию').removeClass('hidden');
-						$(".div-select-uploading-image").removeClass('hidden');
-						$(".btn-loading").remove();
-					}
-				},1000);
-			},
-			error: function(xhr,textStatus,errorThrown){
-				$(".div-select-uploading-image").removeClass('hidden');
-			}
-		});
 	});
 });
