@@ -4,14 +4,23 @@ $json_request['status'] = FALSE;
 $json_request['downloadPhotoSrc'] = '';
 
 if(isset($_FILES['file']['tmp_name']) && $_FILES['file']['error'] == 0):
+
+	//echo $_FILES['file']['tmp_name']."\n";
+	
+
 	$json_request = manupulationWithPhotoUpload();
 endif;
 
 
 function manupulationWithPhotoUpload(){
 	
-	$uploaddir  = getcwd().'/temporary/';
+	//$uploaddir  = getcwd().'/temporary/';
+	$uploaddir  = getcwd().'/../../../tmp/';
 	$uploadfile = $uploaddir.basename($_FILES['file']['name']);
+
+	//echo $uploaddir."\n";
+	//echo $uploadfile."\n";
+	//exit;
 	
 	$result['status'] = FALSE;
 	$result['downloadPhotoSrc'] = '';

@@ -214,7 +214,9 @@ function createWatermark($sourceFile, $watermarkFile, $marginLeft = 5, $marginBo
 }
 
 
-$sourceFile = getcwd().'/temporary/'.$_GET['file'];
+//$sourceFile = getcwd().'/temporary/'.$_GET['file'];
+$sourceFile = getcwd().'/../../../tmp/'.$_GET['file'];
+
 $watermarkFile = getcwd().'/img/popups/logo.png';
 $watermarkFile2 = getcwd().'/img/popups/logo2.png';
 $watermarkFile3 = getcwd().'/img/application/overlays/';
