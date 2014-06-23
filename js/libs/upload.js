@@ -24,16 +24,21 @@ uploadImage.singlePhotoOption = {
 	success: function(response,statusText,xhr,jqForm){
 		//uploadImage.setProgress(100,false);
 		if(response.status == true){
-			//window.open('download.php?file='+response.downloadPhotoSrc+response.req);
-			var hiddenIFrameID = 'hiddenDownloader',
-		        iframe = document.getElementById(hiddenIFrameID);
-		    if (iframe === null) {
-		        iframe = document.createElement('iframe');
-		        iframe.id = hiddenIFrameID;
-		        iframe.style.display = 'none';
-		        document.body.appendChild(iframe);
-		    }
-		    iframe.src = 'download.php?file='+response.downloadPhotoSrc+response.req;
+			if(response.hasOwnProperty('req') && response.req.length > 3){
+				var hiddenIFrameID = 'hiddenDownloader',
+			        iframe = document.getElementById(hiddenIFrameID);
+			    if (iframe === null) {
+			        iframe = document.createElement('iframe');
+			        iframe.id = hiddenIFrameID;
+			        iframe.style.display = 'none';
+			        document.body.appendChild(iframe);
+			    }
+			    iframe.src = 'download.php?file='+response.downloadPhotoSrc+response.req;
+			} else {
+				//only upload files to the server and show message
+				$('#load-photo').addClass('uploaded');
+				window.scrollTo(0, 0);
+			}
 		}
 	}
 }

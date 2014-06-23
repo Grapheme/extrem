@@ -17,14 +17,14 @@ function image_resize($src, $dst, $width, $height, $crop = 0)
 
   // resize
   if($crop){
-    if($w < $width or $h < $height) return "Picture is too small!";
+    //if($w < $width or $h < $height) return "Picture is too small!";
     $ratio = max($width/$w, $height/$h);
     $h = $height / $ratio;
     $x = ($w - $width / $ratio) / 2;
     $w = $width / $ratio;
   }
   else{
-    if($w < $width and $h < $height) return "Picture is too small!";
+    //if($w < $width and $h < $height) return "Picture is too small!";
     $ratio = min($width/$w, $height/$h);
     $width = $w * $ratio;
     $height = $h * $ratio;
@@ -215,19 +215,21 @@ function createWatermark($sourceFile, $watermarkFile, $marginLeft = 5, $marginBo
 
 
 //$sourceFile = getcwd().'/temporary/'.$_GET['file'];
-$sourceFile = getcwd().'/../../../tmp/'.$_GET['file'];
+$sourceFile = '/srv/www/extreme_hour/tmp/'.$_GET['file'];
 
-$watermarkFile = getcwd().'/img/popups/logo.png';
-$watermarkFile2 = getcwd().'/img/popups/logo2.png';
-$watermarkFile3 = getcwd().'/img/application/overlays/';
+//$watermarkFile = getcwd().'/img/popups/logo.png';
+//$watermarkFile2 = getcwd().'/img/popups/logo2.png';
+//$watermarkFile3 = getcwd().'/img/application/overlays/';
+$watermarkFile = '/srv/www/extreme_hour/repo/master/htdocs/img/popups/logo.png';
+$watermarkFile2 = '/srv/www/extreme_hour/repo/master/htdocs/img/popups/logo2.png';
+$watermarkFile3 = '/srv/www/extreme_hour/repo/master/htdocs/img/application/overlays/';
 
 $pic_type = strtolower(strrchr($_GET['file'],"."));
-if (true !== ($pic_error = @image_resize($sourceFile, "resized$pic_type", 600, 600, 1))) {
+$src = '/srv/www/extreme_hour/tmp/passionhour'.$pic_type;
+if (true !== ($pic_error = image_resize($sourceFile, $src, 600, 600, 1))) {
     echo $pic_error;
     exit;
 }
-
-$src = "resized$pic_type";
 
 if (isset($_GET['logo-extreme']) || isset($_GET['logo-hours']) || isset($_GET['filter'])) {
 	if (isset($_GET['logo-extreme'])) {

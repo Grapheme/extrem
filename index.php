@@ -1,3 +1,8 @@
+<?php
+define('__ROOT__', dirname(__FILE__)); 
+require_once(__ROOT__.'/twitter.php'); 
+?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -39,7 +44,7 @@
                                 
                             </div>                    
                             <footer class="app-footer">
-                                <a id="photo__popup" target="_blank" href="http://mamba.ru/promo/extreme.phtml">Приложение</a>
+                                <a id="photo__popup" target="_blank" href="http://www.mamba.ru/ru/promo/extreme.html">Приложение</a>
                             </footer>
                         </section>
                         <div class="ice-cream-slider">
@@ -135,11 +140,11 @@
                             <section>
                                 <header>Доведите градус своей<br/>страсти до максимума...</header>
                                 <a href="#"></a>
-                                <footer>eXtreme советы</footer>
+                                <footer>extreme советы</footer>
                             </section>
                         <li id="events" class="bot-link bot-link_m events">
                             <section>
-                                <header>Презентации<br>нового вкуса<br>eXtreme</header>
+                                <header>Презентации<br>нового вкуса<br>extreme</header>
                                 <a href="#"></a>
                                 <footer>события</footer>
                             </section>
@@ -147,7 +152,7 @@
                             <section>
                                 <header>Сергей Судариков</header>
                                 <a href="#"></a>
-                                <footer>eXtreme блоггеры</footer>
+                                <footer>extreme блоггеры</footer>
                             </section>
                     </ul>
                     <a class="dropzone select-image" href="javascript:void(0);"><span class="drop-text">Загрузите вашу фотографию</span></a>
@@ -184,7 +189,7 @@
                         <h2>Extreme советы</h2>
                         <div class="popup-headdesc">
                             Наши советы о том, как
-                            можно провести «Час страсти»
+                            можно провести «Час Страсти»
                         </div>
                     </header>
                     <div class="popup-content">
@@ -564,6 +569,7 @@
                 <div class="popup-close"></div>
             </div>
             <div class="popup-body clearfix">
+                <div class="msg-box">Спасибо за участие. Ваше фото было отправлено.</div>
                 <div class="photo-border">
                 	<div id="HolderPhoto"></div>
                     <div class="photo-frame"> </div>
@@ -576,6 +582,40 @@
                 <a href="javascript:void(0);" class="photo-upload-link select-image">Загрузить другую фотографию</a>
             </div>
         </div>
+        <div class="popup advice-popup hidden" data-popup="5">
+                <div class="popup-head">
+                    <div class="mini-logo"></div>
+                    <div class="popup-close"></div>
+                </div>
+                <div class="popup-body" id="popupCont">
+                    <header class="popup-header">
+                        <h2>#ЧАССТРАСТИ</h2>
+                        <div class="popup-headdesc">
+                            Ваши твиты с хэштегом #часстрасти
+                        </div>
+                    </header>
+                    <div class="popup-content">
+                        <div class="popup-fotorama">
+                        <?php
+                            $tweets = getTweets(5);
+                            for ($i=0; $i < count($tweets->statuses); $i++) {
+                                echo '<div class="slide slide-4" data-taste="0">'.$tweets->statuses[$i]->text.'</div>';
+                                //echo $tweet->text."\n";
+                                //echo "@".$tweet->user->screen_name."\n";
+                            }
+                        ?>
+                        </div>                        
+                    </div>
+                    <footer class="popup-footer">
+                        <script type="text/javascript" src="http://yandex.st/share/share.js"
+                        charset="utf-8"></script>
+                        <div class="yashare-auto-init" data-yashareL10n="ru"
+                         data-yashareQuickServices="vkontakte,facebook,odnoklassniki" data-yashareTheme="counter"
+
+                        ></div> 
+                    </footer>
+                </div>
+            </div>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
@@ -745,5 +785,14 @@
     </script>
 	<script src="js/libs/jquery-form.min.js"></script>
 	<script src="js/libs/upload.js"></script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-52189500-1', 'mamba.ru');
+    ga('send', 'pageview');
+    </script>
 </body>
 </html>

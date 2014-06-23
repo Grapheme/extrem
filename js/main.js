@@ -74,6 +74,7 @@ var Popup = (function(){
 		$popup_2 = $('[data-popup="2"]'),
 		$popup_3 = $('[data-popup="3"]'),
 		$popup_4 = $('[data-popup="4"]'),
+		$popup_5 = $('[data-popup="5"]'),
 		$close = $('.popup-close'),
 		$overlay = $('.overlay'),
 		$popupArr = $('.popup'),
@@ -99,6 +100,7 @@ var Popup = (function(){
 		$overlay.addClass('hidden').removeAttr('style');
 		$mainWrapper.removeAttr('style');
 		$popupArr.addClass('hidden');
+		$('#load-photo').removeClass('uploaded');
 	}
 	function alignOverlay() {
 
@@ -111,7 +113,7 @@ var Popup = (function(){
 		openPopup($popup_1);
 	});
 	$(document).on('click', '#events', function(){
-		openPopup($popup_1);
+		openPopup($popup_5);
 	});
 	$(document).on('click', '#bloggers', function(){
 		openPopup($popup_2);
