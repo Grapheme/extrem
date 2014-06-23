@@ -599,7 +599,7 @@ require_once(__ROOT__.'/twitter.php');
                         <?php
                             $tweets = getTweets(5);
                             for ($i=0; $i < count($tweets->statuses); $i++) {
-                                echo '<div class="slide slide-4" data-taste="0">'.$tweets->statuses[$i]->text.'</div>';
+                                echo '<div class="slide slide-'.$i.'" data-taste="0">'.$tweets->statuses[$i]->text.'</div>';
                                 //echo $tweet->text."\n";
                                 //echo "@".$tweet->user->screen_name."\n";
                             }
