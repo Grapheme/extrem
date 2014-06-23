@@ -44,7 +44,7 @@ require_once(__ROOT__.'/twitter.php');
                                 
                             </div>                    
                             <footer class="app-footer">
-                                <a id="photo__popup" target="_blank" href="http://www.mamba.ru/ru/promo/extreme.html">Приложение</a>
+                                <a id="photo__popup" target="_blank" href="http://www.mamba.ru/promo/extreme.phtml">Приложение</a>
                             </footer>
                         </section>
                         <div class="ice-cream-slider">
