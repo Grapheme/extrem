@@ -133,7 +133,7 @@
                     <ul class="bot-links">
                         <li id="advices" class="bot-link bot-link_b advices">
                             <section>
-                                <header>Топ самых<br>страстных фильмов</header>
+                                <header>Доведите градус своей<br/>страсти до максимума...</header>
                                 <a href="#"></a>
                                 <footer>eXtreme советы</footer>
                             </section>
@@ -145,7 +145,7 @@
                             </section>
                         <li id="bloggers" class="bot-link bot-link_b bloggers">
                             <section>
-                                <header>Учим аргентинское<br>танго</header>
+                                <header>Сергей Судариков</header>
                                 <a href="#"></a>
                                 <footer>eXtreme блоггеры</footer>
                             </section>
@@ -336,7 +336,7 @@
                         <div class="content-title">
                             Аня Лунева
                         </div>
-                        <div class="content-info taste-strawberry">
+                        <div class="content-info taste-tropic">
                             <span class="content-author">
                                 Аня Лунева
                             </span>
@@ -450,7 +450,7 @@
                         </li>
                         <li>
                             <h3>Татьяна Аверина</h3>
-                            <div class="list-item-info clearfix taste-tropic">
+                            <div class="list-item-info clearfix taste-strawberry">
                                 <span class="list-author">
                                     Татьяна Аверина
                                 </span>
@@ -461,7 +461,7 @@
                         </li>
                         <li>
                             <h3>Екатерина Брицова</h3>
-                            <div class="list-item-info clearfix taste-tropic">
+                            <div class="list-item-info clearfix taste-strawberry">
                                 <span class="list-author">
                                     Екатерина Брицова
                                 </span>
@@ -483,7 +483,7 @@
                         </li>
                         <li>
                             <h3>Сергеи Судариков</h3>
-                            <div class="list-item-info clearfix taste-tropic">
+                            <div class="list-item-info clearfix taste-strawberry">
                                 <span class="list-author">
                                     Сергеи Судариков
                                 </span>
@@ -494,7 +494,7 @@
                         </li>
                         <li>
                             <h3>Irina Shevchik</h3>
-                            <div class="list-item-info clearfix taste-tropic">
+                            <div class="list-item-info clearfix taste-strawberry">
                                 <span class="list-author">
                                     Irina Shevchik
                                 </span>
@@ -505,7 +505,7 @@
                         </li>
                         <li>
                             <h3>Stas Vitus</h3>
-                            <div class="list-item-info clearfix taste-tropic">
+                            <div class="list-item-info clearfix taste-strawberry">
                                 <span class="list-author">
                                     Stas Vitus
                                 </span>
@@ -571,7 +571,7 @@
                 </div>
                 <form id="form-photo-save" method="POST" action="upload.php">
 					<input type="file" style="width: 1em;" name="file" class="input-photo invisible" id="selectPhoto">
-					<button value="send" type="submit" class="photo-save">Сохранить</button>
+					<button value="send" type="submit" class="photo-save">Отправить</button>
 				</form>
                 <a href="javascript:void(0);" class="photo-upload-link select-image">Загрузить другую фотографию</a>
             </div>

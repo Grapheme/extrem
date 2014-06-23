@@ -24,7 +24,16 @@ uploadImage.singlePhotoOption = {
 	success: function(response,statusText,xhr,jqForm){
 		//uploadImage.setProgress(100,false);
 		if(response.status == true){
-			window.open('download.php?file='+response.downloadPhotoSrc);
+			//window.open('download.php?file='+response.downloadPhotoSrc+response.req);
+			var hiddenIFrameID = 'hiddenDownloader',
+		        iframe = document.getElementById(hiddenIFrameID);
+		    if (iframe === null) {
+		        iframe = document.createElement('iframe');
+		        iframe.id = hiddenIFrameID;
+		        iframe.style.display = 'none';
+		        document.body.appendChild(iframe);
+		    }
+		    iframe.src = 'download.php?file='+response.downloadPhotoSrc+response.req;
 		}
 	}
 }
