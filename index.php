@@ -563,7 +563,7 @@ require_once(__ROOT__.'/twitter.php');
                 <span class="icon icon-down-dir"></span>
             </a>
         </div>
-        <div id="load-photo" class="popup advice-popup pad-popup hidden" data-popup="4">
+        <div id="load-photo" class="popup app__popup advice-popup pad-popup hidden" data-popup="4">
             <div class="popup-head">
                 <div class="mini-logo"></div>
                 <div class="popup-close"></div>
