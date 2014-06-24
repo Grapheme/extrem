@@ -37,6 +37,7 @@ uploadImage.singlePhotoOption = {
 			} else {
 				//only upload files to the server and show message
 				$('#load-photo').addClass('uploaded');
+				$('button.photo-save').html('Отправить');
 				window.scrollTo(0, 0);
 			}
 		}

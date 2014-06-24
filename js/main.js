@@ -140,3 +140,13 @@ var Popup = (function(){
 })();
 
 Slider.init();
+
+$(document).ready(function(){
+	$('button.photo-save').click(function(e){	
+		$(this).html('Пожалуйста подождите ...');
+	});
+});
+
+
+
+
