@@ -48,7 +48,9 @@
                     <span class="large">любимым.</span>
                 </div>
                 <a href="main.php<? echo (strlen($_SERVER['QUERY_STRING']) > 2) ? '?'.$_SERVER['QUERY_STRING'] : ''; ?>" class="enter-btn"> </a>
-                <div class="logo"></div>
+                <div class="counter">
+                    204
+                </div>
             </div>
         </div>
 
