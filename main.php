@@ -169,9 +169,11 @@ require_once(__ROOT__.'/twitter.php');
                             <span>горячая линия</span>
                             <a href="tel:+78003470200">8-800-347 02 00</a>
                         </div>
+                        <?php if ($_GET['r'] !== 'mail' && $_GET['r'] !== 'rambler') : ?>
                         <div class="extreme-vk">
                             <a href="http://vk.com/extremenestle" target="_blank"><span class="icon icon-vkontakte-rect"></span> vk.com/extremenestle</a>
                         </div>
+                        <?php endif; ?>
                         <div class="feedback">
                             <a href="mailto:hourofpassion@gmail.com">обратная связь</a>
                         </div>
@@ -794,13 +796,13 @@ require_once(__ROOT__.'/twitter.php');
 	<script src="js/libs/jquery-form.min.js"></script>
 	<script src="js/libs/upload.js"></script>
     <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-52189500-1', 'mamba.ru');
-    ga('send', 'pageview');
+        ga('create', 'UA-52189500-1', 'mamba.ru');
+        ga('send', 'pageview');
     </script>
 </body>
 </html>
