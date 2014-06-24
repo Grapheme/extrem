@@ -44,7 +44,15 @@ require_once(__ROOT__.'/twitter.php');
                                 
                             </div>                    
                             <footer class="app-footer">
-                                <a id="photo__popup" target="_blank" href="http://www.mamba.ru/promo/extreme.phtml">Приложение</a>
+                            <?php
+                                $link = 'http://www.mamba.ru/promo/extreme.phtml';
+                                if ($_GET['r'] === 'mail') {
+                                    $link = 'http://love.mail.ru/promo/extreme.phtml';
+                                } elseif ($_GET['r'] === 'rambler') {
+                                    $link = 'http://love.rambler.ru/promo/extreme.phtml';
+                                }
+                            ?>
+                                <a id="photo__popup" target="_blank" href="<?= $link ?>">Приложение</a>
                             </footer>
                         </section>
                         <div class="ice-cream-slider">
@@ -770,7 +778,7 @@ require_once(__ROOT__.'/twitter.php');
         var $popupFotorama = $('.popup-fotorama').fotorama({
             nav: false,
             width: '848',
-            height: '400',
+            height: '320',
             arrows: 'always'
         });
         var $popupFotoramaApi = $popupFotorama.data('fotorama');
