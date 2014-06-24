@@ -70,14 +70,29 @@ if(upload !== null){
 						var img_height = img.height;
 
 						if(img_height < img_width) {
-							$('#HolderPhoto img').css('height', '800px');
+							$('#HolderPhoto img').css('height', '100%');
 						} else {
-							$('#HolderPhoto img').css('width', '600px');
+							$('#HolderPhoto img').css('width', '100%');
 						}
+						$( "#HolderPhoto img" ).draggable({
+							axis: 'x',
+							cursor: "move",
+							drag: function( event, ui ) {
+								var parentPos = $('#HolderPhoto').offset();
+								var childPos = $('#HolderPhoto img').offset();
+						        if (ui.position.left >= '0') {
+						            ui.position.left = '0';
+						        }
+						        if (-ui.position.left >= $('#HolderPhoto img').width() - $('#HolderPhoto').width()){
+						        	ui.position.left = -($('#HolderPhoto img').width() - $('#HolderPhoto').width());
+						        } else {
+						        	console.log(ui.position.left, $('#HolderPhoto img').width() - $('#HolderPhoto').width());
+						        }
+							}
+						});
 
 						$('input[name=width]').val(parseInt($('#HolderPhoto img').css('width')));
-						$('input[name=height]').val(parseInt($('#HolderPhoto img').css('height')));
-
+						$('input[name=height]').val(parseInt($('#HolderPhoto img').css('height')));						
 					}
 				};
 				reader.readAsDataURL(file);

@@ -2,6 +2,18 @@
 	background: #cc044d;
 }
 
+#HolderPhoto {
+	height: 100%;
+
+	img {
+		height: 100% !important;
+
+		&:hover {
+			z-index: 2;
+		}
+	}
+}
+
 .app-header {
 	position: relative;
 	top: 0; left: 0;
@@ -205,6 +217,10 @@
 				top: 0; left: 0; right: 0; bottom: 0;
 				background-size: 100% 100%;
 				z-index: 1;
+
+				&:hover {
+					z-index: -1;
+				}
 			}
 		}
 	}
