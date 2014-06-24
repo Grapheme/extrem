@@ -217,15 +217,16 @@ function createWatermark($sourceFile, $watermarkFile, $marginLeft = 5, $marginBo
 $sourceFile = getcwd().'/temporary/'.$_GET['file'];
 //$sourceFile = '/srv/www/extreme_hour/tmp/'.$_GET['file'];
 
-//$watermarkFile = getcwd().'/img/popups/logo.png';
-//$watermarkFile2 = getcwd().'/img/popups/logo2.png';
-//$watermarkFile3 = getcwd().'/img/application/overlays/';
-$watermarkFile = '/srv/www/extreme_hour/repo/master/htdocs/img/popups/logo.png';
-$watermarkFile2 = '/srv/www/extreme_hour/repo/master/htdocs/img/popups/logo2.png';
-$watermarkFile3 = '/srv/www/extreme_hour/repo/master/htdocs/img/application/overlays/';
+$watermarkFile = getcwd().'/img/popups/logo.png';
+$watermarkFile2 = getcwd().'/img/popups/logo2.png';
+$watermarkFile3 = getcwd().'/img/application/overlays/';
+//$watermarkFile = '/srv/www/extreme_hour/repo/master/htdocs/img/popups/logo.png';
+//$watermarkFile2 = '/srv/www/extreme_hour/repo/master/htdocs/img/popups/logo2.png';
+//$watermarkFile3 = '/srv/www/extreme_hour/repo/master/htdocs/img/application/overlays/';
 
 $pic_type = strtolower(strrchr($_GET['file'],"."));
-$src = '/srv/www/extreme_hour/tmp/passionhour'.$pic_type;
+$src = getcwd().'/temporary/passionhour'.$pic_type;
+//$src = '/srv/www/extreme_hour/tmp/passionhour'.$pic_type;
 if (true !== ($pic_error = image_resize($sourceFile, $src, 600, 600, 1))) {
     echo $pic_error;
     exit;
