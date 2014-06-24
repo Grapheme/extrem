@@ -24,7 +24,7 @@
         <div class="app-container">
             <a href="#" class="app-logo-ext"></a>
             <a href="#" class="app-logo-hou"></a>
-            <!--<a href="#" class="app-add-text">Добавить текст</a>-->
+            <a href="#" class="app-add-text">Добавить текст</a>
             <div class="app-window">
                 <div class="app-upload">
                     <a href="#" class="upload-zone">Загрузите сюда фотографию</a>
