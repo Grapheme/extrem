@@ -10,8 +10,8 @@ endif;
 
 function manupulationWithPhotoUpload(){
 	
-	//$uploaddir  = getcwd().'/../../../tmp/';
-	$uploaddir = '/srv/www/extreme_hour/tmp/';
+	$uploaddir  = getcwd().'/temporary/'.$_GET['file'];
+	//$uploaddir = '/srv/www/extreme_hour/tmp/';
 	$uploadfile = $uploaddir.basename($_FILES['file']['name']);
 	
 	$result['status'] = FALSE;

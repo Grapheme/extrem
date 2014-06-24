@@ -139,7 +139,7 @@ require_once(__ROOT__.'/twitter.php');
                                 <div class="app-tag">на нашем сайте</div>
                             </div>                    
                             <footer class="app-footer">
-                                <a href="app.php" target="_blank">Приложение</a>
+                                <a href="#" target="_blank">Приложение</a>
                             </footer>
                         </section>
                     </div>
