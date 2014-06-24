@@ -19,13 +19,36 @@
         <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
-    <body>
+    <body class="manifest-body">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div class="manifest-wrapper">
             <div class="crops-wrapper">
-                
+                <div class="man man-1">
+                    <span class="min">Почему мы ждем его/ее</span>
+                    <span class="large">вконтакте,</span>
+                    <span class="med">а не в своих</span>
+                    <span class="big">объятиях?</span>
+                </div>
+                <div class="man man-2">
+                    <span class="big">Почему смотрим</span>
+                    <span class="med">на экран чаще, чем в</span>
+                    <span class="large">любимые глаза</span>
+                </div>
+                <div class="man man-3">
+                    <span class="min">Пора понять: поцелуи</span>
+                    <span class="big">слаще лайков,</span>
+                    <span class="med">реальная страсть</span>
+                    <span class="large">вкуснее</span>
+                </div>
+                <div class="man man-4">
+                    <span class="min">Пора выйти из сети</span>
+                    <span class="med">и уделить время</span>
+                    <span class="large">любимым.</span>
+                </div>
+                <a href="main.php" class="enter-btn"></a>
+                <div class="logo"></div>
             </div>
         </div>
 
