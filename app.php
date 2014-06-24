@@ -43,7 +43,9 @@
 					<input type="file" style="width: 1em;" name="file" class="input-photo invisible" id="selectPhoto">
 					<button value="send" type="submit" class="save-btn"><span>Сохранить</span></button>
                     <input type="hidden" name="logo-extreme" value="no">
+                    <input type="hidden" name="logo-extreme-coords" value="30, 305">
                     <input type="hidden" name="logo-hours" value="no">
+                    <input type="hidden" name="logo-hours-coords" value="627, 21">
                     <input type="hidden" name="filter" value="no">
                     <input type="hidden" name="width">
                     <input type="hidden" name="height">
@@ -94,6 +96,23 @@
     <script src="js/app.js"></script>
     <script src="js/libs/jquery-form.min.js"></script>
 	<script src="js/libs/upload.js"></script>
+    <script src="js/vendor/jquery-ui-1.10.4.custom.min"></script>
+    <script>
+        $( ".logo-ext" ).draggable({
+            containment: ".app-screen",
+            stop: function( event, ui ) {
+                var input = $('input[name="logo-extreme-coords"]');
+                input.val(ui.position.top + ', ' + ui.position.left);
+            }
+        });
+        $( ".logo-hou" ).draggable({
+            containment: ".app-screen",
+            stop: function( event, ui ) {
+                var input = $('input[name="logo-hours-coords"]');
+                input.val(ui.position.top + ', ' + ui.position.left);
+            }
+        });
+    </script>
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
