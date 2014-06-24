@@ -138,8 +138,7 @@ require_once(__ROOT__.'/twitter.php');
                                 <header>Анна<br>Межиковская</header>
                                 <div class="app-tag">на нашем сайте</div>
                             </div>                    
-                            <footer class="app-footer" style="opacity: 0.4;">
-                                <!--<a href="app.php" target="_blank">Приложение</a>-->
+                            <footer class="app-footer">
                                 <a href="#" target="_blank">Приложение</a>
                             </footer>
                         </section>
