@@ -152,9 +152,9 @@ require_once(__ROOT__.'/twitter.php');
                             </section>
                         <li id="events" class="bot-link bot-link_m events">
                             <section>
-                                <header>Презентации<br>нового вкуса<br>extreme</header>
+                                <header>Ваши твиты с хэштегом<br>#часстрасти</header>
                                 <a href="#"></a>
-                                <footer>события</footer>
+                                <footer class="hidden">события</footer>
                             </section>
                         <li id="bloggers" class="bot-link bot-link_b bloggers">
                             <section>
