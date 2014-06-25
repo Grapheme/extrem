@@ -81,6 +81,8 @@ if(upload !== null){
 							drag: function( event, ui ) {
 								var parentPos = $('#HolderPhoto').offset();
 								var childPos = $('#HolderPhoto img').offset();
+								var posInput = $('input[name="position"]');
+
 								if (ui.position.top >= '0') {
 									ui.position.top = '0';
 								}
@@ -93,6 +95,7 @@ if(upload !== null){
 								if (-ui.position.left >= $('#HolderPhoto img').width() - $('#HolderPhoto').width()){
 									ui.position.left = -($('#HolderPhoto img').width() - $('#HolderPhoto').width());
 								}
+								posInput.val(ui.position.top + ', ' + ui.position.left);
 							}
 						});
 

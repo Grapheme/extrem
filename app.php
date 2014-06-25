@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Создать фото страсти</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=1280, initial-scale=1, maximum-scale=1, minimal-ui">
     <link rel="stylesheet" href="css/fontello.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
@@ -82,6 +82,7 @@
                             <button value="send" type="submit" class="save-btn"><span>Сохранить</span></button>
                             <input type="hidden" name="logo-extreme" value="no">
                             <input type="hidden" name="logo-hours" value="no">
+                            <input type="hidden" name="position" value="0, 0">
                             <input type="hidden" name="filter" value="no">
                             <input type="hidden" name="width">
                             <input type="hidden" name="height">
