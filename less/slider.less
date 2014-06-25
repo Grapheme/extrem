@@ -290,7 +290,7 @@
 		.slide[data-taste="1"] {
 			color: #ABB629; //Фисташка
 		}
-		.slide[data-taste="2"] {
+		.slide[data-taste="5"] {
 			color: lighten(#720544, 10%);
 		}
 		.slide[data-taste="3"] {
@@ -299,26 +299,28 @@
 		.slide[data-taste="4"] {
 			color: #E1CAB3;
 		}
-		.slide[data-taste="5"] {
+		.slide[data-taste="2"] {
 			color: #F3AF06;
-		}
-		.slide[data-taste="6"] {
-			color: #F3AF06;
-		}
-		.slide[data-taste="7"] {
-			color: lighten(#631F0C, 20%);
 		}
 	}
 }
-
+.advice-fotorama {
+	display: none;
+}
 #popupCont {
 	.transition;
 
 	&[data-taste="0"] {
-		border-color: #cd094e;		
+		border-color: #cd094e;
+		.advice-fotorama[data-taste="0"] {
+			display: block;
+		}	
 	}
 	&[data-taste="1"] {
 		border-color: #ABB629;
+		.advice-fotorama[data-taste="1"] {
+			display: block;
+		}
 		.popup-fotorama {
 			.fotorama__arr--next {			    
 			    background: url(../img/popups/arrows/right00.png) ;
@@ -329,7 +331,10 @@
 			}
 		}
 	}
-	&[data-taste="2"] {
+	&[data-taste="5"] {
+		.advice-fotorama[data-taste="5"] {
+			display: block;
+		}
 		border-color: lighten(#720544, 10%);
 		.popup-fotorama {
 			.fotorama__arr--next {			    
@@ -342,6 +347,9 @@
 		}
 	}
 	&[data-taste="3"] {
+		.advice-fotorama[data-taste="3"] {
+			display: block;
+		}
 		border-color: lighten(#631F0C, 20%);
 		.popup-fotorama {
 			.fotorama__arr--next {			    
@@ -354,6 +362,9 @@
 		}
 	}
 	&[data-taste="4"] {
+		.advice-fotorama[data-taste="4"] {
+			display: block;
+		}
 		border-color: #E1CAB3;
 		.popup-fotorama {
 			.fotorama__arr--next {			    
@@ -365,7 +376,10 @@
 			}
 		}
 	}
-	&[data-taste="5"] {
+	&[data-taste="2"] {
+		.advice-fotorama[data-taste="2"] {
+			display: block;
+		}
 		border-color: #F3AF06;
 		.popup-fotorama {
 			.fotorama__arr--next {			    
@@ -374,30 +388,6 @@
 
 			.fotorama__arr--prev {			    
 			    background: url(../img/popups/arrows/left05.png) ;
-			}
-		}
-	}
-	&[data-taste="6"] {
-		border-color: #F3AF06;
-		.popup-fotorama {
-			.fotorama__arr--next {			    
-			    background: url(../img/popups/arrows/right05.png) ;
-			}
-
-			.fotorama__arr--prev {			    
-			    background: url(../img/popups/arrows/left05.png) ;
-			}
-		}
-	}
-	&[data-taste="7"] {
-		border-color: lighten(#631F0C, 20%);
-		.popup-fotorama {
-			.fotorama__arr--next {			    
-			    background: url(../img/popups/arrows/right02.png) ;
-			}
-
-			.fotorama__arr--prev {			    
-			    background: url(../img/popups/arrows/left02.png) ;
 			}
 		}
 	}
