@@ -607,7 +607,6 @@ require_once(__ROOT__.'/twitter.php');
                 <div class="photo-border">
                 	<div id="HolderPhoto"></div>
                     <div class="photo-frame"> </div>
-                    <div class="photo-logo"> </div>
                 </div>
                 <form id="form-photo-save" method="POST" action="upload.php">
 					<input type="file" style="width: 1em;" name="file" class="input-photo invisible" id="selectPhoto">

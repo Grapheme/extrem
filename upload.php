@@ -10,7 +10,7 @@ endif;
 
 function manupulationWithPhotoUpload(){
 	
-	$uploaddir  = getcwd().'/temporary/'.$_GET['file'];
+	$uploaddir  = getcwd().'/temporary/';
 	//$uploaddir = '/srv/www/extreme_hour/tmp/';
 	$uploadfile = $uploaddir.basename($_FILES['file']['name']);
 	
@@ -31,17 +31,15 @@ if (isset($_POST['logo-extreme']) && $_POST['logo-extreme'] !== 'no') {
 if (isset($_POST['logo-hours']) && $_POST['logo-hours'] !== 'no') {
 	$request .= '&logo-hours=1';
 }
-if (isset($_POST['width']) && $_POST['width'] !== 'no') {
+if (isset($_POST['width'])) {
 	$request .= '&width='.$_POST['width'];
 }
-if (isset($_POST['height']) && $_POST['height'] !== 'no') {
+if (isset($_POST['height'])) {
 	$request .= '&height='.$_POST['height'];
 }
-if (isset($_POST['logo-hours']) && $_POST['logo-hours'] !== 'no') {
-	$request .= '&logo-hours=1';
-}
-if (isset($_POST['logo-hours']) && $_POST['logo-hours'] !== 'no') {
-	$request .= '&logo-hours=1';
+if (isset($_POST['position'])) {
+	$dims = explode(', ', $_POST['position']);
+	$request .= '&top='.abs($dims[0]).'&left='.abs($dims[1]);
 }
 if (isset($_POST['filter']) && $_POST['filter'] !== 'no') {
 	switch($_POST['filter']){
