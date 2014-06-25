@@ -1,12 +1,12 @@
 .app-body {
-	background: #cc044d;
+	background: #0A3E77;
 }
 
 #HolderPhoto {
 	height: 100%;
 
 	img {
-		height: 100% !important;
+		min-height: 100% !important;
 
 		&:hover {
 			z-index: 2;
@@ -14,38 +14,40 @@
 	}
 }
 
-.app-header {
-	position: relative;
-	top: 0; left: 0;
-	height: 80rem / @htmlFontSize;
-	width: 100%;
-	min-width: 1280rem / @htmlFontSize;
-	background-color: #0b6495;
-	background-image: url(../img/application/header_ice.png), url(../img/application/header.jpg);
-	background-repeat: no-repeat;
-	background-position: -125rem / @htmlFontSize -25rem / @htmlFontSize, center center;
-	background-size: auto, 100% 100%;
+.app-wrapper {
+	.main-header {
+		.logo {
+			background-image: url(../img/apps/header.jpg);
+		}		
+	}
+
+	main {
+		background-image: url(../img/apps/bg01.jpg);
+		background-color: #0A3E77;
+		height: auto;
+	}
+
+	.main-footer {
+		margin: 150rem / @htmlFontSize 0 0;
+		padding: 0 0 61rem / @htmlFontSize;
+	}
 }
 
 .app-main {
-	background-image: url(../img/application/blinds.png), url(../img/application/light.png);
-	background-position: center 100rem / @htmlFontSize, center -80rem / @htmlFontSize;
 	background-repeat: no-repeat;
 	min-width: 1280rem / @htmlFontSize;
 	width: 100%;
 	margin: 0 auto;
+	padding: 2rem 0 0;
 }
 
 .app-container {
 	position: relative;
 	margin: 0 auto;
-	top: -40rem / @htmlFontSize;
+	top: 0;
 	width: 100%;
 	max-width: 1366rem / @htmlFontSize;
 	min-width: 1280rem / @htmlFontSize;
-	background-image: url(../img/application/milk.png), url(../img/application/redsplash.png);
-	background-repeat: no-repeat;
-	background-position: 93rem / @htmlFontSize 45rem / @htmlFontSize, right 280rem / @htmlFontSize;
 
 	.app-logo-ext {
 		position: absolute;
@@ -63,14 +65,90 @@
 		right: 20px;
 		top: 30px;
 		display: inline-block;
-		background: url(../img/extreme.png) no-repeat center center e('/') 100% 100%;
-		width: 277rem / @htmlFontSize;
-		height: 128rem / @htmlFontSize;
+		background: url(../img/apps/slogo.png) no-repeat center center e('/') 100% 100%;
+		width: 162rem / @htmlFontSize;
+		height: 76rem / @htmlFontSize;
 		opacity: 0;
-		z-index: 3;
+
+		&.active {
+			z-index: 5;
+			opacity: 1;
+		}
+
+		&.not-vis {
+			background-image: url(../img/apps/tlogo.png);
+			.remove {
+				display: none;
+			}
+			.add {
+				display: block;
+			}
+		}
+
+		.add {
+			position: absolute;
+			top: -1rem;
+			right: 0;
+			width: 25rem / @htmlFontSize;
+			height: 25rem / @htmlFontSize;
+
+			background: url(../img/apps/add.png) no-repeat 0 0 e('/') 100% 100%;
+		}
+		.remove {
+			position: absolute;
+			top: -1rem;
+			right: 0;
+			width: 25rem / @htmlFontSize;
+			height: 25rem / @htmlFontSize;
+
+			background: url(../img/apps/delete.png) no-repeat 0 0 e('/') 100% 100%;
+		}
+	}
+	.logo-hou {
+		.transition;
+		position: absolute;
+		left: 20px;
+		bottom: 30px;
+		display: inline-block;
+		background: url(../img/apps/slogo2.png) no-repeat center center e('/') 100% 100%;
+		width: 227rem / @htmlFontSize;
+		height: 106rem / @htmlFontSize;
+		opacity: 0;
 
 		&.active {
 			opacity: 1;
+			z-index: 5;
+		}
+
+		&.not-vis {
+			background-image: url(../img/apps/tlogo2.png);
+			.remove {
+				display: none;
+			}
+			.add {
+				display: block;
+			}
+		}
+
+		.add {
+			left: 10.5rem;
+		    position: absolute;
+		    top: 1.3rem;
+
+			width: 25rem / @htmlFontSize;
+			height: 25rem / @htmlFontSize;
+
+			background: url(../img/apps/add.png) no-repeat 0 0 e('/') 100% 100%;
+		}
+		.remove {			
+			left: 10.5rem;
+		    position: absolute;
+		    top: 1.3rem;
+
+			width: 25rem / @htmlFontSize;
+			height: 25rem / @htmlFontSize;
+
+			background: url(../img/apps/delete.png) no-repeat 0 0 e('/') 100% 100%;
 		}
 	}
 
@@ -82,23 +160,6 @@
 		background: url(../img/application/hour.png) no-repeat center center e('/') 100% 100%;
 		width: 311rem / @htmlFontSize;
 		height: 143rem / @htmlFontSize;
-	}
-
-	.logo-hou {
-		.transition;
-		position: absolute;
-		left: 20px;
-		bottom: 30px;
-		display: inline-block;
-		background: url(../img/application/hour.png) no-repeat center center e('/') 100% 100%;
-		width: 311rem / @htmlFontSize;
-		height: 143rem / @htmlFontSize;
-		opacity: 0;
-		z-index: 3;
-
-		&.active {
-			opacity: 1;
-		}
 	}
 
 	.app-add-text {
@@ -116,12 +177,203 @@
 
 	.app-window {
 		position: relative;
-		width: 600rem / @htmlFontSize;
+		width: 580rem / @htmlFontSize;
+		height: 422rem / @htmlFontSize;
 		margin: 0 auto;
+
+		.app-ices {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			.ice-item {
+				position: absolute;
+				cursor: pointer;
+
+				.ice-name {
+					.transition(color);
+					cursor: pointer;
+					position: absolute;
+					border-bottom: 1px dashed;
+					font-size: 18em / @htmlFontSize;
+					line-height: 1;
+				}
+
+				&.ice-item-yamberi {
+					top: -47px;
+					left: -130px;
+					width: 284rem / @htmlFontSize;
+					height: 297rem / @htmlFontSize;
+					background: url(../img/apps/filters/03.png);
+
+					&:hover {
+						.ice-name {
+							
+							color: #AD704F;
+							border-color: transparent;
+						}
+					}
+
+					&.active {
+						.ice-name {
+							font-size: 22em / @htmlFontSize;							
+							color: #AD704F;
+							border-color: transparent;
+						}
+					}
+
+					.ice-name {
+						top: 3.1rem;
+						left: -5.3rem;
+					}				
+				}
+                &.ice-item-tropic {
+                	top: 15rem;
+					left: -11.3rem;
+					width: 375rem / @htmlFontSize;
+					height: 179rem / @htmlFontSize;
+					background: url(../img/apps/filters/01.png);
+
+					&:hover {
+						.ice-name {
+							
+							color: #FFCE2F;
+							border-color: transparent;
+						}
+					}
+
+					&.active {
+						.ice-name {
+							font-size: 22em / @htmlFontSize;							
+							color: #FFCE2F;
+							border-color: transparent;
+						}
+					}
+
+					.ice-name {
+						top: 5.4rem;
+						left: -5.6rem;
+					}
+                }
+                &.ice-item-strawberry {
+                	top: 4rem;
+					left: -14rem;
+					width: 384rem / @htmlFontSize;
+					height: 206rem / @htmlFontSize;
+					background: url(../img/apps/filters/02.png);
+
+					&:hover {
+						.ice-name {
+							
+							color: #D94755;
+							border-color: transparent;
+						}
+					}
+
+					&.active {
+						.ice-name {
+							font-size: 22em / @htmlFontSize;
+							color: #D94755;
+							border-color: transparent;
+						}
+					}
+
+					.ice-name {
+						top: 4.8rem;
+						left: -7rem;
+					}
+                }
+                &.ice-item-pistachio {
+                	top: 15rem;
+					right: -11.8rem;
+					width: 382rem / @htmlFontSize;
+					height: 177rem / @htmlFontSize;
+					background: url(../img/apps/filters/04.png);
+
+					&:hover {
+						.ice-name {
+							
+							color: #A1B543;
+							border-color: transparent;
+						}
+					}
+					&.active {
+						.ice-name {
+							font-size: 22em / @htmlFontSize;
+							color: #A1B543;
+							border-color: transparent;
+						}
+					}
+
+					.ice-name {
+						top: 5.8rem;
+						right: -6.5rem;
+					}
+                }
+                &.ice-item-whitechocolate {
+                	top: -3rem;
+					right: -8.7rem;
+					width: 285rem / @htmlFontSize;
+					height: 297rem / @htmlFontSize;
+					background: url(../img/apps/filters/06.png);
+
+					&:hover {
+						.ice-name {
+							
+							color: #D6BB9E;
+							border-color: transparent;
+						}
+					}
+
+					&.active {
+						.ice-name {
+							font-size: 22em / @htmlFontSize;
+							color: #D6BB9E;
+							border-color: transparent;
+						}
+					}
+
+					.ice-name {
+						top: 3.2rem;
+						right: -9.9rem;
+					}
+                }
+                &.ice-item-blackcurrant {
+                	top: 4rem;
+					right: -14.2rem;
+					width: 395rem / @htmlFontSize;
+					height: 197rem / @htmlFontSize;
+					background: url(../img/apps/filters/05.png);
+
+					&:hover {
+						.ice-name {
+							
+							color: #B35A6F;
+							border-color: transparent;
+						}
+					}
+
+					&.active {
+						.ice-name {
+							font-size: 22em / @htmlFontSize;
+							color: #B35A6F;
+							border-color: transparent;
+						}
+					}
+
+					.ice-name {
+						top: 5rem;
+						right: -6rem;
+					}
+                }
+			}
+		}
 
 		.app-upload {
 			position: relative;
-			height: 80rem / @htmlFontSize;
+			height: 100%;
 			font-size: 18rem / @htmlFontSize;
 			line-height: 80rem / @htmlFontSize;
 			text-align: center;
@@ -180,9 +432,9 @@
 				display: inline-block;
 				width: 100%;
 				height: 100%;
-				background: #fff;
+				background: url(../img/apps/upload.png) no-repeat center center e('/') cover #d43374;
 				text-decoration: none;
-				color: #adacac;
+				color: transparent;
 				font-weight: 100;
 
 				.upload-prog {
@@ -196,11 +448,12 @@
 		}
 
 		.app-screen {
-			position: relative;
+			position: absolute;
+			top: 0;
+			left: 0;
 			z-index: 2;
-			width: 600rem / @htmlFontSize;
-			height: 800rem / @htmlFontSize;
-			background: url(../img/application/app-screen.jpg);
+			width: 580rem / @htmlFontSize;
+			height: 422rem / @htmlFontSize;
 			overflow: hidden;
 
 			-webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
@@ -231,38 +484,57 @@
 	margin-top: 50rem / @htmlFontSize;
 
 	.share-btn {
+		.transition;
 		position: relative;
-		float: left;
 		display: inline-block;
-		background: #f39200;
+		background: #0b6293;
 
-		&:after {
-			background: url(../img/application/big-share.jpg);
+		&:hover {
+			background: lighten(#0b6293, 10%)
 		}
 	}
 
 	.save-btn {
+		.transition;
 		position: relative;
-		float: right;
 		display: inline-block;
 		background: #0b6293;
+
+		&:hover {
+			background: lighten(#0b6293, 10%)
+		}
 		span {
 			text-shadow: 0 -2px 1px #555;
 		}
+	}
+	.new-photo {
+		.transition;
+		display: inline-block;
+		background: #f39200;
 
-		&:after {
-			background: url(../img/application/big-save.jpg);
+		span {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+
+		&:hover {
+			background: lighten(#f39200, 10%)
 		}
 	}
+	#form-photo-save {
+		display: inline-block;
+		vertical-align: top;
+	}
 
-	.share-btn, .save-btn {
-		width: 271rem / @htmlFontSize;
-		height: 232rem / @htmlFontSize;
-		font-size: 27rem / @htmlFontSize;
+	.share-btn, .save-btn, .new-photo {
+		width: 280rem / @htmlFontSize;
+		height: 78rem / @htmlFontSize;
+		font-size: 18rem / @htmlFontSize;
 		text-align: center;
 		color: #fff;
 		font-weight: 300;
-		line-height: 232rem / @htmlFontSize;
+		line-height: 78rem / @htmlFontSize;
 		text-decoration: none;
 		text-shadow: 0px -2px 1px rgba(150, 150, 150, 1);
 		border: 0 none;
@@ -272,80 +544,12 @@
 			position: relative;
 			z-index: 2;
 		}
-
-		&:after {
-			.transition(opacity);
-			content: "";
-			position: absolute;
-			top: 0; left: 0; right: 0; bottom: 0;
-			opacity: 1;
-			z-index: 1;
-		}
-
-		&:hover {
-			&:after {
-				opacity: 0;
-			}
-		}
 	}
 
 	.app-ices {
 		display: inline-block;
 		width: 50%;
 		margin-top: 20rem / @htmlFontSize;
-	}
-
-	.ice-item {
-		text-align: left;
-		position: relative;
-		display: inline-block;
-		width: 160rem / @htmlFontSize;
-		height: 91rem / @htmlFontSize;
-		margin: 0 25rem / @htmlFontSize 30rem / @htmlFontSize 0;
-		cursor: pointer;
-
-		&:after {
-			.transition(opacity);
-			content: "";
-			position: absolute;
-			width: 80rem / @htmlFontSize;
-			height: 80rem / @htmlFontSize;
-			border-radius: 40rem / @htmlFontSize;
-			background: #ee8a41;
-			left: -20rem / @htmlFontSize;
-			z-index: 1;
-			opacity: 0;
-		}
-
-		.ice-name {
-			.transition(color);
-			position: absolute;
-			left: 65rem / @htmlFontSize;
-			line-height: 75rem / @htmlFontSize;
-			font-size: 18rem / @htmlFontSize;
-
-			span {
-				display: inline-block;
-				line-height: normal;
-				vertical-align: middle;
-			}
-		}
-
-		&.active {
-			.ice-cream {
-				.transform(scale(1.1) rotate(20deg) translateX(-5rem / @htmlFontSize));
-			}
-
-			&:after {
-				opacity: 1;
-			}
-
-			.ice-name {
-				font-size: 23rem / @htmlFontSize;
-				color: #f7ab3b;
-				left: 70rem / @htmlFontSize;
-			}
-		}
 	}
 
 	.ice-cream {

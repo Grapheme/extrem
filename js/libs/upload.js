@@ -63,7 +63,9 @@ if(upload !== null){
 					img.src = event.target.result;
 					img.onload = function(){
 						uploadImage.changeStatus = true;
+						$('.logo-ext, .logo-hou').addClass('active');
 						$("#HolderPhoto").html(img);
+						$("#HolderPhoto").parent().css('z-index', '3');
 						$("#load-overlay").removeClass('hidden').height($('.main-wrapper').height() + 100);
 						$("#load-photo").removeClass('hidden');
 						var img_width = img.width;
@@ -75,24 +77,27 @@ if(upload !== null){
 							$('#HolderPhoto img').css('width', '100%');
 						}
 						$( "#HolderPhoto img" ).draggable({
-							axis: 'x',
 							cursor: "move",
 							drag: function( event, ui ) {
 								var parentPos = $('#HolderPhoto').offset();
 								var childPos = $('#HolderPhoto img').offset();
-						        if (ui.position.left >= '0') {
-						            ui.position.left = '0';
-						        }
-						        if (-ui.position.left >= $('#HolderPhoto img').width() - $('#HolderPhoto').width()){
-						        	ui.position.left = -($('#HolderPhoto img').width() - $('#HolderPhoto').width());
-						        } else {
-						        	console.log(ui.position.left, $('#HolderPhoto img').width() - $('#HolderPhoto').width());
-						        }
+								if (ui.position.top >= '0') {
+									ui.position.top = '0';
+								}
+								if (-ui.position.top >= $('#HolderPhoto img').height() - $('#HolderPhoto').height()) {
+									ui.position.top = -($('#HolderPhoto img').height() - $('#HolderPhoto').height());
+								}
+								if (ui.position.left >= '0') {
+									ui.position.left = '0';
+								}
+								if (-ui.position.left >= $('#HolderPhoto img').width() - $('#HolderPhoto').width()){
+									ui.position.left = -($('#HolderPhoto img').width() - $('#HolderPhoto').width());
+								}
 							}
 						});
 
 						$('input[name=width]').val(parseInt($('#HolderPhoto img').css('width')));
-						$('input[name=height]').val(parseInt($('#HolderPhoto img').css('height')));						
+						$('input[name=height]').val(parseInt($('#HolderPhoto img').css('height')));
 					}
 				};
 				reader.readAsDataURL(file);
@@ -102,7 +107,7 @@ if(upload !== null){
 	};
 }
 $(function(){
-	$(".select-image").click(function(){
+	$(".select-image, .upload-zone, .new-photo span").click(function(){
 		uploadImage.changeStatus = false;
 		$("#selectPhoto").click();
 	});
@@ -110,4 +115,25 @@ $(function(){
 		$("#form-photo-save").ajaxSubmit(uploadImage.singlePhotoOption);
 		return false;
 	});
+	$('.logo-ext .add').click( function(){
+		var $parent = $(this).parent();		
+		$parent.removeClass('not-vis');
+		$('input[name="logo-extreme"]').val("yes");
+	});
+	$('.logo-ext .remove').click( function(){
+		var $parent = $(this).parent();		
+		$parent.addClass('not-vis');
+		$('input[name="logo-extreme"]').val("no");
+	});
+	$('.logo-hou .add').click( function(){
+		var $parent = $(this).parent();		
+		$parent.removeClass('not-vis');
+		$('input[name="logo-hours"]').val("yes");
+	});
+	$('.logo-hou .remove').click( function(){
+		var $parent = $(this).parent();		
+		$parent.addClass('not-vis');
+		$('input[name="logo-hours"]').val("no");
+	});
+
 });
