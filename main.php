@@ -185,16 +185,29 @@ require_once(__ROOT__.'/twitter.php');
             <div class="popup advice-popup hidden" data-popup="1">
                 <div class="popup-head">
                     <div class="mini-logo"></div>
-                    <div class="mini-slider">
-                        <div class="slide slide-1" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
+                    <div class="mini-slider" data-auto="false">
+                        <div class="slide slide-1" data-taste="0" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
                             <div class="mini-desc">Клубника</div>
                         </div>
-                        <div class="arr arr__left"><span class="icon icon-left-dir"></span></div>
-                        <div class="arr arr__right"><span class="icon icon-right-dir"></span></div>
+                        <div class="slide slide-2" data-taste="1" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
+                            <div class="mini-desc">Фисташка</div>
+                        </div>
+                        <div class="slide slide-3" data-taste="2" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
+                            <div class="mini-desc">Тропик</div>
+                        </div>
+                        <div class="slide slide-4" data-taste="3" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
+                            <div class="mini-desc">Ямбери</div>
+                        </div>
+                        <div class="slide slide-5" data-taste="4" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
+                            <div class="mini-desc">Два шоколада</div>
+                        </div>
+                        <div class="slide slide-6" data-taste="5" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
+                            <div class="mini-desc">Ягодный</div>
+                        </div>
                     </div>
                     <div class="popup-close"></div>
                 </div>
-                <div class="popup-body" id="popupCont">
+                <div class="popup-body" id="popupCont" data-taste="0">
                     <header class="popup-header">
                         <h2>Extreme советы</h2>
                         <div class="popup-headdesc">
@@ -204,41 +217,52 @@ require_once(__ROOT__.'/twitter.php');
                     </header>
                     <div class="popup-content">
                         <div class="popup-fotorama">
-                            <div class="slide slide-1" data-taste="0">
-                                Доведите градус своей
-                                страсти до максимума,
-                                охладите пыл
-                                мороженым eXtreme
-                                Клубника и покажите друг
-                                другу настоящий
-                                «Час страсти»!
-
+                            <div class="advice-fotorama" data-taste="0">
+                                <div class="slide slide-1" data-taste="0">
+                                    Доведите градус своей
+                                    страсти до максимума,
+                                    охладите пыл
+                                    мороженым eXtreme
+                                    Клубника и покажите друг
+                                    другу настоящий
+                                    «Час страсти»!
+                                </div>
                             </div>
-                            <div class="slide slide-2" data-taste="1">
-                                Съешьте любимый Extreme
-                                Фисташка на его глазах,
-                                дразните его. Не оставьте
-                                ни кусочка. Угостите любимого
-                                мороженным уже после
-                                «Часа Страсти».
+                            <div class="advice-fotorama" data-taste="1">
+                                <div class="slide slide-2" data-taste="1">
+                                    Съешьте любимый Extreme
+                                    Фисташка на его глазах,
+                                    дразните его. Не оставьте
+                                    ни кусочка. Угостите любимого
+                                    мороженным уже после
+                                    «Часа Страсти».
+                                </div>
                             </div>
-                            <div class="slide slide-3" data-taste="2">
-                                Возьмите кончик рожка в зубы и покормите любимого Ягодным Extreme без помощи рук.
-                            </div>
-                            <div class="slide slide-4" data-taste="3">
-                                Напишите ему страстное послание прямо на своём теле, используя лишь рожок Extreme Ямберия. Будьте кратки, но красноречивы. Позвольте ему справиться с прочитанным.
-                            </div>
-                            <div class="slide slide-5" data-taste="4">
-                                Попробуйте классический вкус Extreme Два Шоколада и сразу же порадуйте любимого особым холодным, но страстным поцелуем.
-                            </div>
-                            <div class="slide slide-6" data-taste="5">
+                            <div class="advice-fotorama" data-taste="5">
+                                <div class="slide slide-6" data-taste="5">
                                 Спросите его про себя! С каждым правильным ответом двигайтесь туда, куда велит вам страсть, и угощайте его Тропическим Extreme.
+                                </div>
+                                <div class="slide slide-7" data-taste="5">
+                                    Сделайте ей согревающий утренний массаж, после – аккуратно проведите мороженным Extreme Тропик по её спине, настроив на Час утренней Страсти.
+                                </div>
                             </div>
-                            <div class="slide slide-7" data-taste="6">
-                                Сделайте ей согревающий утренний массаж, после – аккуратно проведите мороженным Extreme Тропик по её спине, настроив на Час утренней Страсти.
+                            <div class="advice-fotorama" data-taste="3">
+                                <div class="slide slide-4" data-taste="3">
+                                    Напишите ему страстное послание прямо на своём теле, используя лишь рожок Extreme Ямберия. Будьте кратки, но красноречивы. Позвольте ему справиться с прочитанным.
+                                </div>
+                                <div class="slide slide-8" data-taste="3">
+                                    Скажите, что он должен исполнить три любых ваших желания за рожок Extreme Ямбери. Пусть желания зажгут ваш «Час Страсти».
+                                </div>
                             </div>
-                            <div class="slide slide-8" data-taste="7">
-                                Скажите, что он должен исполнить три любых ваших желания за рожок Extreme Ямбери. Пусть желания зажгут ваш «Час Страсти».
+                            <div class="advice-fotorama" data-taste="4">
+                                <div class="slide slide-5" data-taste="4">
+                                    Попробуйте классический вкус Extreme Два Шоколада и сразу же порадуйте любимого особым холодным, но страстным поцелуем.
+                                </div>
+                            </div>
+                            <div class="advice-fotorama" data-taste="2">
+                                <div class="slide slide-3" data-taste="2">
+                                    Возьмите кончик рожка в зубы и покормите любимого Ягодным Extreme без помощи рук.
+                                </div>
                             </div>
                         </div>                        
                     </div>
@@ -624,7 +648,7 @@ require_once(__ROOT__.'/twitter.php');
                         ></div> 
                     </footer>
                 </div>
-            </div>
+        </div>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
@@ -694,6 +718,7 @@ require_once(__ROOT__.'/twitter.php');
             var parent = $('.fotorama').fotorama({
                 arrows: false,
                 nav: false,
+                autoplay: false,
                 height: '280',
                 autoplay: '15000',
                 transition: 'crossfade'
@@ -776,7 +801,7 @@ require_once(__ROOT__.'/twitter.php');
                     target: '+=1'
                 });
         };
-        var $popupFotorama = $('.popup-fotorama').fotorama({
+        var $popupFotorama = $('.advice-fotorama').fotorama({
             nav: false,
             width: '848',
             height: '320',
@@ -787,10 +812,29 @@ require_once(__ROOT__.'/twitter.php');
         $popupFotorama.on(
           'fotorama: show fotorama:showend',
           function (e, fotorama, extra) {
-            var index = $('.fotorama__active .slide').data('taste');
-            $('#popupCont').attr('data-taste', index);
+            var index = $('.popup-fotorama .fotorama__active .slide').data('taste');
           }
         );
+        
+        var $miniFotorama = $('.mini-slider').fotorama({
+            nav: false,
+            autoplay: false
+        });
+
+        $miniFotorama.on(
+          'fotorama: show fotorama:showend',
+          function (e, fotorama, extra) {
+            var index = $('.mini-slider .fotorama__active .slide').data('taste');
+            $('.mini-slider').attr('data-taste', index);
+            $('#popupCont').attr('data-taste', index);
+          }
+        ).on(
+          'fotorama: ready',
+          function(e, fotorama, extra) {
+            var index = $('.mini-slider .fotorama__active .slide').data('taste');
+            fotorama.show(index);
+          }
+        );        
     </script>
 	<script src="js/libs/jquery-form.min.js"></script>
 	<script src="js/libs/upload.js"></script>

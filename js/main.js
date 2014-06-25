@@ -41,6 +41,7 @@ var Slider = (function(){
 				$currentDesc = $('.desc-slide.active').removeClass('active').addClass('passed').next().addClass('active').index();
 				$arrow.attr({'data-arrow': $current});
 				$main.attr({'data-bg': $current});
+				$('#popupCont').attr('data-taste', $current-1);
 
 				if ($current == $size) {
 					$next.addClass('disabled');
@@ -60,6 +61,7 @@ var Slider = (function(){
 				$currentDesc = $('.desc-slide.active').removeClass('active').prev().addClass('active').removeClass('passed').index();
 				$arrow.attr({'data-arrow': $current});
 				$main.attr({'data-bg': $current});
+				$('#popupCont').attr('data-taste', $current-1);
 
 				if ($current === 1) {
 					$prev.addClass('disabled');
