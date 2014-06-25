@@ -31,6 +31,18 @@ if (isset($_POST['logo-extreme']) && $_POST['logo-extreme'] !== 'no') {
 if (isset($_POST['logo-hours']) && $_POST['logo-hours'] !== 'no') {
 	$request .= '&logo-hours=1';
 }
+if (isset($_POST['width']) && $_POST['width'] !== 'no') {
+	$request .= '&width='.$_POST['width'];
+}
+if (isset($_POST['height']) && $_POST['height'] !== 'no') {
+	$request .= '&height='.$_POST['height'];
+}
+if (isset($_POST['logo-hours']) && $_POST['logo-hours'] !== 'no') {
+	$request .= '&logo-hours=1';
+}
+if (isset($_POST['logo-hours']) && $_POST['logo-hours'] !== 'no') {
+	$request .= '&logo-hours=1';
+}
 if (isset($_POST['filter']) && $_POST['filter'] !== 'no') {
 	switch($_POST['filter']){
 	    case 'yamberi': $request .= '&filter=filter-yamberi.png'; break;
