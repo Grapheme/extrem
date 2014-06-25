@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Час Страсти</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=1280, initial-scale=1, maximum-scale=1, minimal-ui">
+        <meta name="viewport" content="width=1280, initial-scale=.6, maximum-scale=1, minimal-ui">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         
