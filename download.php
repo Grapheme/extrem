@@ -1,6 +1,6 @@
 <?php
 
-function image_resize($src, $dst, $width, $height, $crop = 0)
+function image_resize($src, $dst, $left = 0, $top = 0, $width, $height, $crop = 0)
 {
 
   if(!list($w, $h) = getimagesize($src)) return "Unsupported picture type!";
@@ -14,6 +14,7 @@ function image_resize($src, $dst, $width, $height, $crop = 0)
     case 'png': $img = imagecreatefrompng($src); break;
     default : return "Unsupported picture type!";
   }
+
 
   // resize
   if($crop){
@@ -40,7 +41,11 @@ function image_resize($src, $dst, $width, $height, $crop = 0)
     imagesavealpha($new, true);
   }
 
-  imagecopyresampled($new, $img, 0, 0, $x, 0, $width, $height, $w, $h);
+  if ($left > 0 || $top > 0) {
+    imagecopyresampled($new, $img, 0, 0, $left, $top, $width, $height, $w, $h);
+  } else {
+    imagecopyresampled($new, $img, 0, 0, $x, 0, $width, $height, $w, $h);
+  }
 
   switch($type){
     case 'bmp': imagewbmp($new, $dst); break;
@@ -225,40 +230,44 @@ $watermarkFile3 = getcwd().'/img/application/overlays/';
 //$watermarkFile3 = '/srv/www/extreme_hour/repo/master/htdocs/img/application/overlays/';
 
 $pic_type = strtolower(strrchr($_GET['file'],"."));
-$src = getcwd().'/temporary/passionhour'.$pic_type;
-//$src = '/srv/www/extreme_hour/tmp/passionhour'.$pic_type;
-if (true !== ($pic_error = image_resize($sourceFile, $src, 600, 600, 1))) {
+$src1 = getcwd().'/temporary/resized'.$pic_type;
+$src2 = getcwd().'/temporary/passionhour'.$pic_type;
+//$src1 = '/srv/www/extreme_hour/tmp/resized'.$pic_type;
+//$src2 = '/srv/www/extreme_hour/tmp/passionhour'.$pic_type;
+if (true === ($pic_error = image_resize($sourceFile, $src1, 0, 0, $_GET['width'], $_GET['height'], 1))) {
+    image_resize($src1, $src2, $_GET['left'], $_GET['top'], 580, 422, 1);
+} else {
     echo $pic_error;
     exit;
 }
 
 if (isset($_GET['logo-extreme']) || isset($_GET['logo-hours']) || isset($_GET['filter'])) {
 	if (isset($_GET['logo-extreme'])) {
-		createWatermark($src, $watermarkFile2, 20, 20, 100, 100, 2);
+		createWatermark($src2, $watermarkFile2, 20, 20, 100, 100, 2);
 	}
 	if (isset($_GET['logo-hours'])) {
-		createWatermark($src, $watermarkFile, 20, 20, 100, 100, 4);
+		createWatermark($src2, $watermarkFile, 20, 20, 100, 100, 4);
 	}
 	if (isset($_GET['filter'])) {
-		createWatermark($src, $watermarkFile3.$_GET['filter'], 0, 0, 100, 20, 1);
+		createWatermark($src2, $watermarkFile3.$_GET['filter'], 0, 0, 100, 20, 1);
 	}
 } else {
-	createWatermark($src, $watermarkFile, 20, 20, 100, 100, 1);
+	createWatermark($src2, $watermarkFile, 20, 20, 100, 100, 1);
 }
 
 header('Pragma: public');
 header('Expires: 0');
 header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
-header('Last-Modified: '.gmdate ('D, d M Y H:i:s', filemtime($src)).' GMT');
+header('Last-Modified: '.gmdate ('D, d M Y H:i:s', filemtime($src2)).' GMT');
 header('Cache-Control: private',false);
-if($FileSize = getimagesize($src)) :
+if($FileSize = getimagesize($src2)) :
 	header('Content-type: '.$FileSize['mime']);
 else:
 	header('Content-type: image/png');
 endif;
-header('Content-Disposition: attachment; filename="'.basename($src).'"');
+header('Content-Disposition: attachment; filename="'.basename($src2).'"');
 header('Content-Transfer-Encoding: binary');
-header('Content-Length: '.filesize($src));
+header('Content-Length: '.filesize($src2));
 header('Connection: close');
-readfile($src);
+readfile($src2);
 
