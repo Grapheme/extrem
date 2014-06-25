@@ -109,7 +109,7 @@ require_once(__ROOT__.'/twitter.php');
                                 <div class="desc-slide" data-slide="slide-3">
                                     <div class="ice-cream-head">Тропик</div>
                                     <div class="ice-cream-body">
-                                        – тропические фантизии для тех, кто просыпается вместе
+                                        – тропические фантазии для тех, кто просыпается вместе
                                     </div>
                                 </div>
                                 <div class="desc-slide" data-slide="slide-4">
@@ -133,7 +133,7 @@ require_once(__ROOT__.'/twitter.php');
                             </div>                            
                         </div>
                         <section class="app app-right">
-                            <div id="app2" class="app-head">
+                            <div id="app2" class="app-head" style="opacity:0.4;">
                                 <img class="app-bg" src="img/apps/02.jpg" alt="">
                                 <header>Анна<br>Межиковская</header>
                                 <div class="app-tag">на нашем сайте</div>
@@ -189,18 +189,22 @@ require_once(__ROOT__.'/twitter.php');
                         <div class="slide slide-1" data-taste="0" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
                             <div class="mini-desc">Клубника</div>
                         </div>
+                        <!--
                         <div class="slide slide-2" data-taste="1" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
                             <div class="mini-desc">Фисташка</div>
                         </div>
+                        -->
                         <div class="slide slide-3" data-taste="2" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
                             <div class="mini-desc">Тропик</div>
                         </div>
                         <div class="slide slide-4" data-taste="3" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
                             <div class="mini-desc">Ямбери</div>
                         </div>
+                        <!--
                         <div class="slide slide-5" data-taste="4" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
                             <div class="mini-desc">Два шоколада</div>
                         </div>
+                        -->
                         <div class="slide slide-6" data-taste="5" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
                             <div class="mini-desc">Ягодный</div>
                         </div>
@@ -219,15 +223,14 @@ require_once(__ROOT__.'/twitter.php');
                         <div class="popup-fotorama">
                             <div class="advice-fotorama" data-taste="0">
                                 <div class="slide slide-1" data-taste="0">
-                                    Доведите градус своей
-                                    страсти до максимума,
-                                    охладите пыл
-                                    мороженым eXtreme
-                                    Клубника и покажите друг
-                                    другу настоящий
-                                    «Час страсти»!
+                                    Час прогулки на лошадях и настоящий мачо на коне, 
+                                    сможет заключить героиню своего романа в объятия! 
+                                    Страстный поцелуй будет ещё слаще с Extreme Два шоколада. 
+                                    #часстрасти #ВечнаяСтрасть
+
                                 </div>
                             </div>
+                            <!--
                             <div class="advice-fotorama" data-taste="1">
                                 <div class="slide slide-2" data-taste="1">
                                     Съешьте любимый Extreme
@@ -238,30 +241,47 @@ require_once(__ROOT__.'/twitter.php');
                                     «Часа Страсти».
                                 </div>
                             </div>
+                            -->
                             <div class="advice-fotorama" data-taste="5">
                                 <div class="slide slide-6" data-taste="5">
-                                Спросите его про себя! С каждым правильным ответом двигайтесь туда, куда велит вам страсть, и угощайте его Тропическим Extreme.
+                                    Подыщите для Вас изысканный номер в гостинице. Приготовьте обстановку 
+                                    заранее и не раскрывайте сюрприз своей второй половинке. Не забудьте 
+                                    сказать, чтобы на ужин в номер подали Пломбирно-Ягодный Extreme. 
+                                    #часстрасти #ИзысканнаяСтрасть
                                 </div>
+                                <!--
                                 <div class="slide slide-7" data-taste="5">
                                     Сделайте ей согревающий утренний массаж, после – аккуратно проведите мороженным Extreme Тропик по её спине, настроив на Час утренней Страсти.
                                 </div>
+                                -->
                             </div>
                             <div class="advice-fotorama" data-taste="3">
                                 <div class="slide slide-4" data-taste="3">
-                                    Напишите ему страстное послание прямо на своём теле, используя лишь рожок Extreme Ямберия. Будьте кратки, но красноречивы. Позвольте ему справиться с прочитанным.
+                                    Устройте со своей половинкой вечер массажа для двоих, 
+                                    такую услугу не трудно найти. Насладившись массажем 
+                                    вместе, продолжите приятный вечер дома. Не забудьте 
+                                    Extreme Ямбери, чтобы подогреть вашу страсть! 
+                                    #часстрасти #ЭкзотикаСтрасти
                                 </div>
+                                <!--
                                 <div class="slide slide-8" data-taste="3">
                                     Скажите, что он должен исполнить три любых ваших желания за рожок Extreme Ямбери. Пусть желания зажгут ваш «Час Страсти».
                                 </div>
+                                -->
                             </div>
+                            <!--
                             <div class="advice-fotorama" data-taste="4">
                                 <div class="slide slide-5" data-taste="4">
                                     Попробуйте классический вкус Extreme Два Шоколада и сразу же порадуйте любимого особым холодным, но страстным поцелуем.
                                 </div>
                             </div>
+                            -->
                             <div class="advice-fotorama" data-taste="2">
                                 <div class="slide slide-3" data-taste="2">
-                                    Возьмите кончик рожка в зубы и покормите любимого Ягодным Extreme без помощи рук.
+                                    Угостите друг друга самым летним вкусом мороженного 
+                                    Extreme – Тропик, нежась на утреннем солнце у бассейна 
+                                    в Сокольниках или Парке Фили. После страстного поцелуя смело 
+                                    ныряйте в прохладную воду! #часстрасти #УтренняяСтрасть
                                 </div>
                             </div>
                         </div>                        
@@ -560,13 +580,13 @@ require_once(__ROOT__.'/twitter.php');
         <div class="popup photo-popup hidden" data-popup="3">
             <div class="popup-head">
                 <div class="mini-logo"></div>
-                <div class="mini-slider">
+                <!--<div class="mini-slider">
                     <div class="slide slide-1" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
                         <div class="mini-desc">Клубника</div>
                     </div>
                     <div class="arr arr__left"><span class="icon icon-left-dir"></span></div>
                     <div class="arr arr__right"><span class="icon icon-right-dir"></span></div>
-                </div>
+                </div>-->
                 <div class="popup-close"></div>
             </div>
             <div class="popup-body">
@@ -804,7 +824,7 @@ require_once(__ROOT__.'/twitter.php');
         var $popupFotorama = $('.advice-fotorama').fotorama({
             nav: false,
             width: '848',
-            height: '320',
+            height: '460',
             arrows: 'always'
         });
         var $popupFotoramaApi = $popupFotorama.data('fotorama');
