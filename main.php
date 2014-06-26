@@ -223,54 +223,50 @@ require_once(__ROOT__.'/twitter.php');
                         <div data-filter="1">
                             <h2>Extreme советы</h2>
                             <div class="popup-headdesc">
-                                Наши советы о том, как
-                                можно провести «Час Страсти»
+                                Наши советы о том, как можно провести «Час Страсти»
                             </div>
                         </div>
                         <div class="hidden" data-filter="2">
-                            <h2>Extreme танцы</h2>
-                            <div class="popup-headdesc">
-                                Танцы для соблазнения
-                                особей противоположного
-                                (и не только) пола
+                            <h2>Танцы</h2>
+                            <div class="popup-headdesc">                                
+                                Нет лучшего воплощения страсти, чем танец. Выбирай свой!
                             </div>
                         </div>
                         <div class="hidden" data-filter="3">
-                            <h2>Extreme фильмы</h2>
+                            <h2>Фильмы</h2>
                             <div class="popup-headdesc">
-                                Фильмы для входа в состояние
-                                страсти
+                                Выбор Extreme – Самые страстные фильмы всех времен.
                             </div>
                         </div>
                     </header>
                     <div class="popup-content">
                         <div class="popup-fotorama">
                             <div class="advice-fotorama" data-taste="0">
-                                <div class="slide slide-1" data-taste="0">
+                                <div class="slide slide-1" data-taste="0" data-filter="1">
                                     Если у вас и у вашей половинки непреодолимая тяга к покорению вершин, отправляйтесь на <a target="_blank" href="https://ru.foursquare.com/explore?mode=url&ne=55.889176%2C37.95433&q=%D0%A1%D0%BA%D0%B0%D0%BB%D0%BE%D0%B4%D1%80%D0%BE%D0%BC&sw=55.507638%2C37.152328">скалодром</a>. Заранее приготовьте  Extreme Клубника как награду за стойкость и выносливость, а дальше останется только покорить друг друга. #часстрасти #ЯркаяСтрасть
                                 </div>
-                                <div class="slide slide-2" data-taste="0">
+                                <div class="slide slide-2" data-taste="0" data-filter="2">
                                     Если вас не пугает высокая скорость и вы обожаете запах кожи и бензина, отправляйтесь с любимым на <a target="_blank" href="https://ru.foursquare.com/explore?mode=url&near=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&q=%D0%9A%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%B3">картинг</a>. Почувствуйте себя настоящим гонщиком - прилив адреналина вам гарантирован, а поддержать волну страсти поможет Extreme Клубника. #часстрасти #ЯркаяСтрасть
                                 </div>
-                                <div class="slide slide-3" data-taste="0">
+                                <div class="slide slide-3" data-taste="0" data-filter="1">
                                     Посмотрите фламенко в одном из испанских баров или сходите на спектакль в <a target="_blank" href="http://www.teatr-romen.ru/">цыганский театр «Ромэн»</a>. Чувственная гитара, хриплые голоса солистов и страстные танцоры заставят ваши сердца трепетать! Пусть у этих чувств будет вкус Extreme Клубника. #часстрасти #ЯркаяСтрасть
                                 </div>
-                                <div class="slide slide-4" data-taste="0">
+                                <div class="slide slide-4" data-taste="0" data-filter="3">
                                     Увезите свою половинку среди ночи на <a target="_blank" href="https://ru.foursquare.com/explore?mode=url&near=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F&nearGeoId=72057594038452837&q=%D0%BF%D0%BB%D1%8F%D0%B6
 ">пляж</a> любоваться звездами. Предложите съесть Extreme Клубника одно на двоих, на последнем кусочке ваши губы сольются в страстном поцелуе. А дальше выбирайте: купание голышом или сразу секс на пляже. #часстрасти #ЯркаяСтрасть
                                 </div>
                             </div>
                             <div class="advice-fotorama" data-taste="1">
-                                <div class="slide slide-1" data-taste="1">
+                                <div class="slide slide-1" data-taste="1" data-filter="1">
                                     Начните страстный вечер со своей половинкой с легкого лакомства, желательно афродизиака - отлично подойдет Extreme Фисташка-миндаль. Пусть любимый ест, а вы шепните на ушко какую-нибудь непристойность. #часстрасти #ДразнящаяСтрасть
                                 </div>
-                                <div class="slide slide-2" data-taste="1">
+                                <div class="slide slide-2" data-taste="1" data-filter="2">
                                     Собираясь на свидание, наденьте плащ на обнаженное тело, попросите возлюбленного отвезти вас туда, где никого нет, займитесь любовью в машине. После, чтобы остыть немного и прийти в себя, съешьте Extreme Фисташка-миндаль. #часстрасти #ДразнящаяСтрасть
                                 </div>
-                                <div class="slide slide-3" data-taste="1">
+                                <div class="slide slide-3" data-taste="1" data-filter="1">
                                     Помните, как в «9 ½ недель» Микки Рурк дразнил Ким Бейсингер кусочками льда? Сделайте тоже самое, только лед замените мороженным Extreme Фисташка-миндаль. Фисташковый вкус еще больше раззадорит желание. #часстрасти #ДразнящаяСтрасть
                                 </div>
-                                <div class="slide slide-4" data-taste="1">
+                                <div class="slide slide-4" data-taste="1" data-filter="3">
                                     Посмотрите вместе фильм, например, «Основной инстинкт». Такие фильмы всегда пробуждают фантазию. Если не будет хватать поп-корна, можете заменить его Extreme Фисташка-миндаль. Фисташка, как известно, отличный афродизиак!  #часстрасти #ДразнящаяСтрасть
                                 </div>
                             </div>
@@ -880,6 +876,12 @@ require_once(__ROOT__.'/twitter.php');
                 });
         };
 
+        $fotoramaCont = $('.advice-fotorama');
+        $fotoramaContElems = {};
+        $fotoramaCont.each( function(){
+            $fotoramaContElems[''+$(this).data('taste')] = $(this).find('.slide');
+        });
+        console.log($fotoramaContElems);
 
         var $popupFotorama = $('.advice-fotorama').fotorama({
             nav: false,
@@ -914,7 +916,13 @@ require_once(__ROOT__.'/twitter.php');
             if(!miniLoadCD) {
                 fotorama.show(superIndex);
                 miniLoadCD = 1;
-            }            
+            }
+
+            setTimeout( function(){
+                $('.cat-adv').trigger('click');
+                console.log('triggered');
+            }, 500);
+            
           }
         );      
     </script>
