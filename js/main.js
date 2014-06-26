@@ -106,9 +106,6 @@ var Popup = (function(){
 		$popupArr.addClass('hidden');
 		$('#load-photo').removeClass('uploaded');
 	}
-	function alignOverlay() {
-
-	}
 
 	$(document).on('click', '#app, #app2', function(){
 		openPopup($popup_3);
@@ -129,10 +126,10 @@ var Popup = (function(){
 		closePopup();
 	});
 	$(document).keyup(function(e) {
-	  if (e.keyCode == 27) {
-	  	e.preventDefault();
-	  	closePopup();
-	  }   // esc
+		if (e.keyCode == 27) {
+			e.preventDefault();
+			closePopup();
+		}   // esc
 	});
 
 	var slide_allow = true;
@@ -147,6 +144,12 @@ var Popup = (function(){
 			slide_allow = true;
 		}, 500);
 	});
+
+	return {
+		open: openPopup,
+		close: closePopup
+	};
+
 })();
 
 Slider.init();

@@ -869,20 +869,22 @@ require_once(__ROOT__.'/twitter.php');
             autoplay: false
         });
 
+        var miniLoadCD = 0;
+
         $miniFotorama.on(
           'fotorama: show fotorama:showend',
           function (e, fotorama, extra) {
+            var superIndex = $('.ice-cream-slider .slide.active').data('taste');
             var index = $('.mini-slider .fotorama__active .slide').data('taste');
             $('.mini-slider').attr('data-taste', index);
             $('#popupCont').attr('data-taste', index);
+            
+            if(!miniLoadCD) {
+                fotorama.show(superIndex);
+                miniLoadCD = 1;
+            }            
           }
-        ).on(
-          'fotorama: ready',
-          function(e, fotorama, extra) {
-            var index = $('.mini-slider .fotorama__active .slide').data('taste');
-            fotorama.show(index);
-          }
-        );        
+        );      
     </script>
 	<script src="js/libs/jquery-form.min.js"></script>
 	<script src="js/libs/upload.js"></script>
