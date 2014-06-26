@@ -49,7 +49,7 @@
                 </div>
                 <a href="main.php<? echo (strlen($_SERVER['QUERY_STRING']) > 2) ? '?'.$_SERVER['QUERY_STRING'] : ''; ?>" class="enter-btn"> </a>
                 <div class="counter">
-                    204
+                    318
                 </div>
             </div>
         </div>

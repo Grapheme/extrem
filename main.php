@@ -1,6 +1,7 @@
 <?php
 define('__ROOT__', dirname(__FILE__)); 
 require_once(__ROOT__.'/twitter.php'); 
+require_once(__ROOT__.'/instagram.php'); 
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +42,31 @@ require_once(__ROOT__.'/twitter.php');
                     <div class="top clearfix">
                         <section class="app app-left">
                             <div id="app" class="app-head fotorama" data-auto="false">
-                                
+                                <?php
+                                    $hashtags = array(
+                                        'passionhour',
+                                        'ЧасСтрасти',
+                                        'hourofpassion',
+                                        'ЯркаяСтрасть',
+                                        'УтренняяСтрасть',
+                                        'ДразнящаяСтрасть',
+                                        'ЭкзотикаСтрасти',
+                                        'ИзысканнаяСтрасть',
+                                        'ВечнаяСтрасть',
+                                    );
+                                    foreach($hashtags as $hashtag) {
+                                        $data = getInstaFeed($hashtag, 10);
+                                        
+                                        foreach ($data['data'] as $img) {
+                                            echo   '<div>' .
+                                                   '<a href="'.$img['link'].'"><img src="'.$img['images']['standard_resolution']['url'].'" /></a>' .
+                                                   '<img class="app-bg" src="'.$img['images']['standard_resolution']['url'].'" alt="">' .
+                                                   '<header><span>'.$img['user']['full_name'].'</span></header>' .
+                                                   '<div class="app-tag"><span>#'.$hashtag.'</span></div>' .
+                                                   '</div>';
+                                        }                                        
+                                    }                                    
+                                ?>
                             </div>                    
                             <footer class="app-footer">
                             <?php
@@ -623,13 +648,29 @@ require_once(__ROOT__.'/twitter.php');
                     <header class="popup-header">
                         <h2>#Часстрасти</h2>
                         <div class="popup-headdesc">
-                            Ваши фотографии из инстаграм<br>
-                            с хэштегом #часстрасти
+                            Добавляйте свои страстные моменты 
+                            в инстаграмм с хэштегом #ЧасСтрасти
                         </div>
                     </header>
                     <div class="popup-content">
                         <div class="instaphoto-slider jcarousel">
                             <ul id="instaSlider">
+                            <?php
+                                foreach($hashtags as $hashtag) {
+                                    $data = getInstaFeed($hashtag, 10);
+                                    
+                                    foreach ($data['data'] as $img) {
+                                        echo '<li class="insta-slide slide-1" style="background:' .
+                                                'url('.$img['images']['standard_resolution']['url'].') no-repeat center center / cover;">' .
+                                                '<div class="slide-desc">' .
+                                                    '<div class="slide-user">'.$img['user']['full_name'].'</div>' .
+                                                    '<div class="slide-description"></div>' .
+                                                    '<div class="slide-tags">#'.$hashtag.'</div>' .
+                                                '</div>' .
+                                            '</li>';
+                                    }                                        
+                                }
+                            ?>
                             </ul>
                         </div>
                         <a href="#" class="jcarousel-control jcarousel-control-prev"></a>
@@ -680,12 +721,12 @@ require_once(__ROOT__.'/twitter.php');
                         <div class="popup-content">
                             <div class="popup-fotorama">
                             <?php
-                                $tweets = getTweets("passionhour");
+                            foreach($hashtags as $hashtag) {
+                                $tweets = getTweets($hashtag);
                                 for ($i=0; $i < count($tweets->statuses); $i++) {
                                     echo '<div class="slide slide-'.$i.'" data-taste="0">'.$tweets->statuses[$i]->text.'</div>';
-                                    //echo $tweet->text."\n";
-                                    //echo "@".$tweet->user->screen_name."\n";
                                 }
+                            }
                             ?>
                             </div>                        
                         </div>
@@ -704,56 +745,11 @@ require_once(__ROOT__.'/twitter.php');
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/vendor/instafeed.min.js"></script>
     <script type="text/javascript">
-        var tag = 'часстрасти';
-        var feed = new Instafeed({
-            target: 'app',
-            get: 'tagged',
-            tagName: tag,
-            clientId: 'a541556dc1cc4a6ab63d72498e28801f',
-            resolution: 'low_resolution',
-            template:
-               '<div>' +
-               '<a href="{{link}}"><img src="{{image}}" /></a>' + 
-               '<img class="app-bg" src="{{image}}" alt="">' +
-               '<header><span>{{model.user.full_name}}</span></header>' +
-               '<div class="app-tag"><span>#' + tag + '</span></div>' +
-               '</div>',
-            useHttp: true,
-            sortBy: 'most-liked',
-            limit: 60,
-            after: function(){
-                fotoramaInit();
-            }
+        $(function(){
+            fotoramaInit();
+            navInit();
         });
-        feed.run();
-
-        var bigSlider = new Instafeed({
-            target: 'instaSlider',
-            get: 'tagged',
-            tagName: tag,
-            clientId: 'a541556dc1cc4a6ab63d72498e28801f',
-            resolution: 'low_resolution',
-            template:
-
-            '<li class="insta-slide slide-1" style="background:' +
-                'url({{image}}) no-repeat center center / cover;">'+
-                '<div class="slide-desc">'+
-                    '<div class="slide-user">{{model.user.full_name}}</div>'+
-                    '<div class="slide-description"></div>'+
-                    '<div class="slide-tags">#часстрасти</div>' +
-                '</div>' +
-            '</li>',
-
-            useHttp: true,
-            sortBy: 'none',
-            limit: 60,
-            after: function(){
-                navInit();
-            }
-        });
-        bigSlider.run();
 
         function navInit() {
             var elems = $('#instaSlider .insta-slide').clone().empty();
