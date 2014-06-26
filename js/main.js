@@ -145,6 +145,21 @@ var Popup = (function(){
 		}, 500);
 	});
 
+	/* Filters in popup */
+	function changeHeader(elem) {
+		var boundIndex = elem.data('filter');
+		var headBlocks = $('#popupCont .popup-header [data-filter]');
+		var headBlock = $('#popupCont .popup-header [data-filter="' + boundIndex + '"]');
+
+		headBlocks.addClass('hidden');
+		headBlock.removeClass('hidden');
+	}
+	$(document).on('click', '.cat-li', function(){
+		changeHeader($(this));
+		$('.cat-li').removeClass('active');
+		$(this).addClass('active')
+	});
+
 	return {
 		open: openPopup,
 		close: closePopup
@@ -155,7 +170,7 @@ var Popup = (function(){
 Slider.init();
 
 $(document).ready(function(){
-	$('button.photo-save').click(function(e){	
+	$('button.photo-save').click(function(e){
 		$(this).html('Пожалуйста подождите ...');
 	});
 });

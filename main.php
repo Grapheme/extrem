@@ -208,11 +208,39 @@ require_once(__ROOT__.'/twitter.php');
                     <div class="popup-close"></div>
                 </div>
                 <div class="popup-body" id="popupCont" data-taste="0">
+                    <ul class="cats">
+                        <li class="cat-li cat-adv active" data-filter="1">
+                            Советы
+                        </li><!--
+                     --><li class="cat-li cat-dan" data-filter="2">
+                            Танцы
+                        </li><!--
+                     --><li class="cat-li cat-fil" data-filter="3">
+                            Фильмы
+                        </li>
+                    </ul>
                     <header class="popup-header">
-                        <h2>Extreme советы</h2>
-                        <div class="popup-headdesc">
-                            Наши советы о том, как
-                            можно провести «Час Страсти»
+                        <div data-filter="1">
+                            <h2>Extreme советы</h2>
+                            <div class="popup-headdesc">
+                                Наши советы о том, как
+                                можно провести «Час Страсти»
+                            </div>
+                        </div>
+                        <div class="hidden" data-filter="2">
+                            <h2>Extreme танцы</h2>
+                            <div class="popup-headdesc">
+                                Танцы для соблазнения
+                                особей противоположного
+                                (и не только) пола
+                            </div>
+                        </div>
+                        <div class="hidden" data-filter="3">
+                            <h2>Extreme фильмы</h2>
+                            <div class="popup-headdesc">
+                                Фильмы для входа в состояние
+                                страсти
+                            </div>
                         </div>
                     </header>
                     <div class="popup-content">
