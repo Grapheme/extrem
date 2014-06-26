@@ -42,7 +42,7 @@ var Slider = (function(){
 				$arrow.attr({'data-arrow': $current});
 				$main.attr({'data-bg': $current});
 				$('#popupCont').attr('data-taste', $current-1);
-				$miniFotorama.data('fotorama').show($current-1)
+				$miniFotorama.data('fotorama').show($current-1);
 
 				if ($current == $size) {
 					$next.addClass('disabled');
@@ -63,6 +63,7 @@ var Slider = (function(){
 				$arrow.attr({'data-arrow': $current});
 				$main.attr({'data-bg': $current});
 				$('#popupCont').attr('data-taste', $current-1);
+				$miniFotorama.data('fotorama').show($current-1);
 
 				if ($current === 1) {
 					$prev.addClass('disabled');
