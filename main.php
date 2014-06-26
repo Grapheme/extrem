@@ -854,7 +854,7 @@ require_once(__ROOT__.'/twitter.php');
         var $popupFotorama = $('.advice-fotorama').fotorama({
             nav: false,
             width: '848',
-            height: '460',
+            height: '550',
             arrows: 'always'
         });
         var $popupFotoramaApi = $popupFotorama.data('fotorama');
