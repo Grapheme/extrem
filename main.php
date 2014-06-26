@@ -57,32 +57,32 @@ require_once(__ROOT__.'/twitter.php');
                         </section>
                         <div class="ice-cream-slider">
                             <h2 class="ice-logo">Extreme</h2>
-                            <div class="slide slide-1">
+                            <div class="slide slide-1" data-taste="0">
                                 <div class="left-splash"></div>
                                 <div class="ice-cream"></div>
                                 <div class="right-splash"></div>
                             </div>
-                            <div class="slide slide-2">
+                            <div class="slide slide-2" data-taste="1">
                                 <div class="left-splash"></div>
                                 <div class="ice-cream"></div>
                                 <div class="right-splash"></div>
                             </div>
-                            <div class="slide slide-3">
+                            <div class="slide slide-3" data-taste="2">
                                 <div class="left-splash"></div>
                                 <div class="ice-cream"></div>
                                 <div class="right-splash"></div>
                             </div>
-                            <div class="slide slide-4">
+                            <div class="slide slide-4" data-taste="3">
                                 <div class="left-splash"></div>
                                 <div class="ice-cream"></div>
                                 <div class="right-splash"></div>
                             </div>
-                            <div class="slide slide-5">
+                            <div class="slide slide-5" data-taste="4">
                                 <div class="left-splash"></div>
                                 <div class="ice-cream"></div>
                                 <div class="right-splash"></div>
                             </div>
-                            <div class="slide slide-6">
+                            <div class="slide slide-6" data-taste="5">
                                 <div class="left-splash"></div>
                                 <div class="ice-cream"></div>
                                 <div class="right-splash"></div>
@@ -326,379 +326,379 @@ require_once(__ROOT__.'/twitter.php');
                     </footer>
                 </div>
             </div>
-        <div class="popup advice-popup pad-popup hidden" data-popup="2">
-            <div class="popup-head">
-                <div class="mini-logo"></div>
-                <!--<div class="mini-slider">
-                    <div class="slide slide-1" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
-                        <div class="mini-desc">Клубника</div>
-                    </div>
-                    <div class="arr arr__left"><span class="icon icon-left-dir"></span></div>
-                    <div class="arr arr__right"><span class="icon icon-right-dir"></span></div>
-                </div>-->
-                <div class="popup-close"></div>
-            </div>
-            <div class="popup-body clearfix">
-                <div class="column-content">
-                    <div class="content-image">
-                        <img src="https://pp.vk.me/c620216/v620216612/f202/XDaHcKCpHbY.jpg" alt="Час Страсти" />
-                        <div class="content-title">
-                            Марина Дударева
+            <div class="popup advice-popup pad-popup hidden" data-popup="2">
+                <div class="popup-head">
+                    <div class="mini-logo"></div>
+                    <!--<div class="mini-slider">
+                        <div class="slide slide-1" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
+                            <div class="mini-desc">Клубника</div>
                         </div>
-                        <div class="content-info taste-strawberry">
-                            <span class="content-author">
+                        <div class="arr arr__left"><span class="icon icon-left-dir"></span></div>
+                        <div class="arr arr__right"><span class="icon icon-right-dir"></span></div>
+                    </div>-->
+                    <div class="popup-close"></div>
+                </div>
+                <div class="popup-body clearfix">
+                    <div class="column-content">
+                        <div class="content-image">
+                            <img src="https://pp.vk.me/c620216/v620216612/f202/XDaHcKCpHbY.jpg" alt="Час Страсти" />
+                            <div class="content-title">
                                 Марина Дударева
-                            </span>
-                            <span class="content-date">
-                                15.06.2014
-                            </span>
-                        </div>
-                    </div>
-                    <div class="content-text">
-                        <p>
-                            На днях мне на глаза попался видеоролик Hot Psychologies, в котором затрагивалась очень важная тема – отношения в сети. Ведь правда, из-за современных технологий мы стали общаться гораздо чаще, но видеться - гораздо реже. Порой я тоже замечаю за собой подобное поведение, но, не смотря на это, для меня нет ничего важнее прикосновений, взглядов и живых эмоций.
-                            Посмотрите и вы - http://www.youtube.com/watch?v=44tgVMy-DNc&list=PLF487B5.. 
-                            <br> #extremepassion #passionhour #часстрасти #час_страсти
-                        </p>
-                    </div>
-                    <div class="content-social">
-                        <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
-                        <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,odnoklassniki" data-yashareTheme="counter"> </div>
-                    </div>
-                </div>
-                <div class="column-content hidden">
-                    <div class="content-image">
-                        <img src="https://pp.vk.me/c618222/v618222432/cd1a/9ex-yLkTHho.jpg" alt="Час Страсти" />
-                        <div class="content-title">
-                            Татьяна Аверина
-                        </div>
-                        <div class="content-info taste-strawberry">
-                            <span class="content-author">
-                                Татьяна Аверина
-                            </span>
-                            <span class="content-date">
-                                19 июня 2014
-                            </span>
-                        </div>
-                    </div>
-                    <div class="content-text">
-                        <p>
-                            Я узнала о проекте "Час Страсти" и хочу сказать, что это замечательная идея! Ничто так не портит свидание как звонки телефона и проверка соц. сетей. Давайте проводить больше времени с любимыми, уделять им все свое внимание в те моменты, когда они рядом! Я буду участвовать в проекте!) Всем любви!)
-                            <br>#extremepassion #passionhour #часстрасти #час_страсти
-                        </p>
-                    </div>
-                    <div class="content-social">
-                        <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
-                        <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,odnoklassniki" data-yashareTheme="counter"> </div>
-                    </div>
-                </div>
-                <div class="column-content hidden">
-                    <div class="content-image">
-                        <img src="https://scontent-b-fra.xx.fbcdn.net/hphotos-frc3/t1.0-9/p480x480/10418980_764211840298479_8986235493383376274_n.jpg" alt="Час Страсти" />
-                        <div class="content-title">
-                            Екатерина Брицова
-                        </div>
-                        <div class="content-info taste-strawberry">
-                            <span class="content-author">
-                                Екатерина Брицова
-                            </span>
-                            <span class="content-date">
-                                19.06.2014
-                            </span>
-                        </div>
-                    </div>
-                    <div class="content-text">
-                        <p>
-                            И новая хорошая социальная идея: отключиться на часок от Интернета. Отложить телефоны, ноуты, планшетники и посвятить время друг другу. Спасибо, что иногда напоминаете нам о существовании такой возможности!
-                            Новый проект "Час Страсти" и я подписываюсь под этим: http://www.youtube.com/watch? v=44tgVMy-DNc&list=PLF487B58B01FA36BA
-                            <br>#extremepassion #passionhour #часстрасти #час_страсти
-                        </p>
-                    </div>
-                    <div class="content-social">
-                        <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
-                        <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,odnoklassniki" data-yashareTheme="counter"> </div>
-                    </div>
-                </div>
-                <div class="column-content hidden">
-                    <div class="content-image">
-                        <img src="https://scontent-b-fra.xx.fbcdn.net/hphotos-xpa1/t1.0-9/10440646_673652639367795_4423626214834128031_n.jpg" alt="Час Страсти" />
-                        <div class="content-title">
-                            Аня Лунева
-                        </div>
-                        <div class="content-info taste-tropic">
-                            <span class="content-author">
-                                Аня Лунева
-                            </span>
-                            <span class="content-date">
-                                18.06.2014
-                            </span>
-                        </div>
-                    </div>
-                    <div class="content-text">
-                        <p>
-                            А что если отключиться от сети, забыть про телефон, компьютеры, социальные сети и провести это время с пользой для души и тела? Крутая инициатива – «Час Страсти». Пройдет 16 июля. Кто поддерживает, ставьте лайк и распространяйте http://www.youtube.com/watch? v=44tgVMy-DNc&featur..
-                            <br>#extremepassion #passionhour #часстрасти #час_страсти
-                        </p>
-                    </div>
-                    <div class="content-social">
-                        <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
-                        <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,odnoklassniki" data-yashareTheme="counter"> </div>
-                    </div>
-                </div>
-                <div class="column-content hidden">
-                    <div class="content-image">
-                        <img src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xpf1/t31.0-8/p960x960/10379794_790666957670635_3202384629220389909_o.jpg" alt="Час Страсти" />
-                        <div class="content-title">
-                            Сергеи Судариков
-                        </div>
-                        <div class="content-info taste-strawberry">
-                            <span class="content-author">
-                                Сергеи Судариков
-                            </span>
-                            <span class="content-date">
-                                18.06.2014
-                            </span>
-                        </div>
-                    </div>
-                    <div class="content-text">
-                        <p>
-                            Когда последний раз вы играли со своей половинкой в "Кто первый возьмет телефон, тот платит за счет в кафе?". Ответы в комментарии. Специально для нас - поколения медиа - людей, в скором времени пройдет специальное событие "Час Страсти". Давайте на 1 час поддержим тренд "Digital Detox" - и опробуем все вкусы страсти в ночь с 15 на 16 июля. Будет интересно! http://www.youtube.com/watch?v=44tgVMy-DNc&list=PLF487B58B01FA36BA
-                            <br>#extremepassion #passionhour #часстрасти #час_страсти
-                        </p>
-                    </div>
-                    <div class="content-social">
-                        <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
-                        <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,odnoklassniki" data-yashareTheme="counter"> </div>
-                    </div>
-                </div>
-                <div class="column-content hidden">
-                    <div class="content-image">
-                        <img src="http://photos-h.ak.instagram.com/hphotos-ak-xfa1/914369_1518654535029951_1101664033_n.jpg" alt="Час Страсти" />
-                        <div class="content-title">
-                            Irina Shevchik
-                        </div>
-                        <div class="content-info taste-strawberry">
-                            <span class="content-author">
-                                Irina Shevchik
-                            </span>
-                            <span class="content-date">
-                                17.06.2014
-                            </span>
-                        </div>
-                    </div>
-                    <div class="content-text">
-                        <p>
-                            Открыла для себя проект «Час страсти». Подумала, что важно провести с любимым вечер без телефона и соцсетей. Вспомнить самые счастливые моменты вместе - бесценно :) вот вам один из них!
-                            <br>#extremepassion #passionhour
-                        </p>
-                    </div>
-                    <div class="content-social">
-                        <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
-                        <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,odnoklassniki" data-yashareTheme="counter"> </div>
-                    </div>
-                </div>
-                <div class="column-content hidden">
-                    <div class="content-image">
-                        <img src="http://photos-g.ak.instagram.com/hphotos-ak-xpf1/891407_871997296147198_24578230_n.jpg" alt="Час Страсти" />
-                        <div class="content-title">
-                            Stas Vitus
-                        </div>
-                        <div class="content-info taste-strawberry">
-                            <span class="content-author">
-                                Stas Vitus
-                            </span>
-                            <span class="content-date">
-                                17.06.2014
-                            </span>
-                        </div>
-                    </div>
-                    <div class="content-text">
-                        <p>
-                            После просмотра видео от Hot Psychologies. много думал и понял, что после работы я сразу домой к ней! Телефон off, интернет off и свет тоже ;)
-                            <br>#extremepassion #passionhour
-                        </p>
-                    </div>
-                    <div class="content-social">
-                        <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
-                        <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,odnoklassniki" data-yashareTheme="counter"> </div>
-                    </div>
-                </div>
-                <div class="column-list">
-                    <div class="list-title">Другие статьи</div>
-                    <ul>
-                        <li style="display: none;">
-                            <h3>Марина Дударева</h3>
-                            <div class="list-item-info clearfix taste-strawberry">
-                                <span class="list-author">
+                            </div>
+                            <div class="content-info taste-strawberry">
+                                <span class="content-author">
                                     Марина Дударева
                                 </span>
-                                <span class="list-date">
-                                    19 июня 2014
+                                <span class="content-date">
+                                    15.06.2014
                                 </span>
                             </div>
-                        </li>
-                        <li>
-                            <h3>Татьяна Аверина</h3>
-                            <div class="list-item-info clearfix taste-strawberry">
-                                <span class="list-author">
+                        </div>
+                        <div class="content-text">
+                            <p>
+                                На днях мне на глаза попался видеоролик Hot Psychologies, в котором затрагивалась очень важная тема – отношения в сети. Ведь правда, из-за современных технологий мы стали общаться гораздо чаще, но видеться - гораздо реже. Порой я тоже замечаю за собой подобное поведение, но, не смотря на это, для меня нет ничего важнее прикосновений, взглядов и живых эмоций.
+                                Посмотрите и вы - http://www.youtube.com/watch?v=44tgVMy-DNc&list=PLF487B5.. 
+                                <br> #extremepassion #passionhour #часстрасти #час_страсти
+                            </p>
+                        </div>
+                        <div class="content-social">
+                            <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+                            <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,odnoklassniki" data-yashareTheme="counter"> </div>
+                        </div>
+                    </div>
+                    <div class="column-content hidden">
+                        <div class="content-image">
+                            <img src="https://pp.vk.me/c618222/v618222432/cd1a/9ex-yLkTHho.jpg" alt="Час Страсти" />
+                            <div class="content-title">
+                                Татьяна Аверина
+                            </div>
+                            <div class="content-info taste-strawberry">
+                                <span class="content-author">
                                     Татьяна Аверина
                                 </span>
-                                <span class="list-date">
+                                <span class="content-date">
                                     19 июня 2014
                                 </span>
                             </div>
-                        </li>
-                        <li>
-                            <h3>Екатерина Брицова</h3>
-                            <div class="list-item-info clearfix taste-strawberry">
-                                <span class="list-author">
+                        </div>
+                        <div class="content-text">
+                            <p>
+                                Я узнала о проекте "Час Страсти" и хочу сказать, что это замечательная идея! Ничто так не портит свидание как звонки телефона и проверка соц. сетей. Давайте проводить больше времени с любимыми, уделять им все свое внимание в те моменты, когда они рядом! Я буду участвовать в проекте!) Всем любви!)
+                                <br>#extremepassion #passionhour #часстрасти #час_страсти
+                            </p>
+                        </div>
+                        <div class="content-social">
+                            <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+                            <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,odnoklassniki" data-yashareTheme="counter"> </div>
+                        </div>
+                    </div>
+                    <div class="column-content hidden">
+                        <div class="content-image">
+                            <img src="https://scontent-b-fra.xx.fbcdn.net/hphotos-frc3/t1.0-9/p480x480/10418980_764211840298479_8986235493383376274_n.jpg" alt="Час Страсти" />
+                            <div class="content-title">
+                                Екатерина Брицова
+                            </div>
+                            <div class="content-info taste-strawberry">
+                                <span class="content-author">
                                     Екатерина Брицова
                                 </span>
-                                <span class="list-date">
-                                    19 июня 2014
+                                <span class="content-date">
+                                    19.06.2014
                                 </span>
                             </div>
-                        </li>
-                        <li>
-                            <h3>Аня Лунева</h3>
-                            <div class="list-item-info clearfix taste-tropic">
-                                <span class="list-author">
+                        </div>
+                        <div class="content-text">
+                            <p>
+                                И новая хорошая социальная идея: отключиться на часок от Интернета. Отложить телефоны, ноуты, планшетники и посвятить время друг другу. Спасибо, что иногда напоминаете нам о существовании такой возможности!
+                                Новый проект "Час Страсти" и я подписываюсь под этим: http://www.youtube.com/watch? v=44tgVMy-DNc&list=PLF487B58B01FA36BA
+                                <br>#extremepassion #passionhour #часстрасти #час_страсти
+                            </p>
+                        </div>
+                        <div class="content-social">
+                            <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+                            <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,odnoklassniki" data-yashareTheme="counter"> </div>
+                        </div>
+                    </div>
+                    <div class="column-content hidden">
+                        <div class="content-image">
+                            <img src="https://scontent-b-fra.xx.fbcdn.net/hphotos-xpa1/t1.0-9/10440646_673652639367795_4423626214834128031_n.jpg" alt="Час Страсти" />
+                            <div class="content-title">
+                                Аня Лунева
+                            </div>
+                            <div class="content-info taste-tropic">
+                                <span class="content-author">
                                     Аня Лунева
                                 </span>
-                                <span class="list-date">
+                                <span class="content-date">
                                     18.06.2014
                                 </span>
                             </div>
-                        </li>
-                        <li>
-                            <h3>Сергеи Судариков</h3>
-                            <div class="list-item-info clearfix taste-strawberry">
-                                <span class="list-author">
+                        </div>
+                        <div class="content-text">
+                            <p>
+                                А что если отключиться от сети, забыть про телефон, компьютеры, социальные сети и провести это время с пользой для души и тела? Крутая инициатива – «Час Страсти». Пройдет 16 июля. Кто поддерживает, ставьте лайк и распространяйте http://www.youtube.com/watch? v=44tgVMy-DNc&featur..
+                                <br>#extremepassion #passionhour #часстрасти #час_страсти
+                            </p>
+                        </div>
+                        <div class="content-social">
+                            <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+                            <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,odnoklassniki" data-yashareTheme="counter"> </div>
+                        </div>
+                    </div>
+                    <div class="column-content hidden">
+                        <div class="content-image">
+                            <img src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xpf1/t31.0-8/p960x960/10379794_790666957670635_3202384629220389909_o.jpg" alt="Час Страсти" />
+                            <div class="content-title">
+                                Сергеи Судариков
+                            </div>
+                            <div class="content-info taste-strawberry">
+                                <span class="content-author">
                                     Сергеи Судариков
                                 </span>
-                                <span class="list-date">
+                                <span class="content-date">
                                     18.06.2014
                                 </span>
                             </div>
-                        </li>
-                        <li>
-                            <h3>Irina Shevchik</h3>
-                            <div class="list-item-info clearfix taste-strawberry">
-                                <span class="list-author">
+                        </div>
+                        <div class="content-text">
+                            <p>
+                                Когда последний раз вы играли со своей половинкой в "Кто первый возьмет телефон, тот платит за счет в кафе?". Ответы в комментарии. Специально для нас - поколения медиа - людей, в скором времени пройдет специальное событие "Час Страсти". Давайте на 1 час поддержим тренд "Digital Detox" - и опробуем все вкусы страсти в ночь с 15 на 16 июля. Будет интересно! http://www.youtube.com/watch?v=44tgVMy-DNc&list=PLF487B58B01FA36BA
+                                <br>#extremepassion #passionhour #часстрасти #час_страсти
+                            </p>
+                        </div>
+                        <div class="content-social">
+                            <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+                            <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,odnoklassniki" data-yashareTheme="counter"> </div>
+                        </div>
+                    </div>
+                    <div class="column-content hidden">
+                        <div class="content-image">
+                            <img src="http://photos-h.ak.instagram.com/hphotos-ak-xfa1/914369_1518654535029951_1101664033_n.jpg" alt="Час Страсти" />
+                            <div class="content-title">
+                                Irina Shevchik
+                            </div>
+                            <div class="content-info taste-strawberry">
+                                <span class="content-author">
                                     Irina Shevchik
                                 </span>
-                                <span class="list-date">
+                                <span class="content-date">
                                     17.06.2014
                                 </span>
                             </div>
-                        </li>
-                        <li>
-                            <h3>Stas Vitus</h3>
-                            <div class="list-item-info clearfix taste-strawberry">
-                                <span class="list-author">
+                        </div>
+                        <div class="content-text">
+                            <p>
+                                Открыла для себя проект «Час страсти». Подумала, что важно провести с любимым вечер без телефона и соцсетей. Вспомнить самые счастливые моменты вместе - бесценно :) вот вам один из них!
+                                <br>#extremepassion #passionhour
+                            </p>
+                        </div>
+                        <div class="content-social">
+                            <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+                            <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,odnoklassniki" data-yashareTheme="counter"> </div>
+                        </div>
+                    </div>
+                    <div class="column-content hidden">
+                        <div class="content-image">
+                            <img src="http://photos-g.ak.instagram.com/hphotos-ak-xpf1/891407_871997296147198_24578230_n.jpg" alt="Час Страсти" />
+                            <div class="content-title">
+                                Stas Vitus
+                            </div>
+                            <div class="content-info taste-strawberry">
+                                <span class="content-author">
                                     Stas Vitus
                                 </span>
-                                <span class="list-date">
+                                <span class="content-date">
                                     17.06.2014
                                 </span>
                             </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="popup photo-popup hidden" data-popup="3">
-            <div class="popup-head">
-                <div class="mini-logo"></div>
-                <!--<div class="mini-slider">
-                    <div class="slide slide-1" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
-                        <div class="mini-desc">Клубника</div>
+                        </div>
+                        <div class="content-text">
+                            <p>
+                                После просмотра видео от Hot Psychologies. много думал и понял, что после работы я сразу домой к ней! Телефон off, интернет off и свет тоже ;)
+                                <br>#extremepassion #passionhour
+                            </p>
+                        </div>
+                        <div class="content-social">
+                            <script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+                            <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,odnoklassniki" data-yashareTheme="counter"> </div>
+                        </div>
                     </div>
-                    <div class="arr arr__left"><span class="icon icon-left-dir"></span></div>
-                    <div class="arr arr__right"><span class="icon icon-right-dir"></span></div>
-                </div>-->
-                <div class="popup-close"></div>
-            </div>
-            <div class="popup-body">
-                <header class="popup-header">
-                    <h2>#Часстрасти</h2>
-                    <div class="popup-headdesc">
-                        Ваши фотографии из инстаграм<br>
-                        с хэштегом #часстрасти
-                    </div>
-                </header>
-                <div class="popup-content">
-                    <div class="instaphoto-slider jcarousel">
-                        <ul id="instaSlider">
+                    <div class="column-list">
+                        <div class="list-title">Другие статьи</div>
+                        <ul>
+                            <li style="display: none;">
+                                <h3>Марина Дударева</h3>
+                                <div class="list-item-info clearfix taste-strawberry">
+                                    <span class="list-author">
+                                        Марина Дударева
+                                    </span>
+                                    <span class="list-date">
+                                        19 июня 2014
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>Татьяна Аверина</h3>
+                                <div class="list-item-info clearfix taste-strawberry">
+                                    <span class="list-author">
+                                        Татьяна Аверина
+                                    </span>
+                                    <span class="list-date">
+                                        19 июня 2014
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>Екатерина Брицова</h3>
+                                <div class="list-item-info clearfix taste-strawberry">
+                                    <span class="list-author">
+                                        Екатерина Брицова
+                                    </span>
+                                    <span class="list-date">
+                                        19 июня 2014
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>Аня Лунева</h3>
+                                <div class="list-item-info clearfix taste-tropic">
+                                    <span class="list-author">
+                                        Аня Лунева
+                                    </span>
+                                    <span class="list-date">
+                                        18.06.2014
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>Сергеи Судариков</h3>
+                                <div class="list-item-info clearfix taste-strawberry">
+                                    <span class="list-author">
+                                        Сергеи Судариков
+                                    </span>
+                                    <span class="list-date">
+                                        18.06.2014
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>Irina Shevchik</h3>
+                                <div class="list-item-info clearfix taste-strawberry">
+                                    <span class="list-author">
+                                        Irina Shevchik
+                                    </span>
+                                    <span class="list-date">
+                                        17.06.2014
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>Stas Vitus</h3>
+                                <div class="list-item-info clearfix taste-strawberry">
+                                    <span class="list-author">
+                                        Stas Vitus
+                                    </span>
+                                    <span class="list-date">
+                                        17.06.2014
+                                    </span>
+                                </div>
+                            </li>
                         </ul>
                     </div>
-                    <a href="#" class="jcarousel-control jcarousel-control-prev"></a>
-                    <a href="#" class="jcarousel-control jcarousel-control-next"></a>                        
                 </div>
-            </div>                
-            <div class="instaphoto-slider-vertical jcarousel-vert">
-                <ul id="instaNavSlider">
-                </ul> 
-            </div>                
-            <a href="#" class="jcarousel-vert-control jcarousel-vert-control-prev">
-                <span class="icon icon-up-dir"></span>
-            </a>
-            <a href="#" class="jcarousel-vert-control jcarousel-vert-control-next">
-                <span class="icon icon-down-dir"></span>
-            </a>
-        </div>
-        <div id="load-photo" class="popup app__popup advice-popup pad-popup hidden" data-popup="4">
-            <div class="popup-head">
-                <div class="mini-logo"></div>
-                <div class="popup-close"></div>
             </div>
-            <div class="popup-body clearfix">
-                <div class="msg-box">Спасибо за участие. Ваше фото было отправлено.</div>
-                <div class="photo-border">
-                	<div id="HolderPhoto"></div>
-                    <div class="photo-frame"> </div>
+            <div class="popup photo-popup hidden" data-popup="3">
+                <div class="popup-head">
+                    <div class="mini-logo"></div>
+                    <!--<div class="mini-slider">
+                        <div class="slide slide-1" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
+                            <div class="mini-desc">Клубника</div>
+                        </div>
+                        <div class="arr arr__left"><span class="icon icon-left-dir"></span></div>
+                        <div class="arr arr__right"><span class="icon icon-right-dir"></span></div>
+                    </div>-->
+                    <div class="popup-close"></div>
                 </div>
-                <form id="form-photo-save" method="POST" action="upload.php">
-					<input type="file" style="width: 1em;" name="file" class="input-photo invisible" id="selectPhoto">
-					<button value="send" type="submit" class="photo-save">Отправить</button>
-				</form>
-                <a href="javascript:void(0);" class="photo-upload-link select-image">Загрузить другую фотографию</a>
+                <div class="popup-body">
+                    <header class="popup-header">
+                        <h2>#Часстрасти</h2>
+                        <div class="popup-headdesc">
+                            Ваши фотографии из инстаграм<br>
+                            с хэштегом #часстрасти
+                        </div>
+                    </header>
+                    <div class="popup-content">
+                        <div class="instaphoto-slider jcarousel">
+                            <ul id="instaSlider">
+                            </ul>
+                        </div>
+                        <a href="#" class="jcarousel-control jcarousel-control-prev"></a>
+                        <a href="#" class="jcarousel-control jcarousel-control-next"></a>                        
+                    </div>
+                </div>                
+                <div class="instaphoto-slider-vertical jcarousel-vert">
+                    <ul id="instaNavSlider">
+                    </ul> 
+                </div>                
+                <a href="#" class="jcarousel-vert-control jcarousel-vert-control-prev">
+                    <span class="icon icon-up-dir"></span>
+                </a>
+                <a href="#" class="jcarousel-vert-control jcarousel-vert-control-next">
+                    <span class="icon icon-down-dir"></span>
+                </a>
             </div>
-        </div>
-        <div class="popup advice-popup hidden" data-popup="5">
+            <div id="load-photo" class="popup app__popup advice-popup pad-popup hidden" data-popup="4">
                 <div class="popup-head">
                     <div class="mini-logo"></div>
                     <div class="popup-close"></div>
                 </div>
-                <div class="popup-body" id="popupCont">
-                    <header class="popup-header">
-                        <h2>#ЧАССТРАСТИ</h2>
-                        <div class="popup-headdesc">
-                            Ваши твиты с хэштегом #часстрасти
-                        </div>
-                    </header>
-                    <div class="popup-content">
-                        <div class="popup-fotorama">
-                        <?php
-                            $tweets = getTweets("passionhour");
-                            for ($i=0; $i < count($tweets->statuses); $i++) {
-                                echo '<div class="slide slide-'.$i.'" data-taste="0">'.$tweets->statuses[$i]->text.'</div>';
-                                //echo $tweet->text."\n";
-                                //echo "@".$tweet->user->screen_name."\n";
-                            }
-                        ?>
-                        </div>                        
+                <div class="popup-body clearfix">
+                    <div class="msg-box">Спасибо за участие. Ваше фото было отправлено.</div>
+                    <div class="photo-border">
+                    	<div id="HolderPhoto"></div>
+                        <div class="photo-frame"> </div>
                     </div>
-                    <footer class="popup-footer">
-                        <script type="text/javascript" src="http://yandex.st/share/share.js"
-                        charset="utf-8"></script>
-                        <div class="yashare-auto-init" data-yashareL10n="ru"
-                         data-yashareQuickServices="vkontakte,facebook,odnoklassniki" data-yashareTheme="counter"
-
-                        ></div> 
-                    </footer>
+                    <form id="form-photo-save" method="POST" action="upload.php">
+    					<input type="file" style="width: 1em;" name="file" class="input-photo invisible" id="selectPhoto">
+    					<button value="send" type="submit" class="photo-save">Отправить</button>
+    				</form>
+                    <a href="javascript:void(0);" class="photo-upload-link select-image">Загрузить другую фотографию</a>
                 </div>
-        </div>
+            </div>
+            <div class="popup advice-popup hidden" data-popup="5">
+                    <div class="popup-head">
+                        <div class="mini-logo"></div>
+                        <div class="popup-close"></div>
+                    </div>
+                    <div class="popup-body" id="popupCont">
+                        <header class="popup-header">
+                            <h2>#ЧАССТРАСТИ</h2>
+                            <div class="popup-headdesc">
+                                Ваши твиты с хэштегом #часстрасти
+                            </div>
+                        </header>
+                        <div class="popup-content">
+                            <div class="popup-fotorama">
+                            <?php
+                                $tweets = getTweets("passionhour");
+                                for ($i=0; $i < count($tweets->statuses); $i++) {
+                                    echo '<div class="slide slide-'.$i.'" data-taste="0">'.$tweets->statuses[$i]->text.'</div>';
+                                    //echo $tweet->text."\n";
+                                    //echo "@".$tweet->user->screen_name."\n";
+                                }
+                            ?>
+                            </div>                        
+                        </div>
+                        <footer class="popup-footer">
+                            <script type="text/javascript" src="http://yandex.st/share/share.js"
+                            charset="utf-8"></script>
+                            <div class="yashare-auto-init" data-yashareL10n="ru"
+                             data-yashareQuickServices="vkontakte,facebook,odnoklassniki" data-yashareTheme="counter"
+
+                            ></div> 
+                        </footer>
+                    </div>
+            </div>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
@@ -851,6 +851,8 @@ require_once(__ROOT__.'/twitter.php');
                     target: '+=1'
                 });
         };
+
+
         var $popupFotorama = $('.advice-fotorama').fotorama({
             nav: false,
             width: '848',

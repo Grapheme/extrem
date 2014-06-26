@@ -42,6 +42,7 @@ var Slider = (function(){
 				$arrow.attr({'data-arrow': $current});
 				$main.attr({'data-bg': $current});
 				$('#popupCont').attr('data-taste', $current-1);
+				$miniFotorama.data('fotorama').show($current-1)
 
 				if ($current == $size) {
 					$next.addClass('disabled');
@@ -125,6 +126,12 @@ var Popup = (function(){
 	});
 	$(document).on('click', '.popup-close, .overlay', function(){
 		closePopup();
+	});
+	$(document).keyup(function(e) {
+	  if (e.keyCode == 27) {
+	  	e.preventDefault();
+	  	closePopup();
+	  }   // esc
 	});
 
 	var slide_allow = true;
