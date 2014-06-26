@@ -58,7 +58,7 @@
                             </div>
                         </div>
                         <div class="app-upload">
-                            <a href="#" class="upload-zone">Загрузите сюда фотографию</a>
+                            <a href="#" class="upload-zone" onclick="_gaq.push(['_trackEvent', 'upload_inner_send']);">Загрузите сюда фотографию</a>
                             <!-- <a class="select-image upload-btn" href="javascript:void(0);">Выбрать фото</a> -->
                             <span class="logo-ext">
                                 <span class="add"></span>
@@ -79,7 +79,7 @@
                         <a href="#" class="new-photo"><span>Новое фото</span></a>
                         <form id="form-photo-save" method="POST" action="upload.php">
                             <input type="file" style="position: absolute; width: 1em;" name="file" class="input-photo invisible" id="selectPhoto">
-                            <button value="send" type="submit" class="save-btn"><span>Сохранить</span></button>
+                            <button value="send" type="submit" class="save-btn" onclick="_gaq.push(['_trackEvent', 'app_inner_save']);"><span>Сохранить</span></button>
                             <input type="hidden" name="logo-extreme" value="yes">
                             <input type="hidden" name="logo-hours" value="yes">
                             <input type="hidden" name="position" value="0, 0">
@@ -117,14 +117,18 @@
     <script src="js/libs/jquery-form.min.js"></script>
 	<script src="js/libs/upload.js"></script>
     <script src="js/vendor/jquery-ui-1.10.4.custom.min.js"></script>
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <script type="text/javascript">
 
-    ga('create', 'UA-52189500-1', 'mamba.ru');
-    ga('send', 'pageview');
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-52189500-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
     </script>
 </body>
 </html>

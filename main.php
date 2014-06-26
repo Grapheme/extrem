@@ -139,7 +139,7 @@ require_once(__ROOT__.'/twitter.php');
                                 <div class="app-tag">на нашем сайте</div>
                             </div>                    
                             <footer class="app-footer">
-                                <a href="app.php" target="_blank">Приложение</a>
+                                <a href="app.php" target="_blank" onclick="_gaq.push(['_trackEvent', 'app_index_click']);">Приложение</a>
                             </footer>
                         </section>
                     </div>
@@ -163,7 +163,7 @@ require_once(__ROOT__.'/twitter.php');
                                 <footer>extreme блоггеры</footer>
                             </section>
                     </ul>
-                    <a class="dropzone select-image" href="javascript:void(0);"><span class="drop-text">Загрузите вашу фотографию</span></a>
+                    <a class="dropzone select-image" href="javascript:void(0);"><span class="drop-text" onclick="_gaq.push(['_trackEvent', 'upload_index_click']);">Загрузите вашу фотографию</span></a>
                     <footer class="main-footer">
                         <div class="hot-line">
                             <span>горячая линия</span>
@@ -888,14 +888,18 @@ require_once(__ROOT__.'/twitter.php');
     </script>
 	<script src="js/libs/jquery-form.min.js"></script>
 	<script src="js/libs/upload.js"></script>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <script type="text/javascript">
 
-        ga('create', 'UA-52189500-1', 'mamba.ru');
-        ga('send', 'pageview');
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-52189500-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
     </script>
 </body>
 </html>
