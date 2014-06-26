@@ -225,7 +225,7 @@ require_once(__ROOT__.'/twitter.php');
                                 <div class="slide slide-1" data-taste="0">
                                     Час прогулки 
                                     <a href="https://ru.foursquare.com/v/%D0%BA%D0%BE%D0%BD%D1%8E%D1%88%D0%BD%D1%8F-%D0%B2-%D0%BD%D0%B5%D1%81%D0%BA%D1%83%D1%87%D0%BD%D0%BE%D0%BC-%D1%81%D0%B0%D0%B4%D1%83/4ead68339adf5c72de49d4fe">на лошадях</a> 
-                                    и настоящий мачо на коне, 
+                                    и настоящий мачо на коне 
                                     сможет заключить героиню своего романа в объятия! 
                                     Страстный поцелуй будет ещё слаще с Extreme Два шоколада. 
                                     #часстрасти #ВечнаяСтрасть
