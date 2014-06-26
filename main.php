@@ -223,7 +223,9 @@ require_once(__ROOT__.'/twitter.php');
                         <div class="popup-fotorama">
                             <div class="advice-fotorama" data-taste="0">
                                 <div class="slide slide-1" data-taste="0">
-                                    Час прогулки на лошадях и настоящий мачо на коне, 
+                                    Час прогулки 
+                                    <a href="https://ru.foursquare.com/v/%D0%BA%D0%BE%D0%BD%D1%8E%D1%88%D0%BD%D1%8F-%D0%B2-%D0%BD%D0%B5%D1%81%D0%BA%D1%83%D1%87%D0%BD%D0%BE%D0%BC-%D1%81%D0%B0%D0%B4%D1%83/4ead68339adf5c72de49d4fe">на лошадях</a> 
+                                    и настоящий мачо на коне, 
                                     сможет заключить героиню своего романа в объятия! 
                                     Страстный поцелуй будет ещё слаще с Extreme Два шоколада. 
                                     #часстрасти #ВечнаяСтрасть
@@ -280,7 +282,9 @@ require_once(__ROOT__.'/twitter.php');
                                 <div class="slide slide-3" data-taste="2">
                                     Угостите друг друга самым летним вкусом мороженного 
                                     Extreme – Тропик, нежась на утреннем солнце у бассейна 
-                                    в Сокольниках или Парке Фили. После страстного поцелуя смело 
+                                    <a href="https://ru.foursquare.com/v/the-%D0%B1%D0%B0ss%D0%B5%D0%B9%D0%BD-%D0%BC%D0%BE%D1%81%D0%BA%D0%B2%D0%B0/5013cb85e4b0be172b877b84">в Сокольниках</a> 
+                                    или <a href="https://ru.foursquare.com/v/%D1%84%D0%B8%D0%BB%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9-%D0%BF%D0%B0%D1%80%D0%BA/4bd2739da8b3a5935010685f">Парке Фили</a>. 
+                                    После страстного поцелуя смело 
                                     ныряйте в прохладную воду! #часстрасти #УтренняяСтрасть
                                 </div>
                             </div>
@@ -650,7 +654,7 @@ require_once(__ROOT__.'/twitter.php');
                     <div class="popup-content">
                         <div class="popup-fotorama">
                         <?php
-                            $tweets = getTweets(5);
+                            $tweets = getTweets("passionhour");
                             for ($i=0; $i < count($tweets->statuses); $i++) {
                                 echo '<div class="slide slide-'.$i.'" data-taste="0">'.$tweets->statuses[$i]->text.'</div>';
                                 //echo $tweet->text."\n";

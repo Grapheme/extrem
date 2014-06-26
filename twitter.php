@@ -27,12 +27,13 @@ curl_close($ch);
 print_r($result);
 */
 
-function getTweets($amount = 5) {
+function getTweets($hashtag = "passionhour", $amount = 5) {
 	$username = 'grapheme_ru';
 	$number_tweets = $amount;
-	$feed = "https://api.twitter.com/1.1/search/tweets.json?q=%23часстрасти&result_type=recent";
+	$feed = "https://api.twitter.com/1.1/search/tweets.json?q=%23".$hashtag."&result_type=recent";
 
-	$cache_file = '/srv/www/extreme_hour/tmp/twitter-cache';
+	//$cache_file = '/srv/www/extreme_hour/tmp/twitter-cache';
+	$cache_file = getcwd().'/cache/twitter-cache-'.$hashtag;
 	$modified = @filemtime( $cache_file );
 	$now = time();
 	$interval = 600; // ten minutes
@@ -60,4 +61,3 @@ function getTweets($amount = 5) {
 
 	return json_decode($json);
 }
-
