@@ -60,11 +60,11 @@
                         <div class="app-upload">
                             <a href="#" class="upload-zone">Загрузите сюда фотографию</a>
                             <!-- <a class="select-image upload-btn" href="javascript:void(0);">Выбрать фото</a> -->
-                            <span class="logo-ext not-vis">
+                            <span class="logo-ext">
                                 <span class="add"></span>
                                 <span class="remove"></span>
                             </span>
-                            <span class="logo-hou not-vis">
+                            <span class="logo-hou">
                                 <span class="add"></span>
                                 <span class="remove"></span>
                             </span>
@@ -80,8 +80,8 @@
                         <form id="form-photo-save" method="POST" action="upload.php">
                             <input type="file" style="position: absolute; width: 1em;" name="file" class="input-photo invisible" id="selectPhoto">
                             <button value="send" type="submit" class="save-btn"><span>Сохранить</span></button>
-                            <input type="hidden" name="logo-extreme" value="no">
-                            <input type="hidden" name="logo-hours" value="no">
+                            <input type="hidden" name="logo-extreme" value="yes">
+                            <input type="hidden" name="logo-hours" value="yes">
                             <input type="hidden" name="position" value="0, 0">
                             <input type="hidden" name="filter" value="no">
                             <input type="hidden" name="width">
@@ -116,7 +116,7 @@
     <script src="js/app.js"></script>
     <script src="js/libs/jquery-form.min.js"></script>
 	<script src="js/libs/upload.js"></script>
-    <script src="js/vendor/jquery-ui-1.10.4.custom.min"></script>
+    <script src="js/vendor/jquery-ui-1.10.4.custom.min.js"></script>
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
