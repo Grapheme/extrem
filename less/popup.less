@@ -378,6 +378,79 @@
 	}
 }
 
+#popupCont {
+	position: relative;
+	min-height: 732px;
+}
+
+.cats {
+	.list-unstyled;
+	position: absolute;
+	z-index: 5;
+	top: 15rem / @htmlFontSize;
+	right: 58rem / @htmlFontSize;
+
+	.cat-li {
+		.box-sizing;
+		.transition(.2s, all, ease);
+		display: inline-block;
+		height: 58rem / @htmlFontSize;
+		padding: 25rem / @htmlFontSize 0 0;
+		margin: 0 18rem / @htmlFontSize 0 0;
+		font-size: 12em / @htmlFontSize;
+		line-height: .75;
+		text-align: left;
+		border-bottom: 2px solid rgba(255, 255, 255, .2);
+		cursor: pointer;
+
+		&:hover {
+			border-color: #ecbe45;
+			color: #e9af17;
+		}
+
+		&.active {
+			border-color: #ecbe45;
+			color: #e9af17;
+		}
+	}
+	.cat-adv {
+		width: 110rem / @htmlFontSize;
+		background: url(../img/cats/01.png) no-repeat right center;
+
+		&:hover {
+			background-image: url(../img/cats/01a.png);
+		}
+
+		&.active {
+			background-image: url(../img/cats/01a.png);
+		}
+	}
+	.cat-dan {
+		width: 89rem / @htmlFontSize;
+		background: url(../img/cats/02.png) no-repeat right center;
+
+		&:hover {
+			background-image: url(../img/cats/02a.png);
+		}
+
+		&.active {
+			background-image: url(../img/cats/02a.png);
+		}
+	}
+	.cat-fil {
+		width: 100rem / @htmlFontSize;
+		background: url(../img/cats/03.png) no-repeat right center;
+
+		&:hover {
+			background-image: url(../img/cats/03a.png);
+		}
+
+		&.active {
+			background-image: url(../img/cats/03a.png);
+		}
+	}
+}
+
 
 
 

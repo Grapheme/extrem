@@ -145,9 +145,40 @@ var Popup = (function(){
 		}, 500);
 	});
 
+	/* Filters in popup */
+	function changeHeader(elem) {
+		var boundIndex = elem.data('filter');
+		var headBlocks = $('#popupCont .popup-header [data-filter]');
+		var headBlock = $('#popupCont .popup-header [data-filter="' + boundIndex + '"]');
+		var fotorama = $('.advice-fotorama:visible');
+		var fotoramaApi = fotorama.data('fotorama');
+		var taste = fotorama.data('taste');
+		console.log(fotorama);
+
+		headBlocks.addClass('hidden');
+		headBlock.removeClass('hidden');
+
+		fotorama.data('fotorama').destroy();
+		fotorama.empty().append($fotoramaContElems[taste].filter('[data-filter="' + boundIndex + '"]'));
+		setTimeout( function(){
+			fotorama.fotorama({
+				nav: false,
+				width: '848',
+				height: '550',
+				arrows: 'always'
+			});
+		}, 100);
+	}
+	$(document).on('click', '.cat-li', function(){
+		changeHeader($(this));
+		$('.cat-li').removeClass('active');
+		$(this).addClass('active');
+	});
+
 	return {
 		open: openPopup,
-		close: closePopup
+		close: closePopup,
+		changeHeader: changeHeader
 	};
 
 })();
@@ -155,7 +186,7 @@ var Popup = (function(){
 Slider.init();
 
 $(document).ready(function(){
-	$('button.photo-save').click(function(e){	
+	$('button.photo-save').click(function(e){
 		$(this).html('Пожалуйста подождите ...');
 	});
 });

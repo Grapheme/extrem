@@ -69,5 +69,12 @@
           })();
 
         </script>
+        <script>
+            $('.crops-wrapper').mousemove(function(e){
+                var amountMovedX = (e.pageX  * -1 / 200);
+                var amountMovedY = (e.pageY * -1 / 200);
+                $(this).css('background-position', (50 + amountMovedX) + '% ' + (50 + amountMovedY) + '%');
+            });
+        </script>
 </body>
 </html>
