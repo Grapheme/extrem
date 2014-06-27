@@ -141,6 +141,12 @@ $(function(){
 		flag = 'share';
 		event.preventDefault();
 		$("#form-photo-save").ajaxSubmit(uploadImage.singlePhotoOption);
+
+    	$.ajax({
+    		url: "/ajax/increasecounter",
+    		type: 'post'
+    	});
+
 		return false;
 	});
 	$('.logo-ext .add').click( function(){
