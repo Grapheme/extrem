@@ -954,7 +954,11 @@ require_once(__ROOT__.'/instagram.php');
     <script>
         //Bounded slider for instagram photos
         function jcarouselLoad(taste) {
+<<<<<<< HEAD
             var elems = rootElems.filter('[data-taste="' + taste + '"], [data-taste="-1"]');
+=======
+            var elems = rootElems.filter('[data-taste="' + taste + '"],[data-taste="-1"]');
+>>>>>>> FETCH_HEAD
 
             $('#instaSlider, #instaNavSlider').empty();
 
