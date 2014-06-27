@@ -16,6 +16,7 @@ var Slider = (function(){
 			$desc.first().addClass('active');
 			$current = $('.slide.active').index();
 			$currentDesc = $('.desc-slide.active');
+			$('.arrow-left').removeClass('disabled');
 
 			$(document).on('click', '.arrow-right', function(){
 				if ( $(this).hasClass('disabled') ) {
@@ -31,9 +32,22 @@ var Slider = (function(){
 			});
 		},
 
+		toStart: function() {
+			for(var i=0; i < 5; i++) {
+				this.prev();
+			}
+		},
+
+		toFinish: function() {
+			for(var i=0; i < 5; i++) {
+				this.next();
+			}
+		},
+
 		next: function() {
-			if ($prev.hasClass('disabled')) {
-				$prev.removeClass('disabled');
+			if ($current == $size) {
+				Slider.toStart();
+				return;
 			}
 
 			if ($current < $size) {
@@ -41,20 +55,16 @@ var Slider = (function(){
 				$currentDesc = $('.desc-slide.active').removeClass('active').addClass('passed').next().addClass('active').index();
 				$arrow.attr({'data-arrow': $current});
 				$main.attr({'data-bg': $current});
-				$('#popupCont').attr('data-taste', $current-1);
-				$miniFotorama.data('fotorama').show($current-1);
-
-				if ($current == $size) {
-					$next.addClass('disabled');
-				}
+				$('#popupCont').attr('data-taste', $current-1);				
+				try { $miniFotorama.data('fotorama').show($current-1); } 
+    			catch (error){}			
 			}
-
-			console.log($current, $size);
 		},
 
 		prev: function() {
-			if ($next.hasClass('disabled')) {
-				$next.removeClass('disabled');
+			if ($current === 1) {
+				Slider.toFinish();
+				return;
 			}
 
 			if ($current > 0) {
@@ -63,11 +73,8 @@ var Slider = (function(){
 				$arrow.attr({'data-arrow': $current});
 				$main.attr({'data-bg': $current});
 				$('#popupCont').attr('data-taste', $current-1);
-				$miniFotorama.data('fotorama').show($current-1);
-
-				if ($current === 1) {
-					$prev.addClass('disabled');
-				}
+				try { $miniFotorama.data('fotorama').show($current-1); } 
+    			catch (error){}
 			}
 		}
 	};
