@@ -75,7 +75,7 @@
                         </div>
                     </div>
                     <div class="app-nav">
-                        <a href="javascript:void(0);" class="share-btn" style="opacity:0.4;"><span>Поделиться</span></a>
+                        <a href="#" id="appShare" class="share-btn"><span>Поделиться</span></a>
                         <a href="#" class="new-photo"><span>Новое фото</span></a>
                         <form id="form-photo-save" method="POST" action="upload.php">
                             <input type="file" style="position: absolute; width: 1em;" name="file" class="input-photo invisible" id="selectPhoto">
@@ -87,6 +87,11 @@
                             <input type="hidden" name="width">
                             <input type="hidden" name="height">
                         </form>                        
+                    </div>
+                    <div class="app-share-btns">
+                        <a class="app-share-vk" href="http://vk.com/share.php?url=URL&title=час страсти&descriptionC&image=IMG_PATH&noparse=true" target="_blank" onclick="return Share.me(this);"><span class="icon icon-vkontakte-rect"></span></a>
+                        <a class="app-share-fb" href="http://www.facebook.com/sharer/sharer.php?s=100&p%5Btitle%5D=час страсти&p%5Bsummary%5D=&p%5Burl%5D=URL&p%5Bimages%5D%5B0%5D=IMG_PATH" target="_blank" onclick="return Share.me(this);"><span class="icon icon-facebook-squared"></span></a>
+                        <a class="app-share-od" href="http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st.comments=&st._surl=URL" target="_blank" onclick="return Share.me(this);"><span class="icon icon-odnoklassniki-rect"></span></a>
                     </div>
                 </div>
             </div>

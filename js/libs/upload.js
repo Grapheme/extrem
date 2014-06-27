@@ -7,6 +7,8 @@ var uploadImage = uploadImage || {};
 uploadImage.changeStatus = false;
 var acceptedTypes = {'image/png': true,'image/jpeg': true,'image/gif': true};
 var maxFileSize = 15728640;
+var flag = 'save';
+var path;
 
 uploadImage.singlePhotoOption = {
 	target: null, type: 'post', dataType:'json',
@@ -25,6 +27,21 @@ uploadImage.singlePhotoOption = {
 		//uploadImage.setProgress(100,false);
 		if(response.status == true){
 			if(response.hasOwnProperty('req') && response.req.length > 3){
+				if( flag === 'share' ) {
+					path = window.location.protocol + '//' + window.location.host + '/download.php?file='+response.downloadPhotoSrc+response.req;
+					$('.app-share-btns').addClass('active');
+					var $vk = $('.app-share-vk');
+					var $fb = $('.app-share-fb');
+					var $od = $('.app-share-od');
+					var vkHref = $vk.attr('href').replace('URL', window.location.protocol + '//' + window.location.host).replace('IMG_PATH', path);
+					var fbHref = $fb.attr('href').replace('URL', window.location.protocol + '//' + window.location.host).replace('IMG_PATH', path);
+					var odHref = $od.attr('href').replace('URL', path);
+					$vk.attr('href', vkHref);
+					$fb.attr('href', fbHref);
+					$od.attr('href', odHref);
+
+					return;
+				}
 				var hiddenIFrameID = 'hiddenDownloader',
 			        iframe = document.getElementById(hiddenIFrameID);
 			    if (iframe === null) {
@@ -34,6 +51,7 @@ uploadImage.singlePhotoOption = {
 			        document.body.appendChild(iframe);
 			    }
 			    iframe.src = 'download.php?file='+response.downloadPhotoSrc+response.req;
+			    console.log(response.downloadPhotoSrc+response.req);
 			} else {
 				//only upload files to the server and show message
 				$('#load-photo').addClass('uploaded');
@@ -115,6 +133,13 @@ $(function(){
 		$("#selectPhoto").click();
 	});
 	$("#form-photo-save button").click(function(event){
+		flag = 'save';
+		$("#form-photo-save").ajaxSubmit(uploadImage.singlePhotoOption);
+		return false;
+	});
+	$("#appShare").click(function(event){
+		flag = 'share';
+		event.preventDefault();
 		$("#form-photo-save").ajaxSubmit(uploadImage.singlePhotoOption);
 		return false;
 	});

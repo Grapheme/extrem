@@ -226,7 +226,7 @@
 
 					.ice-name {
 						top: 3.1rem;
-						left: -5.3rem;
+						left: -13.3rem;
 					}				
 				}
                 &.ice-item-tropic {
@@ -309,7 +309,7 @@
 
 					.ice-name {
 						top: 5.8rem;
-						right: -6.5rem;
+						right: -11.5rem;
 					}
                 }
                 &.ice-item-whitechocolate {
@@ -365,7 +365,7 @@
 
 					.ice-name {
 						top: 5rem;
-						right: -6rem;
+						right: -13rem;
 					}
                 }
 			}
@@ -625,5 +625,74 @@
 
 	.soc-ok {
 		background: url(../img/application/soc-ok.png) no-repeat 0 0 e('/') 100% 100%;
+	}
+}
+.app-share-btns {
+	.transition;
+	position: absolute;
+	bottom: -4rem;
+	left: 0;
+	width: 100%;
+	margin: 1rem;
+	text-align: center;
+	opacity: 0;
+
+	&.active {
+		opacity: 1;
+	}
+
+	.app-share-vk {
+		.transition;
+		display: inline-block;
+		margin-right: 10px;
+		color: #56789C;
+		font-size: 1.4em;
+		text-decoration: none;
+		vertical-align: top;
+		height: 20px;
+		line-height: 20px;
+		background: #fff;
+		border-radius: 10px;
+		width: 21px;
+
+		&:hover {
+			color: lighten(#56789C, 10%);
+		}
+	}
+	.app-share-fb {
+		.transition;
+		display: inline-block;
+		margin-right: 10px;
+		color: #3B5998;
+		font-size: 1.6em;
+		text-decoration: none;
+		vertical-align: top;
+		height: 20px;
+		line-height: 20px;
+		background: #fff;
+		border-radius: 10px;
+		width: 21px;
+
+		&:hover {
+			color: lighten(#3B5998, 10%);
+		}
+	}
+	.app-share-od {
+		.transition;
+		display: inline-block;
+		margin-right: 10px;
+		color: #F79700;
+		font-size: 1.4em;
+		text-decoration: none;
+		vertical-align: top;
+		height: 20px;
+		line-height: 20px;
+		background: #fff;
+		border-radius: 10px;
+		width: 21px;
+
+		&:hover {
+			color: lighten(#F79700, 10%);
+		}
 	}
 }
