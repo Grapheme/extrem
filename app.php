@@ -34,7 +34,7 @@
                         <div class="app-ices">
                             <div class="ice-item ice-item-yamberi">
                                 <a href="#" class="ice-cream" data-ice="yamberi"></a>
-                                <span class="ice-name"><span>Ямбери</span></spam>
+                                <span class="ice-name"><span>Шоколадный ямбери</span></spam>
                             </div>
                             <div class="ice-item ice-item-tropic">
                                 <a href="#" class="ice-cream" data-ice="tropic"></a>
@@ -46,15 +46,15 @@
                             </div>
                             <div class="ice-item ice-item-pistachio">
                                 <a href="#" class="ice-cream" data-ice="pistachio"></a>
-                                <span class="ice-name"><span>Фисташка</span></span>
+                                <span class="ice-name"><span>Фисташка-миндаль</span></span>
                             </div>
                             <div class="ice-item ice-item-whitechocolate">
                                 <a href="#" class="ice-cream" data-ice="whitechokolate"></a>
-                                <span class="ice-name"><span>Белый шоколад</span></span>
+                                <span class="ice-name"><span>Два шоколада</span></span>
                             </div>
                             <div class="ice-item ice-item-blackcurrant">
                                 <a href="#" class="ice-cream" data-ice="blackcurrant"></a>
-                                <span class="ice-name"><span>Ягодный</span></span>
+                                <span class="ice-name"><span>Пломбирно-ягодный</span></span>
                             </div>
                         </div>
                         <div class="app-upload">
