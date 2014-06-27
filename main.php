@@ -210,7 +210,7 @@ require_once(__ROOT__.'/instagram.php');
             <div class="popup advice-popup hidden" data-popup="1">
                 <div class="popup-head">
                     <div class="mini-logo"></div>
-                    <div class="mini-slider" data-auto="false">
+                    <div class="mini-slider" id="miniSlider" data-auto="false">
                         <div class="slide slide-1" data-taste="0" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
                             <div class="mini-desc">Клубника</div>
                         </div>
@@ -279,8 +279,7 @@ require_once(__ROOT__.'/instagram.php');
                                     Посмотрите фламенко в одном из испанских баров или сходите на спектакль в <a target="_blank" href="http://www.teatr-romen.ru/">цыганский театр «Ромэн»</a>. Чувственная гитара, хриплые голоса солистов и страстные танцоры заставят ваши сердца трепетать! Пусть у этих чувств будет вкус Extreme Клубника. #часстрасти #ЯркаяСтрасть
                                 </div>
                                 <div class="slide slide-4" data-taste="0" data-filter="1">
-                                    Увезите свою половинку среди ночи на <a target="_blank" href="https://ru.foursquare.com/explore?mode=url&near=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F&nearGeoId=72057594038452837&q=%D0%BF%D0%BB%D1%8F%D0%B6
-">пляж</a> любоваться звездами. Предложите съесть Extreme Клубника одно на двоих, на последнем кусочке ваши губы сольются в страстном поцелуе. А дальше выбирайте: купание голышом или сразу секс на пляже. #часстрасти #ЯркаяСтрасть
+                                    Увезите свою половинку среди ночи на <a target="_blank" href="https://ru.foursquare.com/explore?mode=url&near=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F&nearGeoId=72057594038452837&q=%D0%BF%D0%BB%D1%8F%D0%B6">пляж</a> любоваться звездами. Предложите съесть Extreme Клубника одно на двоих, на последнем кусочке ваши губы сольются в страстном поцелуе. А дальше выбирайте: купание голышом или сразу секс на пляже. #часстрасти #ЯркаяСтрасть
                                 </div>
                                 <div class="slide slide-5 movie" data-taste="0" data-filter="3">
                                     <p><a target="_blank" href="http://www.kinopoisk.ru/film/17663/">СОБЛАЗН</a> (2001, США, Франция)</p>
@@ -769,32 +768,65 @@ require_once(__ROOT__.'/instagram.php');
             <div class="popup photo-popup hidden" data-popup="3">
                 <div class="popup-head">
                     <div class="mini-logo"></div>
-                    <!--<div class="mini-slider">
-                        <div class="slide slide-1" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
+                    <div class="mini-slider" id="photoMiniSlider" data-auto="false">
+                        <div class="slide slide-1" data-taste="0" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
                             <div class="mini-desc">Клубника</div>
                         </div>
-                        <div class="arr arr__left"><span class="icon icon-left-dir"></span></div>
-                        <div class="arr arr__right"><span class="icon icon-right-dir"></span></div>
-                    </div>-->
+                        <div class="slide slide-2" data-taste="1" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
+                            <div class="mini-desc">Фисташка</div>
+                        </div>
+                        <div class="slide slide-3" data-taste="2" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
+                            <div class="mini-desc">Тропик</div>
+                        </div>
+                        <div class="slide slide-4" data-taste="3" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
+                            <div class="mini-desc">Ямбери</div>
+                        </div>
+                        <div class="slide slide-5" data-taste="4" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
+                            <div class="mini-desc">Два шоколада</div>
+                        </div>
+                        <div class="slide slide-6" data-taste="5" style="background:url(../img/popups/mini01.png) no-repeat center center / auto 100%;">
+                            <div class="mini-desc">Ягодный</div>
+                        </div>
+                    </div>
                     <div class="popup-close"></div>
                 </div>
-                <div class="popup-body">
+                <div class="popup-body" id="photoPopupCont">
                     <header class="popup-header">
                         <h2>#Часстрасти</h2>
                         <div class="popup-headdesc">
                             Добавляйте свои страстные моменты 
                             в инстаграмм с хэштегом #ЧасСтрасти
+                            <span class="slider-tag" data-taste="0">#ЯркаяСтрасть</span><!-- Клубника -->
+                            <span class="slider-tag hidden" data-taste="1">#ДразнящаяСтрасть</span><!-- Фисташка -->
+                            <span class="slider-tag hidden" data-taste="2">#УтренняяСтрасть</span><!-- Тропик -->
+                            <span class="slider-tag hidden" data-taste="3">#ЭкзотикаСтрасти</span><!-- Ямбери -->
+                            <span class="slider-tag hidden" data-taste="4">#ВечнаяСтрасть</span><!-- Два шоколада -->
+                            <span class="slider-tag hidden" data-taste="5">#ИзысканнаяСтрасть</span><!-- Ягодный -->
                         </div>
                     </header>
                     <div class="popup-content">
                         <div class="instaphoto-slider jcarousel">
                             <ul id="instaSlider">
+                                <li class="insta-slide slide-1" style="background:url(http://scontent-b.cdninstagram.com/hphotos-xfp1/t51.2885-15/10448874_655000991250123_1147404698_n.jpg) no-repeat center center / cover;" data-taste="1">
+                                    <div class="slide-desc">
+                                        <div class="slide-user">Maxim Goroshkov</div>
+                                        <div class="slide-description"></div>
+                                        <div class="slide-tags">#ЧасСтрасти</div>
+                                    </div>
+                                </li>
+                                <li class="insta-slide slide-1" style="background:url(http://scontent-b.cdninstagram.com/hphotos-xfp1/t51.2885-15/10448874_655000991250123_1147404698_n.jpg) no-repeat center center / cover;" data-taste="1">
+                                    <div class="slide-desc">
+                                        <div class="slide-user">Maxim Goroshkov</div>
+                                        <div class="slide-description"></div>
+                                        <div class="slide-tags">#ЧасСтрасти</div>
+                                    </div>
+                                </li>
                             <?php
                                 foreach($hashtags as $hashtag) {
                                     $data = getInstaFeed($hashtag, 10);
                                     
                                     foreach ($data['data'] as $img) {
-                                        echo '<li class="insta-slide slide-1" style="background:' .
+                                        echo '<li class="insta-slide slide-1" data-taste="0" style="background:' .
                                                 'url('.$img['images']['standard_resolution']['url'].') no-repeat center center / cover;">' .
                                                 '<div class="slide-desc">' .
                                                     '<div class="slide-user">'.$img['user']['full_name'].'</div>' .
@@ -880,16 +912,22 @@ require_once(__ROOT__.'/instagram.php');
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script type="text/javascript">
+        var rootElems;
+
         $(function(){
             fotoramaInit();
-            navInit();
+            rootElems = navInit();
+            console.log(rootElems);
         });
 
         function navInit() {
-            var elems = $('#instaSlider .insta-slide').clone().empty();
+            var rootElems = $('#instaSlider .insta-slide').clone();
+            var elems = rootElems.filter('[data-taste="0"]').clone().empty();
             var parent = $('#instaNavSlider');
             parent.append(elems);
             jCarouselInit();
+
+            return rootElems;
         };       
     </script>
     <script src="js/vendor/fotorama.js"></script>
@@ -908,16 +946,28 @@ require_once(__ROOT__.'/instagram.php');
     <script src="js/vendor/jcarousel.js"></script>
     <script>
         //Bounded slider for instagram photos
+        function jcarouselLoad(taste) {
+            var elems = rootElems.filter('[data-taste="' + taste + '"]');
+
+            $('#instaSlider, #instaNavSlider').empty();
+
+            $('#instaSlider').append(elems.clone());
+            $('#instaNavSlider').append(elems.clone().empty());
+
+            $('.jcarousel, .jcarousel-vert').jcarousel('destroy');
+
+            jCarouselInit();
+        }
         function jCarouselInit() {
             var connector = function(itemNavigation, carouselStage) {
                 return carouselStage.jcarousel('items').eq(itemNavigation.index());
             };
             var mainCarousel = $('.jcarousel').jcarousel({
 
-            });
+            }).jcarousel('scroll', '0');
             var navCarousel = $('.jcarousel-vert').jcarousel({
                 vertical: true
-            });
+            }).jcarousel('scroll', '0');
             navCarousel.jcarousel('items').each(function() {
                 var item = $(this);
 
@@ -1004,7 +1054,7 @@ require_once(__ROOT__.'/instagram.php');
           }
         );
         
-        var $miniFotorama = $('.mini-slider').fotorama({
+        var $miniFotorama = $('#miniSlider').fotorama({
             nav: false,
             autoplay: false
         });
@@ -1015,8 +1065,8 @@ require_once(__ROOT__.'/instagram.php');
           'fotorama: show fotorama:showend',
           function (e, fotorama, extra) {
             var superIndex = $('.ice-cream-slider .slide.active').data('taste');
-            var index = $('.mini-slider .fotorama__active .slide').data('taste');
-            $('.mini-slider').attr('data-taste', index);
+            var index = $('#miniSlider .fotorama__active .slide').data('taste');
+            $('#miniSlider').attr('data-taste', index);
             $('#popupCont').attr('data-taste', index);
             
             if(!miniLoadCD) {
@@ -1030,7 +1080,26 @@ require_once(__ROOT__.'/instagram.php');
             }, 500);
             
           }
-        );      
+        ); 
+
+        var $photoMiniFotorama = $('#photoMiniSlider').fotorama({
+            nav: false,
+            autoplay: false
+        }); 
+
+        $photoMiniFotorama.on(
+            'fotorama: show fotorama:showend',
+            function (e, fotorama, extra) {
+                var superIndex = $('.ice-cream-slider .slide.active').data('taste');
+                var index = $('#photoMiniSlider .fotorama__active .slide').data('taste');
+                $('#photoMiniSlider').attr('data-taste', index);
+                $('#photoPopupCont').attr('data-taste', index);
+                $('.jcarousel-vert-control').attr('data-taste', index);
+                $('#photoPopupCont .popup-headdesc span').addClass('hidden');
+                $('#photoPopupCont .popup-headdesc span[data-taste="' + index + '"]').removeClass('hidden');
+                jcarouselLoad(index);
+            }
+        );  
     </script>
 	<script src="js/libs/jquery-form.min.js"></script>
 	<script src="js/libs/upload.js"></script>

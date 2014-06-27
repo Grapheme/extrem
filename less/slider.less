@@ -398,6 +398,97 @@
 		}
 	}
 }
+.jcarousel-vert-control {
+	&[data-taste="0"] {
+		background: #cd094e;
+	}
+	&[data-taste="1"] {
+		background: #ABB629;
+	}
+	&[data-taste="2"] {
+		background: #F3AF06;
+	}
+	&[data-taste="3"] {
+		background: lighten(#631F0C, 20%);
+	}
+	&[data-taste="4"] {
+		background: #E1CAB3;
+	}
+	&[data-taste="5"] {
+		background: lighten(#720544, 10%);
+	}
+}
+#photoPopupCont {
+	.transition;
+
+	&[data-taste="0"] {
+		border-color: #cd094e;
+
+		a { color: lighten(#cd094e, 10%); }
+	}
+	&[data-taste="1"] {
+		border-color: #ABB629;
+
+		a { color: lighten(#ABB629, 10%); }
+		
+		.jcarousel-control-next {			    
+		    background: url(../img/popups/arrows/right00.png) ;
+		}
+
+		.jcarousel-control-prev {			    
+		    background: url(../img/popups/arrows/left00.png) ;
+		}
+	}
+	&[data-taste="5"] {
+		border-color: lighten(#720544, 10%);
+		a { color: lighten(#720544, 10%); }
+		
+		.jcarousel-control-next {			    
+		    background: url(../img/popups/arrows/right03.png) ;
+		}
+
+		.jcarousel-control-prev {			    
+		    background: url(../img/popups/arrows/left03.png) ;
+		}
+	}
+	&[data-taste="3"] {
+
+		border-color: lighten(#631F0C, 20%);
+		a { color: lighten(#631F0C, 10%); }
+		
+		.jcarousel-control-next {			    
+		    background: url(../img/popups/arrows/right02.png) ;
+		}
+
+		.jcarousel-control-prev {			    
+		    background: url(../img/popups/arrows/left02.png) ;
+		}
+	}
+	&[data-taste="4"] {
+		border-color: #E1CAB3;
+		a { color: lighten(#E1CAB3, 10%); }
+
+		.jcarousel-control-next {			    
+		    background: url(../img/popups/arrows/right04.png) ;
+		}
+
+		.jcarousel-control-prev {			    
+		    background: url(../img/popups/arrows/left04.png) ;
+		}
+	}
+	&[data-taste="2"] {
+		border-color: #F3AF06;
+		a { color: lighten(#F3AF06, 10%); }
+
+		.jcarousel-control-next {			    
+		    background: url(../img/popups/arrows/right05.png) ;
+		}
+
+		.jcarousel-control-prev {			    
+		    background: url(../img/popups/arrows/left05.png) ;
+		}
+	}
+}
 .mini-slider .fotorama__spinner {
 	display: none;
 }

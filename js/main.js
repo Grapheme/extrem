@@ -168,11 +168,13 @@ var Popup = (function(){
 				arrows: 'always'
 			});
 		}, 100);
+		return fotorama.data('fotorama');
 	}
 	$(document).on('click', '.cat-li', function(){
-		changeHeader($(this));
+		var api = changeHeader($(this));
 		$('.cat-li').removeClass('active');
 		$(this).addClass('active');
+		setTimeout(function(){ api.show('<<'); }, 100);
 	});
 
 	return {
