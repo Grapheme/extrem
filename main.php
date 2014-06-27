@@ -821,6 +821,13 @@ require_once(__ROOT__.'/instagram.php');
                                         <div class="slide-tags">#ЧасСтрасти</div>
                                     </div>
                                 </li>
+                                <li class="insta-slide slide-1" style="background:url(http://scontent-b.cdninstagram.com/hphotos-xfp1/t51.2885-15/10448874_655000991250123_1147404698_n.jpg) no-repeat center center / cover;" data-taste="-1">
+                                    <div class="slide-desc">
+                                        <div class="slide-user">Maxim Goroshkov</div>
+                                        <div class="slide-description"></div>
+                                        <div class="slide-tags">#ЧасСтрасти</div>
+                                    </div>
+                                </li>
                             <?php
                                 foreach($hashtags as $hashtag) {
                                     $data = getInstaFeed($hashtag, 10);
@@ -847,10 +854,10 @@ require_once(__ROOT__.'/instagram.php');
                     <ul id="instaNavSlider">
                     </ul> 
                 </div>                
-                <a href="#" class="jcarousel-vert-control jcarousel-vert-control-prev">
+                <a href="#" class="jcarousel-vert-control first-vert jcarousel-vert-control-prev">
                     <span class="icon icon-up-dir"></span>
                 </a>
-                <a href="#" class="jcarousel-vert-control jcarousel-vert-control-next">
+                <a href="#" class="jcarousel-vert-control first-vert jcarousel-vert-control-next">
                     <span class="icon icon-down-dir"></span>
                 </a>
             </div>
@@ -885,7 +892,7 @@ require_once(__ROOT__.'/instagram.php');
                             </div>
                         </header>
                         <div class="popup-content">
-                            <div class="popup-fotorama">
+                            <div class="popup-fotorama" id="Twitter">
                             <?php
                             foreach($hashtags as $hashtag) {
                                 $tweets = getTweets($hashtag);
@@ -947,7 +954,7 @@ require_once(__ROOT__.'/instagram.php');
     <script>
         //Bounded slider for instagram photos
         function jcarouselLoad(taste) {
-            var elems = rootElems.filter('[data-taste="' + taste + '"]');
+            var elems = rootElems.filter('[data-taste="' + taste + '"], [data-taste="-1"]');
 
             $('#instaSlider, #instaNavSlider').empty();
 
@@ -1038,6 +1045,13 @@ require_once(__ROOT__.'/instagram.php');
             $fotoramaContElems[''+$(this).data('taste')] = $(this).find('.slide');
         });
         console.log($fotoramaContElems);
+
+        var $twFotorama = $('#Twitter').fotorama({
+            nav: false,
+            width: '848',
+            height: '550',
+            arrows: 'always'
+        });
 
         var $popupFotorama = $('.advice-fotorama').fotorama({
             nav: false,
