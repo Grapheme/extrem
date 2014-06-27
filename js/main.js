@@ -16,7 +16,6 @@ var Slider = (function(){
 			$desc.first().addClass('active');
 			$current = $('.slide.active').index();
 			$currentDesc = $('.desc-slide.active');
-			$('.arrow-left').removeClass('disabled');
 
 			$(document).on('click', '.arrow-right', function(){
 				if ( $(this).hasClass('disabled') ) {

@@ -112,7 +112,7 @@ require_once(__ROOT__.'/instagram.php');
                                 <div class="ice-cream"></div>
                                 <div class="right-splash"></div>
                             </div>
-                            <div class="arrow arrow-left disabled">
+                            <div class="arrow arrow-left">
                                 <span class="icon icon-left-dir"></span>
                             </div>
                             <div class="arrow arrow-right">
