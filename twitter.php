@@ -32,11 +32,11 @@ function getTweets($hashtag = "passionhour", $amount = 5) {
 	$number_tweets = $amount;
 	$feed = "https://api.twitter.com/1.1/search/tweets.json?q=%23".$hashtag."&result_type=recent";
 
-	//$cache_file = '/srv/www/extreme_hour/tmp/twitter-cache';
+	//$cache_file = '/srv/www/extreme_hour/tmp/twitter-cache-'.$hashtag;
 	$cache_file = getcwd().'/cache/twitter-cache-'.$hashtag;
 	$modified = @filemtime( $cache_file );
 	$now = time();
-	$interval = 600; // ten minutes
+	$interval = 6000; // ten minutes
 
 	// check the cache file
 	if ( !$modified || ( ( $now - $modified ) > $interval ) ) {

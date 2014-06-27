@@ -180,7 +180,7 @@ function createWatermark($sourceFile, $watermarkFile, $marginLeft = 5, $marginBo
     	$dest_x = $marginLeft;
     	$dest_y = $sourceImageAttr[1] - $watermark_height - $marginBottom;
     }
-
+    /*
     if ( $sourceImageAttr['mime'] == 'image/png')
     {
         if(function_exists('imagesavealpha') && function_exists('imagecolorallocatealpha') )
@@ -191,6 +191,7 @@ function createWatermark($sourceFile, $watermarkFile, $marginLeft = 5, $marginBo
              imagesavealpha($oImage, true);  // (PHP 4 >= 4.3.2, PHP 5)
         }
     }
+    */
     if ($watermarkImageAttr['mime'] == 'image/png') {
         imagecopy($oImage, $oWatermarkImage, $dest_x, $dest_y, 0, 0, $watermark_width, $watermark_height);
     }

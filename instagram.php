@@ -10,11 +10,11 @@ function getInstaFeed($hashtag = "passionhour", $amount = 5) {
 
 	$url = 'https://api.instagram.com/v1/tags/'.$hashtag.'/media/recent?'.http_build_query($query);
 
-	//$cache_file = '/srv/www/extreme_hour/tmp/insta-cache';
+	//$cache_file = '/srv/www/extreme_hour/tmp/insta-cache-'.$hashtag;
 	$cache_file = getcwd().'/cache/insta-cache-'.$hashtag;
 	$modified = @filemtime( $cache_file );
 	$now = time();
-	$interval = 600; // ten minutes
+	$interval = 6000; // ten minutes
 
 	// check the cache file
 	if ( !$modified || ( ( $now - $modified ) > $interval ) ) {

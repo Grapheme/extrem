@@ -75,7 +75,7 @@
                         </div>
                     </div>
                     <div class="app-nav">
-                        <a href="#" class="share-btn"><span>Поделиться</span></a>
+                        <a href="javascript:void(0);" class="share-btn" style="opacity:0.4;"><span>Поделиться</span></a>
                         <a href="#" class="new-photo"><span>Новое фото</span></a>
                         <form id="form-photo-save" method="POST" action="upload.php">
                             <input type="file" style="position: absolute; width: 1em;" name="file" class="input-photo invisible" id="selectPhoto">
