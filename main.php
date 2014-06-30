@@ -158,10 +158,19 @@ require_once(__ROOT__.'/instagram.php');
                             </div>                            
                         </div>
                         <section class="app app-right">
-                            <div id="app2" class="app-head" style="opacity:0.4;">
-                                <img class="app-bg" src="img/apps/02.jpg" alt="">
-                                <header>Анна<br>Межиковская</header>
-                                <div class="app-tag">на нашем сайте</div>
+                            <div id="app2" class="app-head fotorama" data-auto="false">
+                                <div class="app-bg" style="background: url(img/apps/02.jpg) no-repeat center center / cover;">
+                                    <header>Анна<br>Межиковская</header>
+                                    <div class="app-tag">на нашем сайте</div>
+                                </div>
+                                <div class="app-bg" style="background: url(http://cs619327.vk.me/v619327831/83a3/RgPC24vH9Q0.jpg) no-repeat center center / cover;">
+                                    <header>Bantik<br>Boy</header>
+                                    <div class="app-tag">на нашем сайте</div>
+                                </div>
+                                <div class="app-bg" style="background: url(img/apps/02.jpg) no-repeat center center / cover;">
+                                    <header>Анна<br>Межиковская</header>
+                                    <div class="app-tag">на нашем сайте</div>
+                                </div>                                
                             </div>                    
                             <footer class="app-footer">
                                 <a href="app.php" target="_blank" onclick="_gaq.push(['_trackEvent', 'app_index_click']);">Приложение</a>
@@ -270,7 +279,7 @@ require_once(__ROOT__.'/instagram.php');
                         <div class="popup-fotorama">
                             <div class="advice-fotorama" data-taste="0">
                                 <div class="slide slide-1" data-taste="0" data-filter="1">
-                                    Если у вас и у вашей половинки непреодолимая тяга к покорению вершин, отправляйтесь на <a target="_blank" href="https://ru.foursquare.com/explore?mode=url&ne=55.889176%2C37.95433&q=%D0%A1%D0%BA%D0%B0%D0%BB%D0%BE%D0%B4%D1%80%D0%BE%D0%BC&sw=55.507638%2C37.152328">скалодром</a>. Заранее приготовьте  Extreme Клубника как награду за стойкость и выносливость, а дальше останется только покорить друг друга. #часстрасти #ЯркаяСтрасть
+                                    <p>Если у вас и у вашей половинки непреодолимая тяга к покорению вершин, отправляйтесь на <a target="_blank" href="https://ru.foursquare.com/explore?mode=url&ne=55.889176%2C37.95433&q=%D0%A1%D0%BA%D0%B0%D0%BB%D0%BE%D0%B4%D1%80%D0%BE%D0%BC&sw=55.507638%2C37.152328">скалодром</a>. Заранее приготовьте  Extreme Клубника как награду за стойкость и выносливость, а дальше останется только покорить друг друга. #часстрасти #ЯркаяСтрасть</p>
                                 </div>
                                 <div class="slide slide-2" data-taste="0" data-filter="1">
                                     Если вас не пугает высокая скорость и вы обожаете запах кожи и бензина, отправляйтесь с любимым на <a target="_blank" href="https://ru.foursquare.com/explore?mode=url&near=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0&q=%D0%9A%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%B3">картинг</a>. Почувствуйте себя настоящим гонщиком - прилив адреналина вам гарантирован, а поддержать волну страсти поможет Extreme Клубника. #часстрасти #ЯркаяСтрасть
@@ -954,11 +963,7 @@ require_once(__ROOT__.'/instagram.php');
     <script>
         //Bounded slider for instagram photos
         function jcarouselLoad(taste) {
-<<<<<<< HEAD
             var elems = rootElems.filter('[data-taste="' + taste + '"], [data-taste="-1"]');
-=======
-            var elems = rootElems.filter('[data-taste="' + taste + '"],[data-taste="-1"]');
->>>>>>> FETCH_HEAD
 
             $('#instaSlider, #instaNavSlider').empty();
 
@@ -1076,6 +1081,8 @@ require_once(__ROOT__.'/instagram.php');
             nav: false,
             autoplay: false
         });
+
+        console.log('open');
 
         var miniLoadCD = 0;
 

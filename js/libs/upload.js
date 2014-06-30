@@ -55,7 +55,7 @@ uploadImage.singlePhotoOption = {
 			} else {
 				//only upload files to the server and show message
 				$('#load-photo').addClass('uploaded');
-				$('button.photo-save').html('Отправить');
+				$('button.photo-save').html('Отправить').removeClass('disabled');
 				window.scrollTo(0, 0);
 			}
 		}
@@ -133,9 +133,12 @@ $(function(){
 		$("#selectPhoto").click();
 	});
 	$("#form-photo-save button").click(function(event){
-		flag = 'save';
-		$("#form-photo-save").ajaxSubmit(uploadImage.singlePhotoOption);
-		return false;
+		if( !$(this).hasClass('disabled') ) {
+			$(this).addClass('disabled');
+			flag = 'save';
+			$("#form-photo-save").ajaxSubmit(uploadImage.singlePhotoOption);
+			return false;
+		}
 	});
 	$("#appShare").click(function(event){
 		flag = 'share';
