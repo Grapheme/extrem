@@ -43,26 +43,52 @@
 	.timer {
 		position: absolute;
 		top: 7rem;
-    	left: 11.4rem;
-    	width: 10rem;
+    	left: 9.1rem;
+    	width: 13rem;
 		font-size: 32em / @htmlFontSize;
-	}
-	.timer-signs {
-		position: absolute;
-		top: 9.5rem;
-    	left: 11.4rem;
-		font-size: 10em / @htmlFontSize;
-		text-transform: uppercase;
+		text-align: center;
 
 		& > div {
+			position: relative;
 			display: inline-block;
+			padding: 0 .5rem;
 		}
 
 		.hours {
-			margin: 0 1.1rem 0 0;
+			&:after {
+				content: 'часов';
+				position: absolute;
+				font-size: 10px;
+				width: 100%;
+				text-align: center;
+				bottom: -10rem / @htmlFontSize;
+				left: 0;
+				text-transform: uppercase;
+			}			
 		}
 		.mins {
-			margin: 0 .85rem 0 0;
+			&:after {
+				content: 'минут';
+				position: absolute;
+				font-size: 10px;
+				width: 100%;
+				text-align: center;
+				bottom: -10rem / @htmlFontSize;
+				left: 0;
+				text-transform: uppercase;
+			}
+		}
+		.secs {
+			&:after {
+				content: 'секунд';
+				position: absolute;
+				font-size: 10px;
+				width: 100%;
+				text-align: center;
+				bottom: -10rem / @htmlFontSize;
+				left: 0;
+				text-transform: uppercase;
+			}
 		}
 	}
 

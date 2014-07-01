@@ -142,6 +142,9 @@ var Popup = (function(){
 
 	var slide_allow = true;
 	$(document).on('click', '.column-list li', function(){
+		var adviceNum = $(this).data('advice');
+		window.location.hash = adviceNum;
+
 		if(!slide_allow) return;
 		slide_allow = false;
 		$(this).slideUp();
@@ -213,9 +216,17 @@ var Popup = (function(){
 Slider.init();
 
 $(document).ready(function(){
+	var hash = window.location.hash.slice(1);
 	$('button.photo-save').click(function(e){
 		$(this).html('Пожалуйста подождите ...');
 	});
+
+	if(hash) {
+		Popup.open($('[data-popup="2"]'));
+		setTimeout( function(){
+			var a = $('.column-list li[data-advice="' + hash + '"]').trigger('click');
+		}, 1200);
+	}
 });
 
 var Share = {

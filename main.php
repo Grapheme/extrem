@@ -38,11 +38,6 @@ require_once(__ROOT__.'/instagram.php');
                         <span class="small">осталось</span>
                     </div>
                     <div id="timer" class="timer"></div>
-                    <div class="timer-signs">
-                        <div class="hours">часов</div>
-                        <div class="mins">минут</div>
-                        <div class="secs">секунд</div>
-                    </div>
                     <h1 class="logo">
                         Час страсти
                     </h1>
@@ -720,7 +715,7 @@ require_once(__ROOT__.'/instagram.php');
                     <div class="column-list">
                         <div class="list-title">Другие статьи</div>
                         <ul>
-                            <li style="display: none;">
+                            <li style="display: none;" data-advice="1">
                                 <h3>Марина Дударева</h3>
                                 <div class="list-item-info clearfix taste-strawberry">
                                     <span class="list-author">
@@ -731,7 +726,7 @@ require_once(__ROOT__.'/instagram.php');
                                     </span>
                                 </div>
                             </li>
-                            <li>
+                            <li data-advice="2">
                                 <h3>Татьяна Аверина</h3>
                                 <div class="list-item-info clearfix taste-strawberry">
                                     <span class="list-author">
@@ -742,7 +737,7 @@ require_once(__ROOT__.'/instagram.php');
                                     </span>
                                 </div>
                             </li>
-                            <li>
+                            <li data-advice="3">
                                 <h3>Екатерина Брицова</h3>
                                 <div class="list-item-info clearfix taste-strawberry">
                                     <span class="list-author">
@@ -753,7 +748,7 @@ require_once(__ROOT__.'/instagram.php');
                                     </span>
                                 </div>
                             </li>
-                            <li>
+                            <li data-advice="4">
                                 <h3>Аня Лунева</h3>
                                 <div class="list-item-info clearfix taste-tropic">
                                     <span class="list-author">
@@ -764,7 +759,7 @@ require_once(__ROOT__.'/instagram.php');
                                     </span>
                                 </div>
                             </li>
-                            <li>
+                            <li data-advice="5">
                                 <h3>Сергеи Судариков</h3>
                                 <div class="list-item-info clearfix taste-strawberry">
                                     <span class="list-author">
@@ -775,7 +770,7 @@ require_once(__ROOT__.'/instagram.php');
                                     </span>
                                 </div>
                             </li>
-                            <li>
+                            <li data-advice="6">
                                 <h3>Irina Shevchik</h3>
                                 <div class="list-item-info clearfix taste-strawberry">
                                     <span class="list-author">
@@ -786,7 +781,7 @@ require_once(__ROOT__.'/instagram.php');
                                     </span>
                                 </div>
                             </li>
-                            <li>
+                            <li data-advice="7">
                                 <h3>Stas Vitus</h3>
                                 <div class="list-item-info clearfix taste-strawberry">
                                     <span class="list-author">
@@ -955,9 +950,9 @@ require_once(__ROOT__.'/instagram.php');
     <script src="js/plugins.js"></script>
     <script src="js/vendor/jquery.countdown.min.js"></script>
     <script type="text/javascript">
-        $('#timer').countdown('2014/07/04', function(event) {
+        $('#timer').countdown('2014/07/15', function(event) {
             var totalHours = event.offset.totalDays * 24 + event.offset.hours;
-            $(this).html(event.strftime(totalHours + ' : %M : %S '));
+            $(this).html(event.strftime('<div class="hours">' + totalHours + '</div>' + ':' + '<div class="mins">%M</div>:<div class="secs">%S</div> '));
         });
     </script>
     <script src="js/main.js"></script>
@@ -1113,7 +1108,8 @@ require_once(__ROOT__.'/instagram.php');
         
         var $miniFotorama = $('#miniSlider').fotorama({
             nav: false,
-            autoplay: false
+            autoplay: false,
+            arrows: 'always'
         });
 
         console.log('open');
@@ -1143,7 +1139,8 @@ require_once(__ROOT__.'/instagram.php');
 
         var $photoMiniFotorama = $('#photoMiniSlider').fotorama({
             nav: false,
-            autoplay: false
+            autoplay: false,
+            arrows: 'always'
         }); 
 
         $photoMiniFotorama.on(
