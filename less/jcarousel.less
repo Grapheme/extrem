@@ -5,12 +5,15 @@ The width can be either fixed in px or flexible in %.
 Position must be relative!
 */
 .jcarousel,
-.jcarousel-vert {
+.jcarousel-vert,
+.jcarousel2,
+.jcarousel-vert2 {
     position: relative;
     overflow: hidden;
 }
 
-.jcarousel-vert {
+.jcarousel-vert,
+.jcarousel-vert2 {
     position: absolute;
     top: 10.45rem;
     bottom: 52rem / @htmlFontSize;
@@ -18,7 +21,8 @@ Position must be relative!
     width: 125rem / @htmlFontSize;
 }
 
-.jcarousel-vert li {
+.jcarousel-vert li,
+.jcarousel-vert2 li {
     position: relative;
     width: 125rem / @htmlFontSize;
     height: 125rem / @htmlFontSize;
@@ -61,11 +65,13 @@ Position must be relative!
         background: lighten(#cd094e, 10%)
     }
 }
-.jcarousel-vert-control-prev {
+.jcarousel-vert-control-prev,
+.jcarousel-vert-control-prev2 {
     top: 123rem / @htmlFontSize;
     right: 8rem / @htmlFontSize;
 }
-.jcarousel-vert-control-next {
+.jcarousel-vert-control-next,
+.jcarousel-vert-control-next2 {
     bottom: 8rem / @htmlFontSize;
     right: 8rem / @htmlFontSize;
 }
@@ -76,7 +82,9 @@ You must ensure that the position is relative or absolute and
 that the width is big enough to contain all items.
 */
 .jcarousel ul,
-.jcarousel-vert ul {
+.jcarousel-vert ul,
+.jcarousel2 ul,
+.jcarousel-vert2 ul {
     width: 20000em;
     position: relative;
 
@@ -90,7 +98,8 @@ that the width is big enough to contain all items.
 These are the item elements. jCarousel works best, if the items
 have a fixed width and height (but it's not required).
 */
-.jcarousel li {
+.jcarousel li,
+.jcarousel2 li {
     /* Required only for block elements like <li>'s */
     float: left;
     border: 21rem / @htmlFontSize 21rem / @htmlFontSize 92rem / @htmlFontSize 21rem / @htmlFontSize;
@@ -110,12 +119,14 @@ have a fixed width and height (but it's not required).
         opacity: .75;
     }
 }
-.jcarousel-control-prev {
+.jcarousel-control-prev,
+.jcarousel-control-prev2 {
     left: 25%;
     background: url(../img/popups/arrows/left01.png) no-repeat 0 0 e('/') 100% 100%;   
 }
 
-.jcarousel-control-next {
+.jcarousel-control-next,
+.jcarousel-control-next2 {
     right: 25%;
     background: url(../img/popups/arrows/right01.png) no-repeat 0 0 e('/') 100% 100%;
 }

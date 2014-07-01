@@ -4,6 +4,7 @@
 	background: #106CA4;
 
 	.main-header-cont {
+		position: relative;
 		max-width: 1180rem / @htmlFontSize;
 		margin: 0 auto;
 		height: 100%;
@@ -17,4 +18,52 @@
 		background: url(../img/header.jpg) no-repeat center 0;
 		text-indent: -9999px;
 	}
+
+	.counter {
+		top: 45%;
+		right: 0;
+		left: auto;
+	}
+
+	.timer-desc {
+		position: absolute;
+		top: 45%;
+		left: 2%;
+		text-transform: uppercase;
+		font-size: 20em / @htmlFontSize;
+		line-height: 1.2em;
+
+		.small {
+			display: block;
+			font-size: 17em / 20;
+			line-height: 1.2em;
+		}
+	}
+
+	.timer {
+		position: absolute;
+		top: 7rem;
+    	left: 11.4rem;
+    	width: 10rem;
+		font-size: 32em / @htmlFontSize;
+	}
+	.timer-signs {
+		position: absolute;
+		top: 9.5rem;
+    	left: 11.4rem;
+		font-size: 10em / @htmlFontSize;
+		text-transform: uppercase;
+
+		& > div {
+			display: inline-block;
+		}
+
+		.hours {
+			margin: 0 1.1rem 0 0;
+		}
+		.mins {
+			margin: 0 .85rem 0 0;
+		}
+	}
+
 }

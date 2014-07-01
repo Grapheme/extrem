@@ -11,6 +11,20 @@
 	z-index: 5;
 }
 
+.help-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	overflow: hidden;
+
+	background: #042d43;
+	background: rgba(4, 45, 67, .9);
+	z-index: 6;
+}
+
 .uploaded {
 	.photo-border { display: none; }
 	#form-photo-save { display: none; }
@@ -29,6 +43,24 @@
 	&.pad-popup {
 		.popup-body {
 			padding-top: 50rem / @htmlFontSize;
+		}
+	}
+
+	&.help-popup {
+		.popup-body {
+			padding: 90rem / @htmlFontSize 0 0;
+			border-left: none;
+			border-right: none;
+			border-bottom: none;
+			border-color: #fff;
+
+			.help-screen {
+				width: 868rem / @htmlFontSize;
+				height: 646rem / @htmlFontSize;
+				margin: 0 auto;
+
+				background: url(../img/help.png) no-repeat 0 0 e('/') 100% 100%;
+			}
 		}
 	}
 

@@ -9,6 +9,7 @@ var Slider = (function(){
 	var $prev = $('.arrow-left');
 	var $arrow = $('[data-arrow]');
 	var $main = $('main');
+	var activeFilter;
 
 	return {
 		init: function() {
@@ -128,8 +129,9 @@ var Popup = (function(){
 	$(document).on('click', '.popup', function(e){
 		e.stopPropagation();
 	});
-	$(document).on('click', '.popup-close, .overlay', function(){
+	$(document).on('click', '.popup-close, .overlay, .help-overlay', function(){
 		closePopup();
+		closeTips();
 	});
 	$(document).keyup(function(e) {
 		if (e.keyCode == 27) {
@@ -150,6 +152,20 @@ var Popup = (function(){
 			slide_allow = true;
 		}, 500);
 	});
+
+	function showTips() {
+		var $overlay = $('.help-overlay');
+		var $popup = $('[data-popup="7"]');
+		$overlay.removeClass('hidden');
+		$popup.removeClass('hidden');
+	}
+
+	function closeTips() {
+		var $overlay = $('.help-overlay');
+		var $popup = $('[data-popup="7"]');
+		$overlay.addClass('hidden');
+		$popup.addClass('hidden');
+	}
 
 	/* Filters in popup */
 	function changeHeader(elem) {
@@ -177,6 +193,7 @@ var Popup = (function(){
 		return fotorama.data('fotorama');
 	}
 	$(document).on('click', '.cat-li', function(){
+		activeFilter = $(this).data('filter');
 		var api = changeHeader($(this));
 		$('.cat-li').removeClass('active');
 		$(this).addClass('active');
@@ -186,7 +203,9 @@ var Popup = (function(){
 	return {
 		open: openPopup,
 		close: closePopup,
-		changeHeader: changeHeader
+		changeHeader: changeHeader,
+		closeTips: closeTips,
+		showTips: showTips
 	};
 
 })();

@@ -30,12 +30,26 @@ require_once(__ROOT__.'/instagram.php');
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div class="main-wrapper">
-            <header class="main-header">
+            <header class="main-header">                
                 <div class="main-header-cont">
+                    <div class="timer-desc">
+                        До часа<br>
+                        страсти
+                        <span class="small">осталось</span>
+                    </div>
+                    <div id="timer" class="timer"></div>
+                    <div class="timer-signs">
+                        <div class="hours">часов</div>
+                        <div class="mins">минут</div>
+                        <div class="secs">секунд</div>
+                    </div>
                     <h1 class="logo">
                         Час страсти
                     </h1>
-                </div>
+                    <div class="counter">
+                        318
+                    </div>
+                </div>                
             </header>
             <main data-bg="1">
                 <div class="wrapper" data-arrow="1">
@@ -214,6 +228,19 @@ require_once(__ROOT__.'/instagram.php');
                     </footer>
                 </div>
             </main>
+            <div class="help-overlay hidden">
+                <div class="popup help-popup hidden" data-popup="7">
+                    <div class="popup-head">
+                        <div class="mini-logo"></div>
+                        <div class="popup-close"></div>
+                    </div>
+                    <div class="popup-body">
+                        <div class="help-screen">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>            
         </div>
         <div id="load-overlay" class="overlay hidden">
             <div class="popup advice-popup hidden" data-popup="1">
@@ -926,6 +953,13 @@ require_once(__ROOT__.'/instagram.php');
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
     <script src="js/plugins.js"></script>
+    <script src="js/vendor/jquery.countdown.min.js"></script>
+    <script type="text/javascript">
+        $('#timer').countdown('2014/07/04', function(event) {
+            var totalHours = event.offset.totalDays * 24 + event.offset.hours;
+            $(this).html(event.strftime(totalHours + ' : %M : %S '));
+        });
+    </script>
     <script src="js/main.js"></script>
     <script type="text/javascript">
         var rootElems;
@@ -1100,7 +1134,7 @@ require_once(__ROOT__.'/instagram.php');
             }
 
             setTimeout( function(){
-                $('.cat-adv').trigger('click');
+                $('.cat-li[data-filter="' + activeFilter + '"]').trigger('click');
                 console.log('triggered');
             }, 500);
             
