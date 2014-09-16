@@ -220,6 +220,16 @@ require_once(__ROOT__.'/instagram.php');
                         <div class="feedback">
                             <a href="mailto:hourofpassion@gmail.com">обратная связь</a>
                         </div>
+
+                        <ul class="social">
+                            <li class="social-li">
+                                <a target="_blank" href="http://www.odnoklassniki.ru/dk?st.cmd=addShare&amp;st._surl=48hours.7ya.ru"><span class="icon icon-odnoklassniki-rect"></span></a>
+                            </li><li class="social-li">
+                                <a target="_blank" href="http://vk.com/share.php?url=http://48hours.7ya.ru&amp;event=button_share"><span class="icon icon-vkontakte-rect"></span></a>
+                            </li><li class="social-li">
+                                <a target="_blank" href="http://www.facebook.com/sharer.php?u=http://48hours.7ya.ru"><span class="icon facebook-squared"></span></a>
+                            </li>
+                        </ul>
                     </footer>
                 </div>
             </main>
